@@ -1,0 +1,22 @@
+% RMN-9.003.pdf
+
+close all
+clear all
+
+t1 = 0;
+t2 = pi/sqrt(2); 
+del = 10^(-6);
+
+n = fix(t2/del) + 1
+
+A = [[0,-1, 0, 0];
+     [1, 0, 0, 0];
+     [0, 0, 0,-1];
+     [0, 0, 1, 0]];
+ 
+
+
+landa = zeros(4,n);
+landa(4,:) = 100*ones(1,n);
+
+CalU = function(landa)

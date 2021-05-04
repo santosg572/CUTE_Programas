@@ -1,0 +1,11 @@
+t1 = 0;
+t2 = pi / 2;
+
+del = 1;
+
+n = (t2 - t1) / del;
+
+for i=1:n
+    t1 + del*(i-1)
+end
+

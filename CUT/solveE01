@@ -1,0 +1,92 @@
+close all
+clear all
+
+t1 = 0;
+t2 = pi/sqrt(2) 
+
+del = 10^(-6);
+
+n = fix((t2-t1)/del)
+disp(['num puntos= ', num2str(n)])
+
+xx = zeros(4,n);
+
+delta = 0.5
+ni = 1.5
+
+A = [[0,-1, 0, 0];
+     [1, 0, 0, 0];
+     [0, 0, 0,-1];
+     [0, 0, 1, 0]];
+ 
+t = 0;
+x1 = [1;0;0;0];
+xx(:,1) = x1;
+
+for j=2:n
+    u = (1-delta)*cos(t) + delta * [t,0,0,0] * (A * x1);
+    U = [[ 0,-u, 0, 1];
+         [ u, 0, 1, 0];
+         [ 0,-1, 0,-u];
+         [-1, 0, u, 0]];
+    x2 = x1 + del * (U * x1);
+    xx(:, j) = x2;
+    x1 = x2;
+    t= t+del;
+end
+
+tt = del*(1:n);
+
+figure(1)
+
+
+subplot(2,2,1)
+plot(tt, xx(1,:))
+axis([0, 3,-1,1])
+subplot(2,2,2)
+plot(tt, xx(2,:))
+axis([0,3,-1,1])
+subplot(2,2,3)
+plot(tt, xx(3,:))
+axis([0,3,-1,1])
+subplot(2,2,4)
+plot(tt, xx(4,:))
+axis([0,3,-1,1])
+ 
+
+uu = zeros(n,1);
+t=0;
+
+for j=1:n
+    uu(j) = (1-delta)*cos(t) + delta*[t, 0, 0,0] * (A * xx(:,j));
+    t = t+del;
+end
+
+figure(2)
+
+plot(uu)
+
+lan = zeros(4,n);
+l2 = [0; 0; 0; 1];
+lan(:,n) = l2;
+
+for j=n:-1:2
+   v = (1-ni) * uu(j) + ni * l2' * (A * xx(:,j));
+   V = [[ 0,-v, 0, 1];
+        [ v, 0, 1, 0];
+        [ 0,-1, 0,-v];
+        [-1, 0, v, 0]];
+     l1 = l2 - del*(V *l2);
+     lan(:, j-1) = l1;
+end
+
+v = zeros(n,1);
+
+for j=1:n
+    v(j) = (1-ni) * uu(j) + ni * (lan(:,j))' * (A * xx(:,j));
+end
+
+figure(4)
+plot(v)
+
+

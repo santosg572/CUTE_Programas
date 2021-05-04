@@ -1,0 +1,54 @@
+directorio.m
+dir_mar0218
+doc_feb0919.txt
+dosCON_abr2917              figuras
+dos_controles_2
+Grafica_Puntos_oct0518      nada
+mat.sh
+mat.sh.save
+p1
+p1.m    nada
+p2.m    nada
+p3.m    utilizando odeset
+p4.m    nada
+p5.m
+p6.m
+p7.m
+p8.m
+p9.m
+P_dos_controles             nada
+pp.m
+Proc_xy
+Prog_may0517
+Programas_2018
+rabitz
+rabitz_P
+Res_1_10_2V2
+Res_cost_1_2V2
+Res_cost_cost_2V2
+Res_cost_sint_2V2
+Resp_ago2217
+Resp_ago2217.tar
+Resp_KROTOV_may2417
+Resp_KROTOV_may2417.tar
+RESP_mar1318
+Resp_RABITZ_may2417
+Resp_RABITZ_may2417.tar
+RMN_9_003_mas
+RMN_9_003_menos
+rr.m
+salida.txt
+solveE01
+SS_dos_controles
+SS_dos_controles_2
+SS_dos_controles_2V2
+SS_jacobi
+SS_krotov
+SS_krotov_P_DOS
+SS_Proc_xy
+SS_rabitz
+SS_rabitz_A
+SS_rabitz_P
+SS_rabitz_P_DOS
+SS_rabitz_PK
+tari.sh

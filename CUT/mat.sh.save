@@ -1,0 +1,5 @@
+/usr/local/Matlab13-alt/bin/matlab#!/bin/bash
+
+matlab -nodisplay -nodesktop -r "run p8.m"
+
+

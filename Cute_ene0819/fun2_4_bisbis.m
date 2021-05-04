@@ -1,0 +1,61 @@
+function res = fun2_4_bisbis(delt, uy, ux, x)
+   ni1 = .5;
+   ni2 = .5;
+   
+   A = [[0, -1, 0, 0];
+        [1, 0, 0, 0];
+        [0, 0, 0, -1];
+        [0, 0, 1, 0 ]];
+   B = [[0, 0, 0, -1];
+        [0, 0,-1, 0 ];
+        [0, 1, 0, 0];
+        [1, 0, 0, 0]];
+    
+   np = length(uy);
+ 
+   randn('state',100);
+   dw = sqrt(delt)*randn(np,1);
+    
+   landa = zeros(4,np);
+    
+   landa(:,np) = [0, 0,0,x(4,np)]';
+   l2 = [0, 0,0,x(4,np)]';
+    
+    for i=np:-1:2
+        xx = x(:,i);
+        v1 = (1-ni1) * uy(i) - .5 * ni1*(l2' * (A * xx));
+        fx = 2*(1-l2'*xx);
+        w1 = (1-ni2) * ux(i) - ni2*(l2' * (B * xx))/fx;
+        w12 = w1^2;
+        C = [[-w12,   v1,     1,     0];
+             [  -v1,-w12,     0,    -1];
+             [   -1,    0, -w12,    v1];
+             [    0,    1,   -v1, -w12]];
+         
+        D = [[  0,  0, 0, -w1];
+             [  0,  0,-w1,  0];
+             [  0, w1, 0,  0];
+             [ w1,  0, 0,  0]];
+         
+         l1 = l2 - (C*l2)*delt + (D*l2)*dw(i);
+         landa(:, i-1) = l1;
+         l2 = l1;
+    end
+    
+    landa;
+    
+    v = zeros(np,1);
+    w = zeros(np,1);
+
+    for i=1:np
+        ll = landa(:,i);
+        xx = x(:,i);
+        v(i) = (1-ni1) * uy(i) - .5 * ni1*(ll' * (A * xx));
+        fx = 2*(1-ll'*xx);
+        w(i) = (1-ni2) * ux(i) - ni2*(ll' * (B * xx))/fx;
+    end
+    
+    res.v=v;
+    res.w =w;
+    res.landa = landa;
+ 
