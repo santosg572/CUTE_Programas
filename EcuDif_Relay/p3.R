@@ -1,4 +1,14 @@
-tao = .5
+#tao = .5
+#niter = 8
+
+#tao = 1
+#niter = 14
+
+#tao = 1.5
+#niter = 14
+
+tao = 2
+niter = 10
 
 Integral <- function(del, f){
    np = 100
@@ -22,33 +32,16 @@ t = seq(-1*tao,0,length.out = np)
 del = t[2] - t[1]
 
 f = rep(1,np)
+ff = f
+tt = t
 
-x = Integral(del, f)
-
-ff = c(f, x)
-tt = c(t, t+tao)
-
-f = x
-
-x = Integral(del, f)
-
-ff = c(ff, x)
-tt = c(tt, t+2*tao)
-
-f = x
-      
-x = Integral(del, f)
-   
-ff = c(ff, x)
-tt = c(tt, t+3*tao)
-
-f = x
-
-x = Integral(del, f)
-
-ff = c(ff, x)
-tt = c(tt, t+3*tao)
-
+for (i in 1:niter){
+   t = t+tao
+   x = Integral(del, f)
+   ff = c(ff, x)
+   tt = c(tt, t)
+   f = x
+}
 
 plot(tt, ff, type='l')
 
