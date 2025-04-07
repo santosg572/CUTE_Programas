@@ -1,6 +1,8 @@
-np=10
+np=600
 
 t = seq(0, 60, length.out = np)
+
+del = t[2] - t[1]
 
 u1 = rep(1, np)
 u2 = rep(0, np)
@@ -17,13 +19,21 @@ C=1
 x1 = X[,1]
 
 for (i in 2:np){
-   A = matrix(c(0, x1[2], x1[3], x1[1], 0, x1[3], -x1[1], -x1[2],0), ncol=3)
-   B = matrix(c(A*u1[i], 0, 0, 0, B*u2[i], 0,0,0,C*u3[3]), ncol=3)
-   x2 = x1 + del*(x1 * A %*% x1 + B %*% x1)
+   T1 = matrix(c(0, x1[2], x1[3], x1[1], 0, x1[3], -x1[1], -x1[2],0), ncol=3)
+   T2 = matrix(c(A*u1[i], 0, 0, 0, B*u2[i], 0,0,0,C*u3[3]), ncol=3)
+   x2 = x1 + del*(x1 * T1 %*% x1 + T2 %*% x1)
    X[,i] = x2
    x1 = x2
 }
 
+par(mfrow=c(2,2))
 
-   x2 = x1 + del * (x1 + A * x1 
-   x2 = x1    
+plot(X[1,], type='l')
+plot(X[2,], type='l')
+plot(X[3,], type='l')
+
+
+
+
+
+
