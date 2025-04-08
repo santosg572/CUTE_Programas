@@ -12,14 +12,17 @@ X = matrix(rep(0, 3*np), nrow=3)
 
 X[,1] = c(.7, .7, .5)
 
-A=1
-B=1
-C=1
+A= .3
+B= .2
+C= .07
+beta = 0.1
+delta = 0.3, 
+epsi = 0.4
 
 x1 = X[,1]
 
 for (i in 2:np){
-   T1 = matrix(c(0, x1[2], x1[3], x1[1], 0, x1[3], -x1[1], -x1[2],0), ncol=3)
+   T1 = matrix(c(0, -beta*x1[2], delta*x1[3], -beta*x1[1], 0, epsi*x1[3], -delta*x1[1], -epsi*x1[2],0), ncol=3)
    T2 = matrix(c(A*u1[i], 0, 0, 0, B*u2[i], 0,0,0,C*u3[3]), ncol=3)
    x2 = x1 + del*(x1 * T1 %*% x1 + T2 %*% x1)
    X[,i] = x2
