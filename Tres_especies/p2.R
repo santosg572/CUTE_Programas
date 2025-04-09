@@ -48,7 +48,6 @@ for (i in (np-1):1){
    c1 = -1 + beta * x[2] + A * u[1] + delta * x[3]
    c2 = -1 + beta * x[1] + B * u[2] - epsi * x[3]
    c3 =  1 + C * u[3] + epsi * x[2] - delta * x[1]
-   print(c(c1, c2, c3))
    T = matrix(c(c1, beta * x[1], delta * x[1], beta*x[2], c2, epsi * c2[2], -delta*x[3], epsi * x[3], c3), ncol=3)
    p1 = p2 - del * (x + T %*% p2)
    P[,i] = p1
@@ -60,12 +59,16 @@ par(mfrow=c(2,2))
 print(range(P[1,]))
 
 p1 = P[1,]
+p2 = P[2,]
+p3 = P[3,]
 
-x[is.na(x)] = 0
+p1[is.na(p1)] = 0
+p2[is.na(p2)] = 0
+p3[is.na(p3)] = 0
 
-plot(P[1,np-1], type='l')
-plot(P[2,np-1], type='l')
-plot(P[3,np-1], type='l')
+plot(p1, type='l')
+plot(p2, type='l')
+plot(p3, type='l')
 
 
 
