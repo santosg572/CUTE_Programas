@@ -1,3 +1,5 @@
+library(scatterplot3d)
+
 del = .0001
 np = 600000
 
@@ -33,6 +35,13 @@ for (i in 2:np){
    X[,i] = x2
    x1 = x2
 }
+
+par(mfrow=c(2,2))
+
+plot(X[1,], type='l')
+plot(X[2,], type='l')
+plot(X[3,], type='l')
+
 
 P = matrix(rep(0, 3*np), nrow=3)
 
@@ -70,6 +79,11 @@ plot(p1, type='l')
 plot(p2, type='l')
 plot(p3, type='l')
 
+scatterplot3d(
+  x = X[1,],
+  y = X[2,],
+  z = X[3,], type='l'
+)
 
 
 

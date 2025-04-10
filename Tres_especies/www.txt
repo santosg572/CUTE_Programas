@@ -1,3 +1,9 @@
+https://www.r-bloggers.com/2021/08/3d-plot-in-r-programming-quick-guide/
+https://cran.r-project.org/web/packages/rgl/vignettes/rgl.html
+https://coolbutuseless.github.io/package/ggrgl/
+https://www.sthda.com/english/wiki/a-complete-guide-to-3d-visualization-device-system-in-r-r-software-and-data-visualization
+
+https://www.sthda.com/english/wiki/scatterplot3d-3d-graphics-r-software-and-data-visualization
 https://hackmd.io/@Leopoldo/B14-hQ-AJx
 
 
