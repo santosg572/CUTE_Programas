@@ -3,8 +3,6 @@ library(scatterplot3d)
 del = .0001
 np = 600000
 
-fil="file"
-
 t = del * 1:np
 
 del = t[2] - t[1]
@@ -16,11 +14,6 @@ U = matrix(rep(0, 3*np), nrow=3)
 
 U[1,] = 1
 
-for (k in 1:2){
-
-X = matrix(rep(0, 3*np), nrow=3)
-
-file1 = paste(fil,k,".pdf", sep='')
 X[,1] = c(.7, .7, .5)
 
 A= .4
@@ -43,7 +36,6 @@ for (i in 2:np){
    x1 = x2
 }
 
-pdf(file=file1)
 par(mfrow=c(2,2))
 
 plot(X[1,], type='l')
@@ -93,16 +85,7 @@ scatterplot3d(
   z = X[3,], type='l'
 )
 
-dev.off()
 
-for (i in 1:np){
-   pp = P[,i]
-   mat = matrix(c(pp[1], 0, 0, 0, pp[2], 0, 0, 0, pp[3]), ncol=3)
-   x = X[,np-i+1]
-   U[,i] = -1 * mat %*% x 
-}
-
-} 
 
 
 
