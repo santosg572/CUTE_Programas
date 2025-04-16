@@ -8,7 +8,7 @@ import sys
 file = sys.argv[1]
 #file = input("Introduce el nombre del archivo de directorios: ")
 
-pati = '/home/santosg/CUTE_feb1924_NUEVA_CHAMBA/CUTE_Prog_ART_jul1023_chamba_feb1824/fac_TETA0.2_A10.4_B10.42_C10.19_dwx1_0.17_dwx2_0.17_dwp_0.17:b0.2d0.3e0.3/'
+pati = '/home/santosg/Cute_Programas/CUTE_feb1924_NUEVA_CHAMBA/CUTE_Prog_ART_jul1023_chamba_feb1824/fac_TETA0.2_A10.4_B10.42_C10.19_dwx1_0.17_dwx2_0.17_dwp_0.17:b0.2d0.3e0.3'
 
 fil = open(file+'.txt', 'r')
 filo = open(file+'.html', 'w')
