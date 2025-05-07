@@ -1,0 +1,290 @@
+pnorm(.70, mean=.64,sd=sqrt(.64*.36/125),lower.tail=FALSE)
+pnorm(.65, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=FALSE)
+pnorm(.58, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=TRUE)
+pnorm(.56, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=FALSE)-pnorm(.63, mean=0.6, sd=sqrt((.6*(1-.6))/100),lower.tail=TRUE)
+pnorm(.09, mean = (.095-.049), sd = sqrt((.095)*(.905)/100 + (.049)*(.951)/120), lower.tail = FALSE)
+res_1 <- pnorm(100, mean = (797 - 660), sd = sqrt(484^2/40+414^2/35), lower.tail = FALSE)
+res_1
+res_2 <- pnorm(8, mean = 0, sd = sqrt(100^2/25 + 80^2/16), lower.tail = FALSE)#
+print("El resultado de P(x1-x2>=8) es:")#
+res_2
+res_3 <- pnorm(.70, mean=.64,sd=sqrt(.64*.36/125),lower.tail=FALSE)
+res_3
+pnorm(.65, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=FALSE)
+pnorm(.58, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=TRUE)
+pnorm(.56, mean=.6,sd=sqrt(.6*(1-.6)/100),lower.tail=FALSE)-pnorm(.63, mean=0.6, sd=sqrt((.6*(1-.6))/100),lower.tail=TRUE)
+res_5 <- pnorm(.09, mean = (.095-.049), sd = sqrt((.095)*(.905)/100 + (.049)*(.951)/120), lower.tail = FALSE)
+res_5
+pnorm(100, mean=(797-660), sd= sqrt(482^2/40 + 414^2/35), lower.tail = FALSE)
+pnorm(.70, mean = .64, sd=sqrt(.64*.36/125), lower.tail = FALSE)
+pnorm(.65, mean = .6, sd =sqrt(.6*.4/100), lower.tail=FALSE)
+pnorm(.58, mean=0.6, sd=sqrt(.6*.4/100), lower.tail = TRUE)
+pnorm(0.63, mean = 0.6, sd=sqrt(.6*.4/100), lower.tail = TRUE) - pnorm(0.56, mean=0.6, sd=sqrt(.6*.4/100), lower.tail=TRUE)
+pnorm(.09, mean = (.095-.049), sd=sqrt((.095)*(0.905)/100+(0.049)*(0.951)/120), lower.tail=FALSE)
+mean(c(1,2,3))
+x = 1:4
+lapply(x,sqrt)
+lapply(list(x, 4:1),sqrt)
+lapply(list(x, 4:1),sum)
+lapply(list(x, 4:1),median)
+round(rnorm(10, mean=55, sd=10))
+round(rnorm(10, mean=55, sd=8))
+round(rnorm(10, mean=60, sd=8))
+round(rnorm(10, mean=55, sd=12))
+sapply(c(62, 22, 55, 49, 58, 51, 51, 68, 63, 57), c(80, 46, 60, 41, 58, 61, 65, 65, 60, 66), mean)
+?sapply
+sapply(list(c(62, 22, 55, 49, 58, 51, 51, 68, 63, 57), c(80, 46, 60, 41, 58, 61, 65, 65, 60, 66)), mean)
+sapply(list(c(62, 22, 55, 49, 58, 51, 51, 68, 63, 57), c(80, 46, 60, 41, 58, 61, 65, 65, 60, 66)), sd)
+mean(c(62, 22, 55, 49, 58, 51, 51, 68, 63, 57))
+?library
+library(tidyverse,help)
+library(tidyverse)
+? ggplot2
+p <- ggplot()
+print(p)
+mtacars
+mtcars
+summary(mtcars)
+dim(mtcars)
+plot(mtacars[,1])
+plot(mtcars[,1])
+plot(mtcars[,2])
+plot(mtcars[,3])
+plot(mtcars[,4])
+plot(mtcars[,5])
+plot(mtcars[,6])
+plot(mtcars[,7])
+plot(mtcars[,8])
+plot(mtcars[,9])
+plot(mtcars[,10])
+plot(mtcars[,10], main=names(mtcars[10]))
+plot(mtcars[,10], main=names(mtcars[1]))
+plot(mtcars[,1], main=names(mtcars[1]))
+plot(mtcars[,2], main=names(mtcars[2]))
+plot(mtcars[,3], main=names(mtcars[3]))
+plot(mtcars[,4], main=names(mtcars[4]))
+plot(mtcars[,5], main=names(mtcars[5]))
+plot(mtcars[,6], main=names(mtcars[6]))
+plot(mtcars[,7], main=names(mtcars[7]))
+plot(mtcars[,8], main=names(mtcars[8]))
+plot(mtcars[,9], main=names(mtcars[9]))
+library(dplyr)#
+#
+df   <- lattice::singer
+df
+dim(df)
+table(df)
+ls
+?pull
+mtcars %>% pull(1)
+mtcars
+mtcars %>% pull(1)
+mtcars %>% pull(1) %>% mean
+mtcars %>% pull(1) %>% plot
+mtcars %>% pull(1) %>% boxplot
+starwars %>% pull(height, name)
+starwars %>% pull(height, name) %>% table
+starwars %>% pull(height, name)
+starwars %>% pull(height, name) %>% table
+starwars %>% across(1,mean)
+?across
+starwars %>% across(1,mean)
+across(iris,mean)
+starwars %>% mutate(across(1,mean))
+starwars %>% mutate(1, across(1,mean))
+starwars %>% mutate(1, across(mean))
+mutate
+mutate()
+mutate(across())
+rlang::last_error()
+starwars %>% near(1)
+starwars %>% near(1,2)
+mean
+starwars %>% pull(height, name) %>% table
+starwars %>% pull(height, name) %>% t.test
+x = starwars %>% pull(height, name) %>% t.test
+x
+x = starwars %>% pull(height, name) %>% tsort
+x = starwars %>% pull(height, name) %>% sort
+x
+?filter
+x = starwars %>% filter
+x
+x = starwars %>% var
+x = starwars %>% var(1)
+x = starwars %>% mutate(mean)
+x <- c(75,80,80,74,84,78,89,72,83,76,75,87,78,79,88)
+CI_sig(x, .05)
+??CI_sig
+install.packages('rcompanion)')
+CI_sig <- function(x,alpha) {sd_x <- sd(x)n_x <- length(x)lbs <- sqrt((n_x-1)*sd_xˆ2/qchisq((1-alpha/2), (n_x-1)))las <- sqrt((n_x-1)*sd_xˆ2/qchisq(alpha/2, (n_x-1)))print(c("Desviación estandar estimada"))print(c(sd_x))print(c("Intervalo de confianza de la desviación estándar"))print(c(lbs, las))}
+CI_sig <- function(x,alpha) {#
+sd_x <- sd(x)#
+n_x <- length(x)#
+lbs <- sqrt((n_x-1)*sd_xˆ2/qchisq((1-alpha/2), (n_x-1)))#
+las <- sqrt((n_x-1)*sd_xˆ2/qchisq(alpha/2, (n_x-1)))#
+print(c("Desviación estandar estimada"))#
+print(c(sd_x))#
+print(c("Intervalo de confianza de la desviación estándar"))#
+print(c(lbs, las))#
+}#
+#
+x <- c(75,80,80,74,84,78,89,72,83,76,75,87,78,79,88)#
+#
+print(CI_sig(x, .05))
+CI_sig <- function(x,alpha) {#
+sd_x <- sd(x)#
+n_x <- length(x)#
+lbs <- sqrt((n_x-1)*sd_xˆ2/qchisq((1-alpha/2), (n_x-1)))#
+las <- sqrt((n_x-1)*sd_xˆ2/qchisq(alpha/2, (n_x-1)))#
+print(c("Desviación estandar estimada"))#
+print(c(sd_x))#
+print(c("Intervalo de confianza de la desviación estándar"))#
+print(c(lbs, las))#
+}#
+#
+x <- c(75,80,80,74,84,78,89,72,83,76,75,87,78,79,88)#
+#
+print(CI_sig(x, .05)
+)
+CI_sig <- function(x,alpha) {#
+	sd_x <- sd(x)#
+	n_x <- length(x)#
+	lbs <- sqrt((n_x-1)*sd_xˆ2/qchisq((1-alpha/2), (n_x-1)))#
+	las <- sqrt((n_x-1)*sd_xˆ2/qchisq(alpha/2, (n_x-1)))#
+	print(c("Desviación estandar estimada"))#
+	print(c(sd_x))#
+	print(c("Intervalo de confianza de la desviación estándar"))#
+	print(c(lbs, las))#
+}
+(.4+1+.8)*10/3
+(1+.9+.9+.4)*10/4
+x = round(runif(24, min=1, max = 20))
+x
+mat = matrix(x, ncol=2)
+mat
+colnames(mat, paste('punto-', 1:12, sep=''))
+rownames(mat, paste('punto-', 1:12, sep=''))
+paste('punto-', 1:12, sep='')
+mat
+rownames
+rownames(mat, paste('punto-', 1:12, sep=''))
+mat
+x = 1:3
+cumsum(x)
+11000/120
+install.packages("bookdown")
+install.packages('ggsegExtra')
+install.packages('ggseg')
+install.packages('ggseg3d')
+# Figure 3ggseg (mapping = aes(fill = region),colour = "black") +scale_fill_brain("dk") +theme(legend.justification = c(1, 0),legend.position = "bottom",legend.text = element_text(size= 5)) +guides(fill = guide_legend(ncol = 3))
+library(ggseg)
+ggseg (mapping = aes(fill = region),colour = "black") +scale_fill_brain("dk") +theme(legend.justification = c(1, 0),legend.position = "bottom",legend.text = element_text(size= 5)) +guides(fill = guide_legend(ncol = 3))
+library('ggplot2')
+library(ggplot2)
+ggseg (mapping = aes(fill = region),colour = "black") +scale_fill_brain("dk") +theme(legend.justification = c(1, 0),legend.position = "bottom",legend.text = element_text(size= 5)) +guides(fill = guide_legend(ncol = 3))
+?ggseg
+x=2:5
+2^x
+?seq
+seq.int(4)
+seq.int(40)
+seq_len(4)
+seq_along(c(2.4))
+seq_along(c(2,4))
+T == 1
+T == 1.
+T == 1.0
+(1:12) + runif(12, min=-2, max=2)
+round((1:12) + runif(12, min=-2, max=2))
+x = rnorm(50, mean=55, sd=10)
+x
+x = round(rnorm(50, mean=55, sd=10))
+x
+A<- matrix(c(51,73,46,59,61,44,46,50,63,48,59,40), nrow = 3, ncol = 4)
+A
+A[1:3,]
+B<- matrix(c(64,54,60,50,44,53,57,52,49,51,46,43), nrow = 3, ncol = 4)
+A
+B
+renglones <- c(A[1:3,], B[1:3,])
+renglones
+A
+as.vector(A)
+c(as.vector(A), as.vector(B))
+B<- matrix(c(64,54,60,50,44,53,57,52,49,51,46,43), nrow = 3, ncol = 4)
+a = 1:24
+a
+dim(a) = c(4,3,2)
+a
+as.vector(A)
+A
+apply(A, 1, mean)
+apply(A, 1, sd)
+apply(A, 1, median)
+apply(A, 2, mean)
+apply(A, 2, sd)
+A
+apply(A, 2, max)
+nombres <- c(paste('Juan', 1:5, sep=''), paste('Benito', 1:7, sep=''), paste('Maria', 1:12, sep=''))
+nombres
+sexo_H <- rep('H', 7)
+sexo_H
+x= c(3,2,4,3,2,3)
+y=c(6,4,3,2,3,4)
+x==y
+x= c(3,2,4,3,2,3)
+y=c(6,2,3,2,2,4)
+x == y
+x = c(4,3,2,3,4)
+y=c(4,2,3,4,2)
+z = cbind(x,y)
+z
+list_data <- list(c("Jan","Feb","Mar"), matrix(c(3,9,5,1,-2,8), nrow = 2), list("green",12.3))
+length(list_data)
+names(list_data)
+list_data
+list_data[[c(1,3]]
+list_data[[c(1,3)]]
+list_data[[2]]
+576*13.05
+1642/6
+N<- c(61,28,55,50,57,52,51,65,62,57,80,46,60,41,58,61,65,65,60,66)
+h <- hist(N,col="lightskyblue", main="Histograma y polígono de frecuencias de N")
+points(h$mids, h$counts, col="blue4", type="l")
+points(c(mean(N), mean(N)), c(0,8), type = "l", col="red")
+DE1<- points(c(mean(N)-sd(N), mean(N)+sd(N)), c(0,0), pch=16)
+DE2<- points(c(mean(N)-sd(N)*2, mean(N)+ sd(N)*2), c(0,0), pch=8)
+N<- c(61,28,55,50,57,52,51,65,62,57,80,46,60,41,58,61,65,65,60,66)
+N1<- N>(mean(N))
+sum(N1)
+N
+N %2
+N % 2
+3%2
+3%%2
+4%%2
+N%%2
+sum(N%%2)
+A<-c(61,28,55,50,57,52,51,65,62,57,80,46,60,41,58,61,65,65,60,66)
+Grafica=hist(A,col = 'skyblue')
+points(Grafica$mids,Grafica$counts,col='red', type = 'l')
+Media=mean(A)
+abline(v=Media,col='darkgreen',lwd='5')
+desv=sd(A)
+points(c(Media-desv,Media+desv,Media-2*desv,Media+2*desv),c(0,0,0,0),pch='*', cex=3, col='red')
+x = c(1 , 2 , 3 , 4 , 5 , 6 , 7,  8,  9, 10, 11, 12)
+y = c(0.16922314 , 3.61049173,  4.27174136,  4.29349495 , 3.45917637,  6.04253561,#
+   7.8074221,   9.98384404,  7.05165572, 11.83863353 ,11.08837895 ,11.43493592)
+res = lm(y~x)
+print(res)
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')
+ls
+dir()
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')
+source('prog_may1222_3_jpg.R')

@@ -50,6 +50,8 @@ GenXU <- function(p=0){
 GenP <- function(x=0, u=0){
    p = matrix(rep(0,3*np), nrow=3)
    p2 = c(.5,.7,.7)
+   p2 = x[,np]
+   print(p2)
    p[,np] = p2
    cc = c(ni, w, k)
 
@@ -61,7 +63,7 @@ GenP <- function(x=0, u=0){
       c3 =  1 - delta * xx[1] - epsi  * xx[2] + A[3] * uu[3]
       mat1 = matrix(c(c1,0,0,0,c2,0,0,0,c3), ncol=3)
       mat2 = matrix(c(0, beta*xx[1], delta*xx[1], beta*xx[2], 0, epsi*xx[2], -delta*xx[3], -epsi*xx[3],0), ncol=3)
-      p1 = p2 - del*(cc * xx + (mat1 + mat2) %*% p2)
+      p1 = p2 - del*(cc * xx + mat1 %*% p2  + mat2 %*% p2)
       p[,i] = p1
       p2 = p1
    }
