@@ -23,16 +23,10 @@ pp =  matrix(rep(c(1, 0, 0), c(n,n, n)), ncol=3)
 param = matrix(c(.15, .15, .15, 12, .1,.1,.1,26, .01,.01,.1,12, .04,.01,.15,24, .07,.03,.05,18, 0, 0, 0, 25), ncol=6)
 
 m = 2
-#dwx1 = param[1,m]
-#dwx2 = param[2,m]
-#dwx3 = param[2,m]
-#dwp =  param[3,m]
-
-dwx1 = 0
-dwx2 = 0
-dwx3 = 0
-dwp =  0
-
+dwx1 = param[1,m]
+dwx2 = param[2,m]
+dwx3 = param[2,m]
+dwp =  param[3,m]
 kk =   param[4,m]
 
 
