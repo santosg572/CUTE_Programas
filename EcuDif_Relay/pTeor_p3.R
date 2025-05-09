@@ -1,14 +1,27 @@
-#tao = .5
-#niter = 8
-
-#tao = 1
-#niter = 14
-
-#tao = 1.5
-#niter = 14
-
 tao = 2
 niter = 10
+
+Gen_delay_Teorico <- function(){
+   np = 100
+   t = seq(-1*tao, 0, length.out = np)
+
+   x = rep(1,np)
+   #xx = x
+   #tt = t
+   tt = c()
+   xx = c()
+
+   for (n in 1:niter){
+      res = 1
+      t = t + tao
+      for (k in 1:n){
+         res = res + (-1)^k *(t - (k-1)*tao)^k / factorial(k)
+      }
+      xx = c(xx, res)
+      tt = c(tt,t)
+   } 
+   ret <- list(t=tt, x=xx) 
+}
 
 Integral <- function(del, f){
    np = 100
@@ -46,9 +59,13 @@ Gen_graf_Retardo_numerica <- function(){
    ret <- list(t=tt, f=ff)
 }
 
-r <- Gen_graf_Retardo_numerica()
+rt <- Gen_delay_Teorico()
+   
+plot(rt$t, rt$x, type='l')
 
-plot(r$t, r$f, type='l')
+rn <- Gen_graf_Retardo_numerica()
+
+points(rn$t, rn$f, type='l', col='red')
 
 
 
