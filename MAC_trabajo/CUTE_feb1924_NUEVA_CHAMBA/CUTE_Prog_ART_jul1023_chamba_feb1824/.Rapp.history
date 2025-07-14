@@ -1,0 +1,48 @@
+mylist = list(a=c(1,2,3),b=c("cat","dog","duck"),#
+   + d=factor("a","b","a"))
+mylist=list(a=c(1,2,3),b=c("cat","dog","duck"),#
+   + d=factor("a","b","a"))
+mylist=list(a=c(1,2,3),b=c("cat","dog","duck"), d=factor("a","b","a"))
+lapply(mylist, mode)
+sapply(mylist, mode)
+librery(ggplot2)
+library(ggplot2)
+str(mpg)
+?mpg
+(7.7-.95)/8.7
+(8.6-7.7)/.95
+(8.6-7.7)/.82
+fsl
+iris
+.8^10
+10000/25.4
+1000*15/25.4
+q()
+28*7
+28/100
+7/100
+.07*.28
+.0196*1000
+1/.0196
+51*.0196
+420*51
+21420*4500
+420*51
+4500*22
+getwd()
+source("pati.R")
+source("pati.R")
+getwd()
+ls
+dir()
+getwd()
+source("pati.R")
+getwd()
+getwd()
+getwd()
+source("prog_ene2423_V1_salto_jpg.R")
+getwd()
+?seq
+source('pp.R')
+source('pp.R')
+source('pp.R')
