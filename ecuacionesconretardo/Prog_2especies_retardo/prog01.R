@@ -36,7 +36,7 @@ p[np,] = p2
 for (i in (np-1):1){
   mat1 = matrix(c(1, -x[i,1], x[i,2], 1), ncol = 2)
   mat2 = matrix(c(x[i, 2]-.4*p2[1]*x[i,1], 0, 0, x[i, 1]-.4*p2[2]*x[i,2]), ncol=2)
-  p1 = p2 - del* (mat1 %*% p2 + mat2 %*% p2)
+  p1 = p2 - del* (x[i,] + mat1 %*% p2 + mat2 %*% p2)
   p[i,] = p1
   p2 = p1
 }
