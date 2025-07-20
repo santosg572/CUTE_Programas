@@ -1,3 +1,5 @@
+# https://www.w3schools.com/r/r_operators.asp
+
 del = 10^(-4)
 
 t1 = 0
@@ -9,7 +11,7 @@ t = seq(t1, t2, length.out = np)
 
 del = t[2] - t[1]
 
-u = matrix(rep(0,2*np), ncol=2)
+p = matrix(rep(1,2*np), ncol=2)
 
 numiter = 10
 
@@ -23,14 +25,25 @@ for (k in 1:numiter){
   x[1,] = x1
 
   for (i in 2:np){
-    uu = u[i-1,]
+    uu = p[i-1,]*x1
+    if (!((0 <= uu[1] & uu[1] <= 1) & (0 <= uu[2] & uu[2] <= 1))){
+      uu = c(0,0)
+    }
     mat1 = matrix(c(1, x1[2], -x1[1], -1), ncol=2)
-    mat2 = matrix(c(uu[1], 0, 0, uu[2]), ncol=2)
-    x2 = x1 + del * (mat1 %*% x1 - .4*(mat2 %*% x1))
+    mat2 = matrix(c(.4*uu[1], 0, 0, .2*uu[2]), ncol=2)
+    x2 = x1 + del * (mat1 %*% x1 - mat2 %*% x1)
     x[i,] = x2
     x1 = x2
   }
 
+  u = matrix(rep(0,2*np), ncol=2)
+
+  for (i in 1:np){
+    uu = p[i,] * x[i,]
+    if ((0 <= uu[1] & uu[1] <= 1) & (0 <= uu[2] & uu[2] <= 1)){
+      u[i,] = uu
+    }
+  }
 
   p = matrix(rep(0,2*np), ncol=2)
 
@@ -40,17 +53,11 @@ for (k in 1:numiter){
   for (i in (np-1):1){
     uu = u[i+1,]
     xx = x[i+1,]
-    mat1 = matrix(c(1, -xx[1], xx[2], 1), ncol = 2)
-    mat2 = matrix(c(xx[2]-.4*uu[1], 0, 0, xx[1]-.4*uu[2]), ncol=2)
-    p1 = p2 + del* (xx + mat1 %*% p2 + mat2 %*% p2)
+    mat1 = matrix(c(1, -xx[1], xx[2], -1), ncol = 2)
+    mat2 = matrix(c(-xx[2]-.4*uu[1], 0, 0, xx[1]-.2*uu[2]), ncol=2)
+    p1 = p2 - del* (c(-xx[1], x[2]) - mat1 %*% p2 - mat2 %*% p2)
     p[i,] = p1
     p2 = p1
-  }
-
-  u = matrix(rep(0,2*np), ncol=2)
-
-  for (i in 1:np){
-    u[i,] = p[i,] * x[i,]
   }
 
 
@@ -64,7 +71,7 @@ for (k in 1:numiter){
 
   par(mfrow=c(3,2))
 
-  plot(x[,1], type='l')
+  plot(x[,1], type='l', main=file)
 
   plot(x[,2], type='l')
 

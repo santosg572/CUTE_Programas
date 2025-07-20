@@ -24,8 +24,10 @@ filon = open('imagenes.html', 'w')
 filon.write(t1)
 
 for ss in datos:
+  ss = ss.replace('\n','')
   im = '<img src="' + ss + '" alt="Italian Trulli">'
   filon.write(im)
+  filon.write('\n')
 
 filon.write(t2)
 
