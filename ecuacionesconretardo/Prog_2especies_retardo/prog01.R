@@ -18,23 +18,28 @@ numiter = 10
 nom = 'fig_'
 
 for (k in 1:numiter){
-  print('-----------------------------------------------')
+  ss = paste('iteracion', k)
+  print(paste('---------------------', ss,  ' --------------------------'))
+
   x = matrix(rep(0,2*np), ncol=2)
 
   x1 = c(1,1)
   x[1,] = x1
 
+  print('----------------------- 1er for---------------------')
   for (i in 2:np){
     uu = p[i-1,]*x1
-    if (!((0 <= uu[1] & uu[1] <= 1) & (0 <= uu[2] & uu[2] <= 1))){
-      uu = c(0,0)
-    }
+#    if (!((0 <= uu[1] & uu[1] <= 1) & (0 <= uu[2] & uu[2] <= 1))){
+#      uu = c(0,0)
+#    }
     mat1 = matrix(c(1, x1[2], -x1[1], -1), ncol=2)
     mat2 = matrix(c(.4*uu[1], 0, 0, .2*uu[2]), ncol=2)
     x2 = x1 + del * (mat1 %*% x1 - mat2 %*% x1)
     x[i,] = x2
     x1 = x2
   }
+
+  print('--------------------- termina el 1 ford-------------------')
 
   u = matrix(rep(0,2*np), ncol=2)
 
@@ -45,6 +50,8 @@ for (k in 1:numiter){
     }
   }
 
+  print('----------------------- 2er for---------------------')
+
   p = matrix(rep(0,2*np), ncol=2)
 
   p2 =  c(.7, .5)
@@ -54,12 +61,13 @@ for (k in 1:numiter){
     uu = u[i+1,]
     xx = x[i+1,]
     mat1 = matrix(c(1, -xx[1], xx[2], -1), ncol = 2)
-    mat2 = matrix(c(-xx[2]-.4*uu[1], 0, 0, xx[1]-.2*uu[2]), ncol=2)
-    p1 = p2 - del* (c(-xx[1], x[2]) - mat1 %*% p2 - mat2 %*% p2)
+    mat2 = matrix(c(xx[2] + .4*uu[1], 0, 0, xx[1]+.2*uu[2]), ncol=2)
+    p1 = p2 - del* (-1*c(-xx[1], x[2]) + mat1 %*% p2 + mat2 %*% p2)
     p[i,] = p1
     p2 = p1
   }
 
+  print('----------------------- termina 2o for---------------------')
 
   if (k < 10){
     file = paste(nom,'0',k, '.jpeg', sep='')
