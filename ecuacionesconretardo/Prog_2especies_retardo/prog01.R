@@ -16,6 +16,23 @@ Gp2 <- function(x=0, u=0){
    ret = matrix(c(x[2] + 0.4*u[1], 0 , 0, -1*x[1] + 0.2*u[2]), ncol=2)
 }
 
+ChecaU <- function(u=0){
+#   print(u)
+   u1 = u[1]
+   u2 = u[2]
+   if (u[1] < 0){
+     u1 = 0
+   } else if (u[1] > 1){
+     u1 = 1
+   }
+   if (u[2] < 0){
+     u2 = 0
+   } else if (u[2] > 1){
+     u2 = 1
+   }
+   res = c(u1, u2)
+}
+
 del = 10^(-4)
 
 t1 = 0
@@ -56,11 +73,9 @@ for (k in 1:numiter){
 
   for (i in 1:np){
     uu = p[i,] * x[i,]
-    if ((0 <= uu[1] & uu[1] <= 1) & (0 <= uu[2] & uu[2] <= 1)){
-      u[i,] = uu
-    }
+    res = ChecaU(uu)
+    u[i,] = uu
   }
-
  # print('----------------------- 2er for---------------------')
 
   p = matrix(rep(0,2*np), ncol=2)
@@ -70,8 +85,8 @@ for (k in 1:numiter){
 
   for (i in (np-1):1){
     xx = x[i+1,]
-    uu = xx*p2
-    p1 = p2 - del* (c(-xx[1], x[2]) - Gp1(xx) %*% p2 + Gp2(xx, uu) %*% p2)
+    uu = u[i+1,]
+    p1 = p2 + del* (-1*c(-xx[1], x[2]) + Gp1(xx) %*% p2 - Gp2(xx, uu) %*% p2)
     p[i,] = p1
     p2 = p1
   }
