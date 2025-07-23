@@ -61,7 +61,7 @@ for (k in 1:numiter){
     uu = u[i+1,]
     xx = x[i+1,]
     mat1 = matrix(c(1, -xx[1], xx[2], -1), ncol = 2)
-    mat2 = matrix(c(xx[2] + .4*uu[1], 0, 0, xx[1]+.2*uu[2]), ncol=2)
+    mat2 = matrix(c(xx[2] + .4*uu[1], 0, 0, -xx[1]+.2*uu[2]), ncol=2)
     p1 = p2 - del* (-1*c(-xx[1], x[2]) + mat1 %*% p2 + mat2 %*% p2)
     p[i,] = p1
     p2 = p1
