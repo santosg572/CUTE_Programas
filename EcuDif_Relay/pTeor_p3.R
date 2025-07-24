@@ -1,5 +1,5 @@
-tao = 2
-niter = 10
+tao = .7
+niter = 50
 
 Gen_delay_Teorico <- function(){
    np = 100
