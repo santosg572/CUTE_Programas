@@ -1,4 +1,4 @@
-SolucionXPU_retardo <- function(del=0, pp=0, wx1=0, wx2=0){
+SolucionXPU_retardo <- function(del=0, pp=0, wx1=0, wx2=0, X0=0, XI=0){
    print('--------------------- SolucionXPU.R ----------------------')
    ss = dim(pp)
 
@@ -11,7 +11,7 @@ SolucionXPU_retardo <- function(del=0, pp=0, wx1=0, wx2=0){
    dwx2 = wx2 *sqrt(del)*runif(n)
    
 
-   x1 = c(.5, .7)
+   x1 = X0
    xx[1,] = x1
    p1 = pp[1,]
    w1 = dwx1[1]
@@ -19,7 +19,8 @@ SolucionXPU_retardo <- function(del=0, pp=0, wx1=0, wx2=0){
    u = Calu1u2(x1, p1)
 	
    for (i in 2:n){
-      A = matrix(c(1 - 0.4 * u[1], x1[2], -x1[1], -1 - 0.2*u[2]), ncol=2)
+      XX = XI[i-1,]
+      A = matrix(c(1 - 0.4 * u[1], XX[2], -XX[1], -1 - 0.2*u[2]), ncol=2)
       res = A %*% x1
       x2 = x1 + del*res + c(w1, w2)
       xx[i,] = x2
