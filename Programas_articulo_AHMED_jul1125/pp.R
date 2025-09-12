@@ -12,7 +12,7 @@ h = .001
 m1 = tao1/h
 m2 = tao2/h
 
-S0 = 15*10^(15)
+S0 = 15*10^(5)
 I0 = 30
 R0 = 0
 
@@ -23,33 +23,49 @@ c1 = 10^9
 c2 = 10^9
 
 
-h = 10^(-4)
-
-t0 = 0
-t1 = 80
-n = 80/h
-
 ##### Paso1------------
 
-m = max(m1, m2)
+S0 = 15*10^5
+I0 = 30
+R0 = 0
 
-S1 = rep(0,m)
-I1 = rep(0,m)
-R1 = rep(0,m)
-u1 = rep(0,m)
-v1 = rep(0,m)
+S1 = rep(S0, m1)
+I1 = rep(I0, m1)
+u = rep(0, m1)
+v = rep(0, m1)
+S = rep(0, m1)
+I2 = rep(0, m1)
 
-l12 = rep(0,m)
-l22 = rep(0,m)
-l32 = rep(0,m)
+I2[1] = 30
+i1 = I2[1]
 
-S2 = rep(0,n)
-I2 = rep(0,n)
-R2 = rep(0,n)
+for (i in 2:m1){
+  i2 = i1 + h*(beta * S1[i-1]*I1[i-1]/(1 + alfa1 * S1[i-1] + alfa2 * I1[i-1]) - (gama + d + epsi)*i1 - v[i-1]* I1[i-1])
+  I2[i] = i2
+  i1 = i2
+}
 
-for (i in 1:(n-1)){
-  S[i+1] = S[i] + h*(D - beta * S[i]*I[i]/(1 + alfa1*S[i] + alfa2 * I[i]) - d*S[i] - u[i]*S[i])
+S2 = rep(0,m1)
+S2[1] =S1[1]
+s1 = S2[1]
 
+for (i in 2:m1){
+  s2 = s1 + h*(D - beta*s1*I2[i-1]/(1+alfa1*s1+alfa2*I2[i]) - d*s1 - u[i-1]*s1)
+  S2[i] = s2
+  s1 = s2
+}
 
-  
+R = rep(0,m1)
+R[1] = R0
+r1 = R[1]
 
+for (i in 2:m1){
+  r2 = r1 + h*(gama * I2[i-1] - d*r1 + u[i-1]*S2[i-1] + v[i-1]*I2[i-1])
+  R[i] = r2
+  r1 = r2
+}
+
+par(mfrow=c(2,2))
+plot(S2, type='l')  
+plot(I2, type='l')
+plot(R, type='l')
