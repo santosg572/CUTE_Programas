@@ -5,7 +5,7 @@ tiempo=$(date +%H:%M:%S)
 
 dia=$(date '+M%mD%dA%y')
 
-nombre=$(uname)
+nombre=$(hostname)
 
 echo ${dia}_${tiempo}-${nombre} >> fecha_ultima.dat
 
