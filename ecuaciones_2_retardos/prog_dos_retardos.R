@@ -28,6 +28,20 @@ Res_Equ_Dif_derecha_tao2 <- function(vali= 0, del1=0, ta1=0, ta2=0){
   res= yf
 }
 
+Res_Equ_Dif_izquierda_tao2 <- function(vali= 0, del1=0, ta1=0, ta2=0){
+  np = length(ta1)
+  yf = rep(0, np)
+
+  y2 = vali
+  yf[np] = y2
+
+  for (i in (np-1):1){
+    y1 = y2 - del1 * (ta1[i+1]+ta2[i+11])
+    yf[i] = y1
+    y2 = y1
+  }
+  res= yf
+}
 
 Res_Equ_Dif_izquierda <- function(del1=0, yi=0){
   np = length(yi)
@@ -73,6 +87,34 @@ procesa_drerecha2 <- function(tao1=0,tao2=0, niter=0){
   ret = list(tt, yy)
 }
 
+procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, valfin=0){
+  print('procesa izquierda2')
+  del = .001
+  n = tao2 / del+1  
+  m = tao1 / del+1
+  t = seq(tao1, 0, length.out = m)  
+  yf = rep(valfin, n)
+  
+  tt = c()
+  yy = yf 
+  
+  ni=n-n+1
+  mi=n-m+1   
+
+  for (i in 1:niter){
+    to = (i-1)*tao1 + t
+    tt = c(to, tt)
+    y1 = yy[mi:(mi+m)]
+    y2 = yy[ni:(ni+m)]
+    k = length(yy)
+    yi = Res_Equ_Dif_derecha_tao2(yy[1] , del, y1, y2)
+    yy = c(yy, yi)
+    mi = mi+m
+    ni = ni+m
+  }
+  ret = list(tt, yy)
+}
+
 procesa_izquierda <- function(tao=0, niter=0, tF){
   t2 = 0
   t1 = -tao
@@ -97,7 +139,8 @@ procesa_izquierda <- function(tao=0, niter=0, tF){
   ret = list(tt, yy)
 }
 
-pp = procesa_drerecha2(.4, .9, 10)
+while (0){
+pp = procesa_izquierda2(.4, .9, 10, )
 
 t = pp[[1]]
 y = pp[[2]]
@@ -105,8 +148,7 @@ nt = length(t)
 ny = length(y)
 
 y = y[(ny-nt+1):ny]
-
-
-
 plot(t, y, type='l')
+}
 
+print('izquierda')
