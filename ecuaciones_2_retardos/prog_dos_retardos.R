@@ -97,7 +97,7 @@ procesa_izquierda <- function(tao=0, niter=0, tF){
   ret = list(tt, yy)
 }
 
-pp = procesa_drerecha2(.5, 1, 10)
+pp = procesa_drerecha2(.4, .9, 10)
 
 t = pp[[1]]
 y = pp[[2]]
