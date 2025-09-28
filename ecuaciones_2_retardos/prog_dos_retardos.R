@@ -92,23 +92,26 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
   del = .001
   n = tao2 / del+1  
   m = tao1 / del+1
+  mt =niter*m
+
   y2 = exp(tf)
   t = tf + seq(0, tao1, length.out = m)  
 
   yf = rep(y2, n)
 
   tt = c()
-  yy = yf 
-  
-  ni=n-n+1
-  mi=n-m+1   
-  yini = yf[1]
+  yy = c(rep(0 ,mt),yf)
+  nyy = length(yy)
+  ni = nyy
+  mi = mt+1
+  cat(' mi= ',mi,' ni= ',ni, '\n')   
+  yini = yy[mi]
 
   for (i in 1:niter){
     to = t - (i-1)*tao1 
     tt = c(to, tt)
-    y1 = yy[(mi-m):mi]
-    y2 = yy[(ni-m):ni]
+    y1 = yy[mi:mi+m-1]
+    y2 = yy[(ni-m+1):ni]
     yi = Res_Equ_Dif_izquierda_tao2(yini , del, y1, y2)
     yini = yi[1]
     yy = c(yi, yy)
