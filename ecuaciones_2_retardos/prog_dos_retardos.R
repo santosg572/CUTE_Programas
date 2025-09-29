@@ -92,7 +92,9 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
   del = .001
   n = tao2 / del+1  
   m = tao1 / del+1
-  mt =niter*m
+  mt =niter*m - niter
+
+  cat(' m= ',m,' n= ',n, '\n')
 
   y2 = exp(tf)
   t = tf + seq(0, tao1, length.out = m)  
@@ -103,7 +105,7 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
   yy = c(rep(0 ,mt),yf)
   nyy = length(yy)
   ni = nyy
-  mi = mt+1
+  mi = ni+1-n
   cat(' mi= ',mi,' ni= ',ni, '\n')   
   yini = yy[mi]
 
@@ -115,8 +117,8 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
     yi = Res_Equ_Dif_izquierda_tao2(yini , del, y1, y2)
     yini = yi[1]
     yy = c(yi, yy)
-    mi = mi-m
-    ni = ni-m
+    mi = mi-m+1
+    ni = ni-m+1
   }
   ret = list(tt, yy)
 }
