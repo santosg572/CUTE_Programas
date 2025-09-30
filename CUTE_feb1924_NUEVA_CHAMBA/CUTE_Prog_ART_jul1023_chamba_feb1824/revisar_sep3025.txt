@@ -1,0 +1,43 @@
+CreaFolder.R
+EncIndices.R
+Gafica_Salva.R
+Grafica_Salva.R
+K.R
+SalvaGrafica.R
+SolucionPPU_3.R
+SolucionPPU_3_salto.R
+SolucionPPU_3_salto_chamba.R
+SolucionXPU_3.R
+SolucionXPU_3_salto.R
+SolucionXPU_3_salto_chamba.R
+codugo.R
+cop.sh
+copia.sh
+creaHTML.py
+cute01.R
+del.sh
+dir.html
+dir.txt
+doc.txt
+eemf01.R
+funcion_poisson.R
+funciones_M.R
+funciones_estocasticas.R
+funciones_modelos.R
+funciones_modelos_A.R
+pati.R
+pp.R
+prog_ene2423_V1.R
+--------------------------------------
+character(0)
+[1] "character"
+iter=  1 
+Error in Calu1u2u3(x1, p1) : objeto 'II' no encontrado
+Calls: SolucionXPU_3 -> Calu1u2u3 -> which
+Ejecución interrumpida
+-------------------------------------
+prog_ene2423_V1_salto.R
+prog_ene2423_V1_salto_jpg.R	nada util
+prog_ene2423_V1_salto_old.R
+prog_prueba.R			nada util
+revisar_sep3025.txt

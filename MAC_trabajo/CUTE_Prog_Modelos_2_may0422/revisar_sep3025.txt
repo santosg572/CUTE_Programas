@@ -1,0 +1,15 @@
+CreaFolder.R
+SolucionPPU_3.R
+SolucionPPU_V2.R
+SolucionXPU_3.R
+SolucionXPU_V2.R
+copila.sh
+fac_12_p_1_0_dwx1_0_dwx2_0_dwp_0
+funciones_modelos.R
+graf3D.pdf
+prog_ene2221_3.R
+prog_ene2221_3_jpg.R
+prog_ene2221_ART.R
+prog_may1222_3_jpg.R
+revisar_sep3025
+revisar_sep3025.txt

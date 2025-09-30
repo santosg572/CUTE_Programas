@@ -1,0 +1,23 @@
+CUT
+CUTE_BLOCH
+CUTE_Prog_Modelos_2_may0422
+CUTE_V1
+CUTE_feb1924_NUEVA_CHAMBA			nada util
+Cute_ene0819
+EDR
+EcuDif_Relay
+MAC_trabajo
+On_Stability_Properties_in_a_Stochastic_Controlled_Lotka-Volterra
+Programas_articulo_AHMED_jul1125
+README.md
+Tres_especies
+antonieta_CUTE_Programas_ART_nov1221
+creaHTML.py
+dir.html
+dir.txt
+ecuaciones_2_retardos
+ecuacionesconretardo
+fecha.sh
+fecha_ultima.dat
+revisar.txt
+sube_git.sh

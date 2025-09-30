@@ -3,7 +3,6 @@ Res_Equ_Dif_derecha <- function(del1=0, yi=0){
   yf = rep(0, np)
 
   y1 = yi[np]
-print(np)
   yf[1] = y1
 
   for (i in 2:np){
@@ -35,10 +34,10 @@ procesa_drerecha <- function(tao=0, niter=0){
   t1 = 0
   t2 = tao
   del = .001
-  ni = (t2-t1) / del
+  ni = (t2-t1) / del + 1
 
-  t = seq(t1, t2, length.out = ni+1)
-  yi = rep(1, ni+1)
+  t = seq(t1, t2, length.out = ni)
+  yi = rep(1, ni)
 
   tt = c()
   yy = c()
