@@ -29,6 +29,10 @@ Res_Equ_Dif_derecha_tao2 <- function(vali= 0, del1=0, ta1=0, ta2=0){
 }
 
 Res_Equ_Dif_izquierda_tao2 <- function(vali= 0, del1=0, ta1=0, ta2=0){
+  print('ta1')
+  print(ta1)
+  print('ta2')
+  print(ta2)
   np = length(ta1)
   yf = rep(0, np)
 
@@ -40,6 +44,7 @@ Res_Equ_Dif_izquierda_tao2 <- function(vali= 0, del1=0, ta1=0, ta2=0){
     yf[i] = y1
     y2 = y1
   }
+  print(yf)
   res= yf
 }
 
@@ -113,13 +118,14 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
     to = t - (i-1)*tao1 
     tt = c(to, tt)
     y1 = yy[mi:mi+m-1]
-    y2 = yy[(ni-m):ni]
+    y2 = yy[(ni-m+1):ni]
     yi = Res_Equ_Dif_izquierda_tao2(yini , del, y1, y2)
     yini = yi[1]
     yy = c(yi, yy)
     mi = mi-m+1
     ni = ni-m+1
   }
+#  print(yy)
   ret = list(tt, yy)
 }
 
@@ -170,8 +176,8 @@ if (proc_derecha == 1){
   nt = length(t)
   ny = length(y)
 
-  print(t)
-  print(y)
+#  print(t)
+#  print(y)
 
   y = y[1:nt]
 
