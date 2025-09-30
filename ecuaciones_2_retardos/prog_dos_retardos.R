@@ -117,11 +117,11 @@ procesa_izquierda2 <- function(tao1=0,tao2=0, niter=0, tf=0){
   for (i in 1:niter){
     to = t - (i-1)*tao1 
     tt = c(to, tt)
-    y1 = yy[mi:mi+m-1]
+    y1 = yy[mi:(mi+m-1)]
     y2 = yy[(ni-m+1):ni]
     yi = Res_Equ_Dif_izquierda_tao2(yini , del, y1, y2)
     yini = yi[1]
-    yy = c(yi, yy)
+    yy[(mi-m+1):mi] = yi
     mi = mi-m+1
     ni = ni-m+1
   }
@@ -168,7 +168,7 @@ if (proc_derecha == 1){
   print('procesa izquierda')
 
   tf = 5
-  pp = procesa_izquierda2(.4, .9, 2, tf)
+  pp = procesa_izquierda2(.4, .9, 10, tf)
 
   t = pp[[1]]
   y = pp[[2]]
