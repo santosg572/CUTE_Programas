@@ -1,4 +1,5 @@
 SolucionXPU_3_RETARDO <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0){
+   print('SolucionXPU_3_RETARDO')
    ss = dim(pp)
 
    n = ss[1]

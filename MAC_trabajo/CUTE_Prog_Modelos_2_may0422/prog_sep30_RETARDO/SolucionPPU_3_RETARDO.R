@@ -1,4 +1,5 @@
 SolucionPPU_3_RETARDO <- function(del=0, xx=0, uu=0, wp=0){ 
+   print('SolucionPPU_3_RETARDO')
 	ss = dim(xx)
 	n = ss[1]
 	
