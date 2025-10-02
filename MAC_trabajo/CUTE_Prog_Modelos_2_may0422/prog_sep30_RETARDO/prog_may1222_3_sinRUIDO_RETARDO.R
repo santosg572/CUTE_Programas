@@ -4,8 +4,8 @@ rm(list=ls())
 # el contro -u- lo reemplace por -p- al inicio del programa
 
 source('CreaFolder.R')
-source('SolucionXPU_3.R')
-source('SolucionPPU_3.R')
+source('SolucionXPU_3_RETARDO.R')
+source('SolucionPPU_3_RETARDO.R')
 source('funciones_modelos.R')
    
 fac= 12
@@ -43,7 +43,7 @@ CreaFolder(prefijo)
 for (jj in 1:40){
 	cat('iter= ', jj, '\n')
 	
-	R <- SolucionXPU_3(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3)
+	R <- SolucionXPU_3_RETARDO(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3)
 	
 	if (jj == kk){
 		fig_nametX1 = paste(fig, prefijo, '_', jj,'_tX1_',kk, '.jpeg', sep='')
@@ -91,7 +91,7 @@ for (jj in 1:40){
 		dev.off()
 	}
 	
-	pp <- SolucionPPU_3(del, R$xx, R$uu, wp=dwp)	
+	pp <- SolucionPPU_3_RETARDO(del, R$xx, R$uu, wp=dwp)	
 
 	if (jj == kk){
 		fig_nametP1 = paste(fig, prefijo, '_', jj,'_tP1_',kk, '.jpeg', sep='')
