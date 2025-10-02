@@ -29,6 +29,10 @@ dwx3 = param[2,m]
 dwp =  param[3,m]
 kk =   param[4,m]
 
+dwx1 = 0
+dwx2 = 0
+dwx3 = 0
+dwp = 0
 
 fig = 'fig_'
 prefijo = paste('fac_',fac,'_p_1_0_dwx1_',dwx1,'_dwx2_',dwx2,'_dwp_',dwp, sep='')
@@ -36,23 +40,10 @@ pat = getwd()
 
 CreaFolder(prefijo)
 
-dwx1 = 0
-dwx2 = 0
-dwx3 = 0
-dwp = 0
-
 for (jj in 1:40){
 	cat('iter= ', jj, '\n')
-
-        r=20
-        s=20
-        delh = .001
-        np = r/delh + 1
-        ninter = 1
-	t = seq(0, r, length.out = np)
-        yi = matrix(c(rep(.7,2*np), rep(.5,np)), , ncol=3)
-
-	R <- SolucionXPU_3(delh, yi, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3)
+	
+	R <- SolucionXPU_3(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3)
 	
 	if (jj == kk){
 		fig_nametX1 = paste(fig, prefijo, '_', jj,'_tX1_',kk, '.jpeg', sep='')

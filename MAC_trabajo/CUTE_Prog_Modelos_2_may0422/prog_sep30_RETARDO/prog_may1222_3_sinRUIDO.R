@@ -29,7 +29,10 @@ dwx3 = param[2,m]
 dwp =  param[3,m]
 kk =   param[4,m]
 
-7
+dwx1 = 0
+dwx2 = 0
+dwx3 = 0
+dwp = 0
 
 fig = 'fig_'
 prefijo = paste('fac_',fac,'_p_1_0_dwx1_',dwx1,'_dwx2_',dwx2,'_dwp_',dwp, sep='')
