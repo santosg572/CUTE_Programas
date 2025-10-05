@@ -40,10 +40,14 @@ pat = getwd()
 
 CreaFolder(prefijo)
 
-for (jj in 1:40){
+for (jj in 1:1){
 	cat('iter= ', jj, '\n')
-	
-	R <- SolucionXPU_3_RETARDO(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3)
+
+        del1=.001
+        np = 20/del1 + 1
+        fi = matrix(c(rep(.7, 2*np), rep(.5, np)), ncol=3)
+
+	R <- SolucionXPU_3_RETARDO(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3, fi)
 	
 	if (jj == kk){
 		fig_nametX1 = paste(fig, prefijo, '_', jj,'_tX1_',kk, '.jpeg', sep='')
