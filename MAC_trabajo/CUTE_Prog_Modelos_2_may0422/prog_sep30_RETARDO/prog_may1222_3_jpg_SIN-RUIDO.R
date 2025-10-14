@@ -14,6 +14,8 @@ tao = 1
 n = round(tao/del + 1)
 t = seq(0, tao, length.out = n)
 
+cat('n= ', n, '\n')
+
 del = t[2] - t[1]
 
 print(n)
@@ -22,9 +24,7 @@ print(del)
 
 
 cc = rep(0, n)
-#pp =  matrix(c(t, cc), ncol=2)
-#pp =  matrix(rep(c(0,1), c(n,n)), ncol=2)
-pp =  matrix(rep(c(1, 0, 0), c(n,n, n)), ncol=3)
+pp =  matrix(rep(c(1, 0, 0), c(60*n,60*n, 60*n)), ncol=3)
 funI =  matrix(rep(c(.7, .7, .5), c(n,n, n)), ncol=3)
 
 #pp =  1*matrix(rep(c(1,1), c(n,n)), ncol=2)
@@ -49,22 +49,36 @@ pat = getwd()
 
 CreaFolder(prefijo)
 
-for (jj in 1:40){
+# 40
+
+for (jj in 1:1){
   cat('iter= ', jj, '\n')
 
-  RR = c()  
-  for (m = 1:60){    
-    R <- SolucionXPU_3(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3, funI)
-    RR = rbind(RR, R)
-    funI = R
-   }
-   	
+  xx = c()
+  uu = c()  
+  tt = c()
+  for (m in 1:15){    
+    R <- SolucionXPU_3(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3, funI, 1)
+    xx = rbind(xx, R$xx)
+    uu = rbind(uu, R$uu)
+    funI = R$xx
+    tt = c(tt, t)
+    t = tao+t
+  }
+  print(dim(xx))
+
+  R = list(xx=xx, uu=uu)
+  t = tt   	
+  print(length(t))
+
   if (jj == kk){
-		fig_nametX1 = paste(fig, prefijo, '_', jj,'_tX1_',kk, '.jpeg', sep='')
-		jpeg(file = file.path(pat, prefijo,fig_nametX1))
-		par(mai=c(1,1,.5,.5))
-		plot(t, R$xx[,1], type='l',xlab='t', ylab='X1',cex.axis=2, cex.lab=2)
-		dev.off()
+    print('grafica')
+    print(jj)
+    fig_nametX1 = paste(fig, prefijo, '_', jj,'_tX1_',kk, '.jpeg', sep='')
+    jpeg(file = file.path(pat, prefijo,fig_nametX1))
+    par(mai=c(1,1,.5,.5))
+    plot(t, R$xx[,1], type='l',xlab='t', ylab='X1',cex.axis=2, cex.lab=2)
+   dev.off()
 
 		fig_nametX2 = paste(fig, prefijo, '_', jj,'_tX2_',kk, '.jpeg', sep='')
 		jpeg(file = file.path(pat, prefijo,fig_nametX2))

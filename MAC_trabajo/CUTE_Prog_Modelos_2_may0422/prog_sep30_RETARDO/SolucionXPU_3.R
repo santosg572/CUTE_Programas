@@ -1,4 +1,5 @@
-SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI){
+SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI=0, i0=0){
+   print('SolucionXPU_3')
    ss = dim(funI)
 
    n = ss[1]
@@ -11,7 +12,7 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI){
    
    x1 = funI[n,]
    xx[1,] = x1
-   p1 = pp[1,]
+   p1 = pp[i0,]
    w1 = dwx1[1]
    w2 = dwx2[1]
    w3 = dwx2[1]
@@ -27,7 +28,7 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI){
    	x1 = c(x21, x22, x23)
 	xx[i,] = x1
         xw = funI[i,]
-	p1 = pp[i,]
+	p1 = pp[i+i0-1,]
 	w1 = dwx1[i]
 	w2 = dwx2[i]
 	w3 = dwx3[i]
@@ -37,7 +38,7 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI){
    uu = matrix(rep(0,3*n), ncol=3)
    
    for (i in 1:n){
-   	pi = pp[i,]
+   	pi = pp[i+i0-1,]
    	xi = xx[i,]
         uu[i, ] = Calu1u2u3(xi,pi)
    }
