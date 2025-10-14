@@ -1,0 +1,847 @@
+ART04-Morris water maze: procedures for assessing spatial and related forms of learning and memory
+============================================================
+
+The Morris water maze (MWM) is a test of spatial learning for rodents that relies on distal cues to navigate 
+from start locations around the perimeter of an open swimming arena to locate a submerged escape platform. 
+Spatial learning is assessed across repeated trials and reference memory is determined by preference for the 
+platform area when the platform is absent. Reversal and shift trials enhance the detection of spatial 
+impairments. Trial-dependent, latent and discrimination learning can be assessed using modifications of the 
+basic protocol. Search-to-platform area determines the degree of reliance on spatial versus non-spatial 
+strategies. Cued trials determine whether performance factors that are unrelated to place learning are 
+present. Escape from water is relatively immune from activity or body mass differences, making it ideal for 
+many experimental models. The MWM has proven to be a robust and reliable test that is strongly correlated with 
+hippocampal synaptic plasticity and NMDA receptor function. We present protocols for performing variants of 
+the MWM test, from which results can be obtained from individual animals in as few as 6 days.
+
+INTRODUCTION
+------------
+
+Many water mazes have been developed, but the one that is referred to as ‘the water maze’ was developed by 
+Richard Morris 1 . The maze was designed as a method to assess spatial or place learning and herein will be 
+referred to as the Morris watermaze (MWM). Morris described the basic procedures in 1984 (ref. 2 ) and 
+subsequently added details and procedures for assessing related forms of learning and memory 3 . Several 
+characteristics have contributed to the prevalent use of the MWM. These include the lack of required 
+pretraining, its high reliability across a wide range of tank configurations and testing procedures, its 
+cross-species utility (rats, mice and humans (in a virtual maze 4 )), extensive evidence of its validity as a 
+measure of hippocampally dependent spatial navigation and reference memory 5 , its specificity as a measure of 
+place learning, and its relative immunity to motivational differences across a range of experimental treatment 
+effects that are secondary to the central purpose of the task (genetic, pharmacological, nutritional, 
+toxicological and lesion). Although the latter is a general characteristic shared by all water mazes 6 , the 
+MWM capitalizes on this strength. For example, hippocampal and septohippocampal lesions in rats reliably 
+induce hyperactivity, but such animals show deficits in the MWM 7 . At the opposite pole, treatments that 
+induce hypoactivity can be dissociated from learning deficits in the MWM. For example, it has been shown that 
+MWM learning impairments are independent of locomotor effects because land-based locomotor reductions did not 
+affect swimming speed. Moreover when the experimental animals have deficits during probe trials, 
+this further dissociates learning from performance because measures 
+recorded on probe trials are insensitive to swimming speed 8 .
+
+The use of the MWM in assessing learning and memory has been reviewed 9,10 , as has the relationship between 
+performance in the MWM and both neurotransmitter systems and drug effects 11 . MWM performance has been linked 
+to long-term potentiation (LTP) and NMDA receptor function 12–15 , making it a key technique in the 
+investigation of hippocampal circuitry. In addition, it has been shown that there is involvement of the 
+entorhinal and perirhinal cortices, as well as involvement of the prefrontal cortex, the cingulate cortex, the 
+neostriatum, and perhaps even the cerebellum in a more limited way 10 .
+
+Despite extensive use of the MWM, the task has not always been used optimally. Some of this stems from an 
+under-appreciation for the aspects of the apparatus and testing procedures that are most salient for obtaining 
+the best possible data. Here, we provide a description of the apparatus, its key features, and protocols that 
+are effective and reliable for detecting drug/ lesion-induced changes in spatial learning and memory 16–20 or 
+changes that arise as a result of genetic manipulations 21–28 . We also provide variations to the basic 
+protocol that can be used to enhance assessment of spatial navigation and/or test for related types of 
+learning (latent, discrimination, and cued learning or working memory).
+
+The MWM is not a maze in the usual sense—that is, it is not a labyrinth; rather, it is an open circular pool 
+that is filled approximately half-way with water. The interior is made such that it is as close to being 
+featureless as possible. It is a ‘maze’ in the sense that the animal must search in order to locate a 
+relatively small goal (a hidden platform) that is submerged below the water surface and placed in a fixed 
+location. The platform is camouflaged either by placing opacifying materials in the water (typically, tempera 
+paint or polypropylene pellets), by creating a nearly invisible platform-to-background color match, or by 
+using transparent platforms against a colored background, thereby making it indistinct given the low visual 
+aspect ratio to the water as seen by the animal when swimming.
+
+It is standard to designate two principal axes of the maze, each line bisecting the maze perpendicular to one 
+another to create an imaginary ‘+’. The end of each line demarcates four cardinal points: North (N), South 
+(S), East (E) and West (W). These are not true magnetic compass directions but refer to S being the 
+experimenter’s position, N being at the opposite point, E being to the experimenter’s right and W being to the 
+experimenter’s left. Dividing the maze this way creates four equal quadrants. The platform is positioned in 
+the middle of one of the quadrants. One can either keep the platform in one quadrant for all trials or test 
+one-quarter of the animals with the platform in each of the quadrants. The latter approach counterbalances for 
+possible quadrant effects. One can even use eight different platform positions 22 . The platform is usually 
+located half-way between the center and the wall, regardless of the quadrant selected, although other 
+arrangements are sometimes used 29 .
+
+Test protocols
+--------------
+
+Spatial acquisition—Place or spatial learning is the most basic MWM procedure. The concept behind it is that 
+the animal must learn to use distal cues to navigate a direct path to the hidden platform when started from 
+different, random locations around the perimeter of the tank. If there are no proximal cues available, the use 
+of distal cues provides the most effective strategy to accomplish this. Most protocols use four start 
+locations: N, S, E and W. Animals are given a series of daily trials using a random or semi-random set of 
+start locations. Semirandom start position sets are most common, such that the four positions are used, with 
+the restriction that one trial each day is from each of the four positions. A few investigators use eight 
+start locations 30 . One concern about the cardinal start positions is that they are not equidistant from the 
+goal, creating short and long paths to the goal. Even in a large maze, a rat starting at E, with 
+the goal located at SE, has a short path to the goal. There is no perfect solution to this 
+problem. A partial solution that we have used is to use only distal start locations 18 . By this, we mean that 
+if the goal is SE, then one can use start locations of N, W, NE and SW. Although not equidistant from the 
+goal, these start positions are closer to being equal in length than using start positions that are adjacent 
+to the goal. Another approach might be to use only two start positions, such as N and Wonly, but one must then 
+be concerned that animals might memorize specific routes rather than use distal cues. A third approach is to 
+use three start positions, each in quadrants other than the one containing the platform 31 , however only two 
+of these are equal in length.
+
+Table 1 illustrates a set of semi-randomly selected distal start positions for basic acquisition training, 
+with the platform being located in the SW quadrant. These are designed so that the animal is not able to learn 
+a specific order of right or left turns to locate the platform, while using each of the four start positions 
+once each day. As can be seen in Table 1, the learning trials are conducted over 5 days, with 4 trials per 
+day. The interval between trials can vary from 10–15 s to 5–15 min. If an animal fails to find the platform 
+within the allotted time, it is usually picked up and placed on the platform for ~15 s, although some prefer 
+to guide the animal to the goal based on evidence that it is the middle portion of the swim path that seems to 
+be most important in learning how to navigate to the goal 32 .
+
+To assess reference memory at the end of learning, a probe (transfer) trial is given. The most common method 
+is to administer one probe trial 24 h after the last acquisition day. With some procedures, the probe trial is 
+administered immediately following the last learning trial; however, this cannot differentiate between short- 
+and long-term memory, as it may reflect memory for the most recent training session. A long interval between 
+the last training trial and the probe trial is essential if reference memory is to be determined independent 
+of the memory of the last training session.
+
+Additional probe trials are sometimes interspersed during the learning phase: these are often given before the 
+first learning trial of the day. These additional probe trials may help to determine the rate of memory 
+consolidation, as this allows the gradual emergence of goal quadrant preference to be seen across days. 
+However, caution should be exercised not to conduct too many probe trials as these are extinction trials and 
+may slow the rate of learning.
+
+Spatial reversal—It is increasingly common and frequently informative to relocate the platform to another 
+quadrant (usually the opposite one) and administer another set of four trials per day for 5 additional days 
+(Table 1). This is often called reversal learning, although the term is not precise, as swimming to an 
+opposite quadrant is not the mirror image of the initial problem as it is in a T-maze. Reversal learning in 
+the MWM reveals whether or not animals can extinguish their initial learning of the platform’s position and 
+acquire a direct path to the new goal position. Tracking patterns typically reveal that mice swim to the 
+previous location first, then begin to search in an arching pattern to reach the new goal (Fig. 1). Even after 
+multiple trials, mice do not entirely abandon their initial learning strategy and begin trials by starting to 
+move towards the original platform position, then turn and swim more directly to the new goal. Rats, on the 
+other hand, rapidly switch their search strategies to the new goal position (Fig. 2). In fact, rats switch 
+away from the old goal location so rapidly that return visits to the original platform location above chance 
+(i.e., 25%) cannot be seen in the average of the first four trials on reversal day 1 but may be seen on 
+individual trials within the first day of reversal testing. As in the acquisition phase, at the end of the 
+reversal phase, a reversal probe trial is given 24 h later.
+
+Spatial double-reversal with a smaller platform—Many variations can be added to the basic MWM procedures and 
+these can add valuable information for understanding the deficits that are observed or may even 
+unmask more subtle deficits that are not seen during acquisition or reversal 
+learning. One procedure that has been effective in our hands has been to move the platform again, either back 
+to the original goal (double-reversal) or to a different quadrant (shift), but with an additional change: use 
+of a smaller platform 17 . For example, if the starting platform is 10 × 10 cm, the reduced platform may be 5 
+× 5 cm. This reduction in platform size taxes the spatial accuracy requirements of the animal and has revealed 
+the effects of some drugs or doses that are not seen during acquisition or reversal 16,20 . A reduced platform 
+probe trial is also given 24 h after the end of this phase of testing.
+
+Repeated learning—Another procedure is to conduct a set of reversal or shift phases serially 19 . This allows 
+an examination of the animals’ flexibility in their ability to learn across multiple phases of new learning. 
+The data also demonstrate the effects of moving the platform to different quadrants. For example, if the 
+platform is shifted to an adjacent quadrant, new learning is more rapid than if shifted to an opposite 
+quadrant 19 .
+
+Spatial working memory—The procedures described above are for the assessment of trialindependent learning 
+(that is, the goal does not move from trial to trial during a given phase of testing). To assess working or 
+trial-dependent learning and memory, a different method is required. In this procedure, which is also called 
+matching- to-sample, the platform is relocated every day and the animal is given two trials (or more) per day 
+(see Table 2). On each day, the first trial represents a sample trial. During the sample trial, the animal 
+must learn the new location of the platform by trial-and-error. Trial 2 (or any successive trial) is the test 
+or matching trial in which savings in recall between Trial 1 and Trial 2 are measured. Trial 2 begins after a 
+15-s inter-trial interval. If the animal recalls the sample trial, it will swim a shorter path to the goal on 
+the second trial. As the platform is moved daily, no learning of platform position from the previous day can 
+be transferred to the next day’s problem; hence, recall on each day during Trial 2 is dependent on that day’s 
+sample trial and measures only temporary or working memory.
+
+Discrimination learning—The MWM can also be used to assess visual discrimination learning 3 . In this 
+procedure, two visible platforms are used that are distinct from one another such as one being white and one 
+being black. One is the standard fixed platform that is raised above the water and the other platform floats 
+from a tether. The task for the subject is to learn which platform can be used for escape from the water and 
+which cannot. The accuracy of the animal’s choice across successive trials is an index of its ability to 
+differentiate the stimulus information of the ‘true’ goal relative to the ‘false’ goal.
+
+Latent learning—In latent learning, the idea is to place the animal on the platform before each trial rather 
+than after. This will allow one to determine how much of the spatial learning stems from navigating to the 
+platform compared with orientation to the goal once there. Morris has described this procedure elsewhere 3 .
+
+Cued learning—A control condition that is frequently used in the MWM is to test the animals for their ability 
+to learn to swim to a cued goal. In this procedure, curtains are closed around the maze to reduce the 
+availability of distal cues. The curtains interfere with the animal’s access to distal cues that could be used 
+to spatially navigate. The platform is the same as in the hidden platform version, except that it is either 
+elevated above the water surface 19 or is kept submerged but a ‘flag’ is mounted that extends above the water 
+surface by approximately 12 cm (ref. 33 ). Although both methods work, we find that the version with a flag 
+seems to be more efficient, as it is readily recognizable from across the pool, whereas the protruding 
+platform may not be. This ‘cue’ is designed to allow the animal a direct line-of-sight to the platform’s 
+location. To ensure that the animal is using this proximal cue to locate the platform, the location of the 
+goal and the start are both moved to new positions during each trial (Table 3). In this way, the 
+subject cannot use 
+distal cues to solve the problem. The only cue that reliably indicates the location of the platform relative 
+to the start is the cue that is attached to the platform. Morris introduced this as a control procedure as 
+part of his original description of the test 1 . Unfortunately, this procedure is all too often omitted, yet 
+its value is unmistakable. If subjects are impaired in cued learning, there is a potentially serious concern 
+about whether a spatial deficit is present. This is because cued learning requires the same basic abilities 
+(intact eyesight, motoric ability (swimming), basic strategies (learning to swim away from the wall, learning 
+to climb on the platform)) and the same motivation (escape from water) as the spatial version of the task. 
+Therefore, if the subject cannot perform the cued task, doubt is cast on its capacity to learn using distal 
+cues in the spatial version. This task can be administered before or after the spatial version, but 
+administering it before has advantages, especially for mice. Some animals find the platform, but then jump 
+back into the water and continue searching. Presumably, this reflects an effort to find another route of 
+escape. In the first few trials, some animals are sufficiently activated by being in the water that it is not 
+always clear that they recognize that the platform is an escape when they first locate it. Therefore, testing 
+animals first in cued trials eliminates the problem of animals not acquiring the appropriate subordinate 
+skills before they are presented with the spatial version of the task.
+
+Control procedures
+------------------
+
+Cued learning is basically a control procedure, but it is not the only one available. For example, Cain 34–36 
+has shown that some drugs interfere with sensorimotor function and this can interfere with the animal’s 
+ability to recognize that the platform is the goal. He has proposed several ways of determining whether 
+sensorimotor interference is occurring. He suggests measuring thigmotaxis, or the tendency to cling or follow 
+the wall around the outer perimeter of the tank, as one index to reflect that the animal is not 
+problem-solving. Excessive thigmotaxis (especially in rats) indicates that the animal is not focusing on the 
+task appropriately because one of the first things that animals have to learn is that there is no escape 
+located around the perimeter of the tank. Having learned this, most animals swim away from the wall and then, 
+by weaving or looping search patterns, eventually find the platform. Not learning this basic approach 
+indicates that the animal may not have adequate awareness of its surroundings. Other measures of impaired 
+sensorimotor interference are excessive jump-offs, swimovers and/or deflections. Rats that reach the platform 
+but do not climb on it, or do not stay on it, are not acquiring the requisite association between the platform 
+and escape. Some of these behaviors may be seen during early trials even in control animals, but these usually 
+disappear within a day. If such behaviors are more frequent in the experimental group, however, questions 
+should be raised about whether spatial learning can be satisfactorily assessed.
+
+Cain has suggested that one way to solve the problem of sensorimotor interference is to compare two groups of 
+experimental animals: one tested in the standard procedure and one pretrained using a ‘non-spatial’ training 
+procedure. The pre-trained group is given a series of hidden platform trials in which the start and goal are 
+moved randomly on every trial, as is done in cued learning, but here the curtains are left open and the 
+platform is hidden. The task cannot be solved using spatial navigation because of the randomized start-goal 
+combinations but it teaches the subject the basic task requirements — namely, the escape can only be found by 
+searching, the goal is located somewhere away from the wall and the platform is the goal. Cain 34–39 , Morris 
+15 and Whishaw 40 have demonstrated that ‘non-spatial’ pretraining can separate components of learning that 
+are not spatial from those that are and this, in turn, can change the interpretation of the findings. As 
+non-spatial or strategy pretraining and cued training both have the effect of teaching animals the basic task 
+requirements and tend to eliminate behaviors such as swimovers, jump-offs and even diving, it can be helpful 
+to conduct cued trials first. Strategy pre-training is not usually necessary unless the data show that
+thigmotaxis or platform recognition behaviors indicate that sensorimotor problems are present. Acute 
+pharmacological studies, however, may need non-spatial pretraining to ensure that noncognitive effects are not 
+interfering with maze performance, whereas delayed or long-term drug effect studies may not need this extra 
+procedure.
+
+Another approach to determine whether or not animals have any underlying sensorimotor deficits is to assess 
+swimming speed. Often this is done in the maze during learning trials 41 . Alternatively, one can pre-test 
+animals in a separate apparatus, such as a long, straight swimming channel. We use a 15 × 244 cm water-filled 
+channel with an escape ladder or platform at one end 33 , although shorter channels have also been used 31 . 
+This task requires virtually no searching, hence virtually no learning. The first one or two trials serve to 
+acclimate them to swimming and the rats quickly recognize that the escape can be found by simply swimming from 
+one end to the other. During subsequent trials (a total of four is typical), rats swim as fast as they can to 
+get from the start to the goal. This provides a measure of basic swimming ability and motivation to escape 
+from water, and can be used to determine whether or not animals are motorically and motivationally equivalent 
+across groups prior to MWM trials. An analysis of the average of these trials or use of the fastest trial 
+provides assurance that MWM trials can be interpreted correctly.
+
+Summary of the MWM
+------------------
+
+Spatial mapping versus working memory hypotheses and the data supporting each using the MWM has been reviewed 
+in detail elsewhere 5,42 . There are many tests that have been used to assess these functions, of which the 
+MWM is but one. However, the MWM has become an important, even dominant, method. As with all methods, the MWM 
+has strengths and weaknesses; however, most of its perceived weaknesses arise from the use of mazes that are 
+too small, protocols that do not adequately assess learning, failure to provide an appropriate interval 
+between training and probe trials to assess reference memory, or lack control procedures to assess non-spatial 
+factors. Despite this, the MWM has become more widely used than its predecessors (radial-arm maze, passive 
+avoidance, T-mazes and their variations) since its introduction 25 years ago. This increased utilization 
+arises because the effects on MWM performance after treatment have been more widely replicated than the 
+effects observed with any other learning task, and the MWM is relatively straightforward to set up. There can 
+be little doubt that the MWM has significantly advanced our understanding of the relationship between NMDA 
+receptors, synaptic plasticity and learning 43 , and it continues to be used in new applications for the 
+assessment of other types of learning. As use of the task has grown, so too have the number of methodological 
+variations, some of which have extended its utility. The protocols described here provide guidance that can 
+help users avoid the most common pitfalls.
+
+The MWM is primarily a test of spatial learning and reference memory and that remains its principal strength. 
+Detailed analyses have shown that rats can solve the task using a minimal set of cues that involve angular 
+separation and distance from the tank wall 29 . Such data show that when properly configured and utilized, 
+with the inclusion of appropriate control procedures, the MWM is a powerful technique for assessing spatial 
+mapping. Appropriate modification of the basic protocol makes it a flexible tool that can be applied to probe 
+spatial learning in more depth or to assess other forms of learning and memory.
+
+MATERIALS
+---------
+ANIMALS
+-------
+
+• Rats: Albino strains (such as Sprague–Dawley, Wistar, Fischer 344 and Lewis) learn well, despite reduced eye 
+pigmentation, as do pigmented strains (such as Long–Evans and Listar).
+
+• Mice: Many labs report that C57BL mice are among the best performers in the MWM test 44,45 ; however, many 
+other strains and hybrids have been used (see GENETIC BACKGROUND).
+
+Either rats or mice may be used, as described above.
+
+! CAUTION Experimenters must comply with national regulations concerning animals and their use.
+
+EQUIPMENT SETUP 
+---------------
+
+The Maze—Morris’ original maze was 130 cm in diameter 1 but he later introduced a larger 214 
+cm diameter maze 2 . Thereafter, he refers to a maze of 200 cm diameter 5 (see also ref. 46 ). 
+Here, we will describe two apparatuses: one for rats and one for mice. Both are stainless-steel circular 
+tanks. The one for rats is 210 cm in diameter and the one for mice is 122 cm in diameter. Both have sides that 
+are 51 cm in height with non-reflective interior surfaces. For albino rats, the inside of the larger maze is 
+painted black, whereas for C57BL mice, the inside of the smaller maze is painted white. Because the area of 
+the surface increases with the square of the radius, larger tanks present a much more difficult spatial 
+problem because of the greatly expanded search area to target ratio. The maze is typically mounted above the 
+floor and plumbed with a drain line and valve to facilitate cleaning.
+
+! CAUTION Commercially available swimming pools and troughs are often used as MWM tanks, but caution should be 
+exercised with these as they often have prominent welded seams, corrugated surfaces or other features that 
+provide proximal cues — that is, markings inside the tank. Such cues undermine the goal of the task, as the 
+purpose is to test the animal’s ability to navigate using distal cues. Having a tank that is professionally 
+constructed with attention to unobtrusive seams and a uniform interior is worth the investment. Smooth 
+interior walls also minimize the attempts of animals to climb the walls during early trials.
+
+The platform—The goal (platform or target) can be either square or circular and is usually 10 or 11 cm 2 or 
+10–12 cm in diameter, and is typically submerged 1–2 cm below the surface, although with mice this depth is 
+often reduced to 0.5–1 cm. We find it instructive to use smaller platform sizes for some phases of learning to 
+increase task difficulty. Task difficulty is a function of the ratio of search area to target size. For 
+example, a 210 cm diameter tank and a 10 cm 2 platform, as we use, has a search area:target ratio of 346:1, 
+whereas a 122 cm diameter tank and a 10 cm 2 platform has a ratio of 117:1. These ratios work well for rats 
+and mice, respectively. A reduction of the platform size to 5 cm 2 increases this ratio to 1385:1 in the large 
+tank and 468:1 in the small tank. We have previously compared the latencies for animals tested using a ratio 
+of 346:1 (10 cm 2 platform) or 1385:1 (5 cm 2 platform) from the beginning of acquisition. We found that, 
+although animals that are trained with the 10 cm 2 platform learned the task to asymptotic performance within 
+~20 trials, it took much longer using the 5 cm 2 platform and performance never reached the same level as it 
+did in the 10 cm 2 platform trained group 47 . Therefore, starting out with a small platform makes the task 
+too difficult. Smaller platforms are best reserved for later phases of testing, after the animal has learned 
+the basic task with a larger platform. Research on the effect of tank diameter to target size is limited, but 
+this ratio clearly is an important variable 48 .
+
+Platforms are typically made of acrylic or PVC. There are several types, the most common being the use of an 
+acrylic dowel or PVC pipe as the vertical post, with the platform mounted on the top (often with small holes 
+or some other textured surface to provide traction). The base is usually a larger piece of acrylic that rests 
+on the bottom of the pool and is large enough to provide stability so that it will not tip when the animal 
+climbs on it and it resists movement when an animal bumps it. Another approach is to use a submerged acrylic 
+disk with holes in it that the platform dowel fits in. This prevents erroneous positioning of the platform and 
+makes it easier to precisely relocate the platform to other positions during different phases of testing. 
+There are also platforms that can be raised and lowered (e.g., Atlantis On-Demand platforms, or by other means 
+31 ). Most acrylic plastics have specific gravities < 1.0, so these materials often require that weight be 
+added. Selection of high-density acrylic avoids this problem.
+
+Water—A common concern is water temperature. It was originally suggested that rats need water to be warmer 
+than typical ambient air temperatures that are found in most laboratories (19–22 °C), but this has not been 
+widely borne out. Rats tested in water that has been equilibrated to ambient temperatures of 19–22 °C perform 
+well and do not show evidence of significant fatigue or hypothermia at typical test ages 49 . However, the 
+situation in mice may be different (see below).
+
+Room configuration—The maze should be placed in a room with ample surrounding visual cues. These distal cues 
+can be intentional or can be endogenous to the room; however, it is critical that the cues are not moved 
+during testing as these are the animal’s navigational reference points for locating the goal, independent of 
+start location. The distance of cues from the outside wall of the maze can also be important (see ref. 29 ). 
+Because some labs are relatively barren, when in doubt it is prudent to add cues; there is no evidence that 
+too many cues are a problem, but too few may be. It is useful to mount curtains around the maze. These may be 
+used to position intentional cues should testing of the effects of cue rotation be desired, but the principal 
+reason to have curtains is to obscure distal cues during cued learning trials (see above).
+
+Experimenter—Experimenter effects in the MWM principally involve animal handling and effects of experimenter 
+visibility. Handling issues are the same as for any experiment that assesses behavior and will not be 
+discussed here. The position of the experimenter can be handled in several ways: the experimenter can: (a) 
+leave the room during testing; (b) stand behind a visual barrier; or (c) remain stationary in a constant 
+location. The latter is the most common but it should not be forgotten that the experimenter then becomes one 
+of the distal cues. Animals that are tested in different quadrants, especially in the distal versus the 
+proximal half of the maze, sometimes show different latencies, depending on whether they are swimming towards 
+or away from the experimenter 50 . This effect does not invalidate the test, but there should be awareness of 
+it and outcomes should not be confounded by allowing an experimenter to move around as they wait for the 
+animal to perform the task.
+
+Lighting—Room lighting should be indirect, especially if a video camera, computer and tracking software are 
+used to record performance. Tracking software is sensitive to light reflections from the water surface and 
+these are minimized by indirect lighting.
+
+Tracking system—There are many commercial vendors that provide tracking systems that can be used for the MWM. 
+A non-exhaustive list includes HVS Image, San Diego Instruments, Accuscan, View Point, Clever Systems, Noldus, 
+Columbus Instruments, Watermaze Software, Coulbourn Instruments, and others. As with any software system, it 
+should be tested on-site before selection.
+
+PROCEDURE
+---------
+
+Spatial acquisition
+-------------------
+
+1| Place the animal in the desired start position in the maze, facing the tank wall. The animal is released 
+into the water at water-level (not dropped). A timer or computer tracking program is started the moment that 
+the animal is released.
+
+2| Stop the timer when the animal reaches (touches) the platform (most animals immediately climb on the 
+platform but there are exceptions 36 ). A trial limit of 1 or 2 min per trial is standard; commonly, 2 min for 
+rats and 1 min for mice. Animals not finding the platform within this time limit are either placed on the 
+platform or guided to it.
+
+3| Leave the animal on the platform during the inter-trial interval (ITI). Inter-trial intervals of 30 or 60 s 
+were once used, but 15 s has become commonplace and produces good learning. However, longer ITIs are often 
+used for mice, especially during the first test session and this improves learning 25 . This may be because 
+mice are more prone to hypothermia-induced performance effects 51 . The objective in leaving the animal on the 
+platform is to allow it to orient to its position in space and remember the position of the goal in relation 
+to surrounding cues. However, this may not be necessary as animals may learn what they need during their 
+navigation to the platform 52 . The latter investigators showed that rats learn the task just as well if the 
+lights are on or off during the ITI when they remain on the platform.
+
+4| Place the animal in the maze at a new start location and repeat the trial (Steps 1–3) until the animal has 
+had the desired number of trials for that day. Animals are normally given multiple trials per day. The most 
+common number is 4. As there are four principal start locations, this keeps the start positions balanced each 
+day. With four trials per day, it takes 5–10 min per animal on the first day and progressively less time per 
+animal each day thereafter. Other trial numbers that have been used are 1 (ref. 23 ), 2 (ref. 53 ), 3 (ref. 54 
+), 5 (ref. 55 ), 6 (refs. 27,56,57 ), 8 (refs. 52,58 ), 10 (ref. 59 ) and 12 (refs. 60,61 ) trials per day. No 
+large advantage of any one of these trial numbers has been convincingly demonstrated in rats. An alternative 
+approach is to allow the animal 15 s on the platform, then remove it to its cage and test the second animal on 
+Trial 1 and repeat this rotation until all animals have completed Trial 1, then repeat the process for 
+subsequent trials. The latter method improves learning performance in mice 51 , but no comparable data exist 
+for rats. There is little evidence to suggest large sensitivity differences as a function of daily trial 
+number, but what evidence there is indicates that having fewer trials per day improves learning 50 . However, 
+this issue has not been sufficiently explored to make definitive recommendations, and tests of trial number 
+have often involved smaller tanks that may not generalize to larger mazes.
+
+5| On subsequent days, repeat the trials. The number of days over which to repeat testing depends on the 
+learning curve. With four trials per day, 5–6 days (20–24 trials) is typically sufficient in a 210 cm maze for 
+rats or in a 122 cm maze for mice to reach asymptotic performance; however, as noted previously, if the task 
+is made more difficult, then more days of testing may be required for animals to reach asymptotic performance. 
+By contrast, rats in a 122 cm maze may approach asymptotic performance by day 2 or 3 (ref. 41 ).
+
+Reference memory: probe trial
+
+6| Remove the platform.
+
+7| Place the animal in a novel start position in the maze, facing the tank wall — for example, 180° from the 
+original platform position. We use a novel start position during the probe trial to ensure that its 
+spatial preference is a reflection of the memory of the goal location rather than for 
+a specific swim path (see Table 1).
+
+8| Remove the animal after a fixed interval (usually 30 or 60 s). There is evidence that quadrant preference 
+decreases after the first 30 s (ref. 41 ), hence 30 s is recommended. The object of the probe trial is to 
+determine whether or not the animal remembers where the platform was located. Indications of such memory 
+include number of platform-site crossovers, time and distance spent in the target quadrant compared with the 
+other quadrants, time in a pre-defined annulus surrounding the target that is larger than the target itself, 
+average distance to the target site, angle (bearing) to the target site, latency to first target-site 
+crossover, and mean search difference and mean zone difference scores (see ref. 62 for a description of the 
+latter measures). Percent time or percent distance in the target quadrant is used most frequently.
+
+▲ CRITICAL STEP Probe trials that are intended to assess reference memory should not be administered shortly 
+after the last learning trial, as this measures recent rather than long-term recall. If an immediate probe 
+trial is given, it should not be a substitute for one given at least 24 h later.
+
+Spatial reversal
+
+9| If spatial reversal tests are desired, relocate the platform to another quadrant (usually the opposite one) 
+and administer another set of four trials per day for 5 days (as described in Steps 1–4).
+
+10| At the end of the reversal phase, perform a reversal probe trial, as described in Steps 6–8.
+
+● TIMING
+
+Each trial is limited to 2 min in rats and 1 min in mice, with an ITI of 15 s and four trials per day. 
+Therefore, it takes no longer than 9 min to complete a learning session. As animals learn, the time per day 
+steadily decreases. Probe trials on the last day are only 30 s. For any phase of testing, 6 days is common: 5 
+learning days and 1 probe day. The first phase is often cued, followed by acquisition, then reversal, 
+double-reversal, working memory (matching to sample), or other procedures.
+
+? TROUBLESHOOTING 
+-----------------
+
+The most common problem is using an improper tank to platform size combination. Many tanks 
+are too small or are at the lower boundary of what constitutes an optimal task for assessing spatial learning. 
+Smaller tanks allow the animal to use other strategies (such as swimming a fixed distance from the wall) to 
+solve the task, while making minimal use of distal cues. Unfortunately, if the tank is too small, animals will 
+learn and the experimenter will not be aware that the animal is using non-distal cues to find the platform and 
+nothing will appear amiss. For this reason, selection of the proper tank size from the outset is the best 
+method for obtaining valid spatial learning.
+
+Using untreated, adult, male, Long–Evans rats, the effect of tank size on performance can be seen in Figure 3. 
+The small tank is 122 cm in diameter and the large tank is 210 cm in diameter. Water temperature was the same 
+for both groups, as was platform size (10 cm 2 ). Both groups received the same number of trials (four per 
+day), in the same order and to the same goal position, on the same days in the same room. The tanks were 
+identically constructed and painted, and the only difference was diameter. For the small tank trials, the 
+smaller perimeter was placed inside the larger one. As can be seen, the small tank group learned the task 
+well; in fact, they learned it so rapidly that there is almost no learning curve. Basically, the 
+small tank group approached asymptotic performance on the second day. By contrast, the large tank group showed a 
+steady improvement in learning up to day 4 and reached asymptotic performance on day 5. It is apparent which 
+curve is better for assessing learning; hence, a 122 cm tank is not recommended for rats.
+
+On the other hand, a 122 cm tank is the most common size that is used for mice. Transgenic, knock-out and 
+knock-in mice are routinely assessed in the MWM for spatial learning. There are ample data that, in mice, good 
+learning curves can be obtained using a 122 cm diameter tank. This may be because this size tank is scaled 
+more to the body size of a mouse or because mice find spatial tasks more difficult than rats and, therefore, a 
+smaller search area is beneficial.
+
+Different mouse strains vary widely in performance during the MWM test. One strain that performs reasonably 
+well is C57BL (ref. 57 ). Regardless of vendor, C57BL mice are fairly good swimmers and respond to being 
+placed in water with an appropriate swim-search response. Some strains float or turn in circles and cannot be 
+used.
+
+Genetic background
+
+In rats, Sprague–Dawley, Wistar, Long–Evans, Fischer 344, ACI, Dark Agouti and Lewis have all been shown to 
+learn when tested in the MWM.
+
+In mice, the results are consistent that C57BL learn in the MWM, but labs have differed in what they report 
+for other strains. For example, 129S strains in which gene targeting is often performed, have an increased 
+incidence of floating and erratic performance but this may be a function of substrain, as 129S2/SvlmJ mice are 
+reported to perform satisfactorily in the MWM 45 . BALB mice are reported to perform well by some 45 in the 
+MWM and poorly by others 44 .
+
+A factor analysis that was designed to locate clustered determinants of MWM learning across multiple mouse 
+strains and a large number of mice (~1,500) has shown that three factors account for most of the variance in 
+MWM performance 63,64 . The largest factor in mice (48%) was termed thigmotaxis and represents the tendency to 
+swim or float near the tank wall; the second largest factor was termed passivity (20%) and represents slow or 
+non-swimming; and the third factor was memory or goal-directed behavior (13%). The outcome of such an analysis 
+is a function of the factors measured, so different measurements would generate a different factor analysis. 
+Nevertheless, this analysis, which included many important variables of MWM performance, shows that much of 
+the variance in performance is due to factors that are unrelated to learning and memory in mice, hence use of 
+appropriate controls is especially important in mouse studies to arrive at a correct interpretation of 
+results.
+
+Non-performers
+
+Non-performers are rarely encountered in rats, but are seen in mice. Among C57BL mice, nonperformers in the 
+MWM are less common than in most other strains. However, some genetic modifications can cause mutant animals 
+to not perform the task. These cases are relatively obvious. However, having a subset of mice that do not 
+search for the goal, because of mixed genetic background or the genetic manipulation under investigation, 
+occurs with some frequency. In such situations, the problem becomes how to handle such cases. The most common 
+problem is that some of the mice float and appear unmotivated to escape. Different methods have been tried to 
+induce non-performers to swim, but these approaches often involve experimenter interventions, such as 
+startling the mouse with a loud noise, prodding it with an object or pre-wetting the fur to reduce buoyancy. 
+Mice are buoyant because their fur coat contains water-repellant oils that allow them to remain floating for 
+minutes at a time. Testing mice in 20–22 °C water generally reduces the frequency of floating. Nonetheless, 
+caution should be used in allowing experimenter interventions. The problem is that interventions 
+are difficult to 
+apply uniformly and may inadvertently introduce bias. If the experimental group has a higher or lower floating 
+frequency or the treatment interacts with startle or other factors, the results could be confounded. A better 
+approach is use of a standard rule that does not involve intervention. Our approach is that if a mouse floats, 
+it is allowed to remain in the water up to the limit of the trial. If the animal fails to swim, it is removed 
+and the next animal is tested. When the other animals in the session are finished, the floater is given a 
+second trial. If it swims, it receives its full trial sequence, with the first trial being excluded from the 
+data. If it floats for the second trial, it is returned to its cage and tested again the next day. If it now 
+swims, it proceeds though the test, staggered one day behind its cohort. If it fails to swim, it is taken out 
+of the test order, as on day 1, until the other animals in the session are tested and is then given one final 
+trial. If it fails to swim during this fourth attempt, it is removed from the experiment. At the conclusion of 
+the experiment, the frequency of floaters in each group is statistically compared to determine whether or not 
+the experimental manipulation significantly altered the frequency of non-performers compared with the wild 
+type. If it does, then the MWM data on those that did swim must be interpreted with caution in light of the 
+possibility of selection bias.
+
+ANTICIPATED RESULTS
+-------------------
+
+Learning trials
+
+Dependent measures of performance on learning trials in the MWM begin with latency (time from start to goal). 
+Latency can be obtained with or without tracking software. Path length is also widely used and has the 
+advantage of being immune to swimming speed. Although pathlength determinations have been carried out without 
+the use of a tracking program, these methods are labor-intensive and such data are more easily captured with a 
+tracking program. Another useful index is cumulative distance from the platform; most tracking programs 
+generate this measure as the distance from the platform measured every second or every few milliseconds. 
+Cumulative distance has been suggested to be one of the better measures of spatial learning ability 54 . First 
+bearing and/or mean directionality, which are similar but not identical, measure the animal’s swim angle at 
+the start of the trial relative to a direct line from the start to the goal. Angle measurements appear to be 
+sensitive to many types of experimental treatments. In our experience, latency, path length and cumulative 
+distance are highly correlated, whereas first bearing has a lower correlation with these first three measures 
+(Table 4). This is logical as the first three measures all reflect aspects of performance across the length of 
+the trial, whereas first bearing is a snapshot of the animal’s performance at one particular point during the 
+trial (at the beginning). Other measures are time or distance in the target annulus (the space between two 
+concentric circles, defined by lines touching the outside and inside edges of the platform, respectively — not 
+to be confused with Morris’ use of the term ‘annulus crossing’, by which he means crossings of a zone 
+surrounding where the platform had been) compared with inner or outer annuli (the latter being a measure of 
+thigmotaxis), number of direct swims (number of paths within a preset corridor from the start to the goal) or 
+circle swims (a swim trajectory that approximates a decreasing radius arc of a circle from the start point to 
+the hidden platform and circling is less than 360°), jump-offs, deflections, swimovers, and others. These 
+other measures can be important especially when testing animals that have recently been administered a drug 
+that can disrupt sensorimotor function 36,37 .
+
+Probe trials
+------------
+
+Site crossings as an index of memory has the limitation that it is variable and often has a low frequency of 
+occurrence, especially if the target is reduced in size or the tank diameter is large. Furthermore, depending 
+on the tracking software, crossover undercounting may occur. We find that the average distance to the target 
+site, time or distance in the target quadrant and first bearing provide more robust measures of memory than 
+exact site crossings. Others report success with target annulus crossovers, where the annulus is a 
+circular zone surrounding and larger than the 
+platform itself.
+
+Data analysis
+-------------
+
+Acquisition trials are generally averaged in blocks of four and plotted as block means (± s.e.m.), or if 
+larger numbers of trials are used then there may be two or more blocks of trials plotted per day. However, the 
+experimenter should also examine the data by trial to ensure that learning is occurring within each daily test 
+session. Unless an unusual pattern is seen, plotting the data in daily four-trial blocks usually accurately 
+represents the learning process. When daily trials are plotted, long latencies are generally seen during Trial 
+1 and Trial 2 of day 1, with improvement during Trial 3 and Trial 4. The next day, performance will begin with 
+Trial 1 being longer than Trial 4 of the preceding day, and then performance improving to exceed the 
+performance on Trial 4 of day 1. This saw-tooth pattern repeats on each successive day of testing, with an 
+overall shortening or downward stair-step pattern of performance across days. Plotting the data by blocks of 
+trials smoothes the learning curve and this line is the most widely used index of spatial learning, although 
+other indices have been used (for example, ref. 54 ).
+
+Data summary and analysis
+-------------------------
+
+Group means for each dependent variable should be calculated per trial and per block of trials. Trials 1 and 2 
+of day 1 of testing should be examined to ensure that the groups do not start the test at different 
+performance levels. The data on the first one or two trials should be compared using a test with high 
+detection power, such as a t-test or analysis of variance (ANOVA) if there are more than two groups. If the 
+groups differ significantly during early trials, it is a warning that the groups entered the test with 
+preexisting differences that may prevent or compromise the interpretation of the learning curves or retention 
+trials in terms of spatial learning and reference memory. If the groups are comparable, then the data are 
+typically plotted and analyzed in blocks of trials in order to stabilize the means. Data are generally 
+analyzed by ANOVA. The factors are usually genotype or treatment group and test day. Some experiments will 
+include additional factors, such as sex. Group is generally a ‘between’-subject factor and day a 
+‘within’-subject factor in the ANOVA model, although in developmental studies using split-litter designs the 
+factors of group, day and sex may all be within/matching factors. Using statistical programs such as SAS, MWM 
+data may be analyzed using Proc GLM (general linear model) or Proc Mixed. GLM split-plot models can 
+accommodate one or more ‘between’ and one or more ‘within’ factors; however, one must be cautious when using 
+GLM models for repeated measure (‘within’) variables. If there are only two levels of the ‘within’ factors, 
+the GLM ANOVA solution is precise, but in the MWM there are usually more than two days of testing. With more 
+than two levels of the repeated measure factor, the significance of the ‘within’ and ‘between’ x ‘within’ 
+factor F-ratios can be distorted. This is because GLM requires that the data meet the assumption of compound 
+symmetry — that is, that the correlations within the variance-covariance matrix of the repeated factor, say 
+day, be exactly the same at all distances between measurements. For example, the correlation between day 1 and 
+day 2 must be the same as the correlation between day 1 and day 3 or between day 2 and day 3. This assumption 
+is almost never met by learning data because variances change as a function of day as learning proceeds. As 
+animals learn the task, their performance become less variable, hence the variances decrease across days and 
+the correlations change. There is no exact test for compound symmetry, but there is a more stringent test for 
+sphericity. If GLM is used, it is advisable that the covariance matrix test for sphericity be used. If the 
+data are significantly non-spherical, there are adjusted F-ratios that can be used to at least partially 
+correct the Ftests so that significance levels are less likely to be overestimated. The two most common 
+methods of adjusting F-ratios are those of Greenhouse–Geisser and Huyhn–Feldt.
+
+Another approach is to use Proc Mixed ANOVA models (SAS). Proc Mixed ANOVA models provide a more precise way 
+of handling the problem of non-symmetry of the covariance matrix, but Proc Mixed is limited in that it cannot 
+handle more than two ‘within’ dimensions in the model. However, Proc Mixed has some significant advantages 
+that make it worthwhile. Proc Mixed provides a set of different covariance models that can be fitted to the 
+data. These different models can be tested against the data and compared using best-fit statistics provided by 
+Proc Mixed. In our experience, the AR (1) (autoregressive (1)) covariance model often provides the best fit 
+for MWM learning variables, such as latency, path length and cumulative distance. Regardless of which 
+covariance model best fits the data, the best fit model can be chosen and the data can be analyzed to obtain 
+more precise F-tests than with Proc GLM. Probe data often have no repeated measure component and, therefore, 
+do not require Proc Mixed. Proc Mixed also provides a ‘slice’ ANOVA option, such that if an interaction is 
+obtained between the factors of group and day, the slice ANOVAs will provide tests of the group effect on each 
+day in order to localize which days show group differences. From this, individual group comparisons (post hoc 
+tests) can be made between the treatment groups on selected days; significant interactions or group main 
+effects require the typical considerations of controlling for multiple comparisons. In SAS, Proc Multtest 
+provides group comparison tests that provide different levels of protection against type I errors. The 
+step-down Bonferonni is one such test that we commonly use.
+
+
+References
+----------
+
+1. Morris RGM. Spatial localization does not require the presence of local cues. Learn Motiv 1981;12:239–260.
+
+2. Morris R. Developments of a water-maze procedure for studying spatial learning in the rat. J Neurosci 
+Methods 1984;11:47–60. [PubMed: 6471907]
+
+3. Stewart, CA.; Morris, RGM. The watermaze. In: Sahgal, A., editor. Behavioural Neuroscience, Volume I, A 
+Practical Approach. IRL Press at Oxford University Press; Oxford: 1993. p. 107-122.
+
+4. Kallai J, Makany T, Karadi K, Jacobs WJ. Spatial orientation strategies in Morris-type virtual water task 
+for humans. Behav Brain Res 2005;159:187–196. [PubMed: 15817182]
+
+5. Morris, RGM. An attempt to dissociate ‘spatial-mapping’ and ‘working-memory’ theories of hippocampal 
+function. In: Seifert, W., editor. Neurobiology of the Hippocampus. Academic Press; New York: 1993. p. 
+405-432.
+
+6. Cravens RW. Effects of maternal undernutrition on offspring behavior: Incentive value of a food reward and 
+ability to escape from water. Dev Psychobiol 1974;7:61–69. [PubMed: 4812271]
+
+7. Morris RG, Garrud P, Rawlins JN, O’Keefe J. Place navigation impaired in rats with hippocampal lesions. 
+Nature 1982;297:681–683. [PubMed: 7088155]
+
+8. Fitzgerald LW, Dokla CP. Morris water task impairment and hypoactivity following cysteamineinduced 
+reductions of somatostatin-like immunoreactivity. Brain Res 1989;505:246–250. [PubMed: 2598042]
+
+9. Brandeis R, Brandys Y, Yehuda S. The use of the Morris water maze in the study of memory and learning. Int 
+J Neurosci 1989;48:29–69. [PubMed: 2684886]
+
+10. D’Hooge R, De Deyn PP. Applications of the Morris water maze in the study of learning and memory.
+Brain Res Rev 2001;36:60–90. [PubMed: 11516773]
+
+11. McNamara RK, Skelton RW. The neuropharmacological and neurochemical basis of place learning in the Morris 
+water maze. Brain Res Rev 1993;18:33–49. [PubMed: 8467349]
+
+12. Jeffery KJ, Morris RGM. Cumulative long-term potentiation in the rat dentate gyrus correlates with, but 
+does not modify, performance in the water maze. Hippocampus 1993;3:133–140. [PubMed: 8353600]
+
+13. Moser EI, Krobert KA, Moser MB, Morris RGM. Impaired spatial learning after saturation of longterm 
+potentiation. Science 1998;281:2038–2042. [PubMed: 9748165]
+
+14. Morris RGM, Anderson E, Lynch GS, Baudry M. Selective impairment of learning and blockade of long-term 
+potentiation by an N-methyl-D-aspartate antagonist, AP5. Nature 1986;329:774–776. [PubMed: 2869411]
+
+15. Bannerman DM, Good MA, Butcher SP, Ramsay M, Morris RGM. Distinct components of spatial learning revealed 
+by prior training and NMDA receptor blockade. Nature 1995;378:182–186. [PubMed: 7477320]
+
+16. Vorhees CV, et al. Adult learning deficits after neonatal exposure to D-methamphetamine: Selective effects 
+on spatial navigation and memory. J Neurosci 2000;20:4732–4739. [PubMed: 10844042]
+
+17. Broening HW, Morford LL, Inman-Wood SL, Fukumura M, Vorhees CV. 3,4methylenedioxymethamphetamine (ecstasy) 
+induced learning and memory impairments depend on the age of exposure during early development. J Neurosci 
+2001;21:3228–3235. [PubMed: 11312307]
+
+18. Vorhees CV, Reed TM, Skelton MR, Williams MT. Exposure to 3,4methylenedioxymethamphetamine (MDMA) on 
+postnatal days 11–20 induces reference but not working memory deficits in the Morris water maze in rats: 
+implications of prior learning. Int J Dev Neurosci 2004;22:247–259. [PubMed: 15380825]
+
+19. Williams MT, et al. Developmental d-methamphetamine treatment selectively induces spatial navigation 
+impairments in reference memory in the Morris water maze while sparing working memory. Synapse 
+2003;48:138–148. [PubMed: 12645039]
+
+20. Morford LL, Inman-Wood SL, Gudelsky GA, Williams MT, Vorhees CV. Impaired spatial and sequential learning 
+in rats treated neonatally with d-fenfluramine. Eur J Neurosci 2002;16:491–500. [PubMed: 12193193]
+
+21. Ehrman LA, et al. Phosphodiesterase 1B modulates the effects of methamphetamine on locomotor activity and 
+spatial learning through a DARPP-32-dependent pathway: Evidence from PDE1BDARPP32 double-knockout mice. Genes 
+Brain Behav. (in the press).
+
+22. Silva AJ, Paylor R, Wehner JM, Tonegawa S. Impaired spatial learning in α-calcium-calmodulin kinase II 
+mutant mice. Science 1992;257:206–211. [PubMed: 1321493]
+
+23. Bourtchuladze R, et al. Deficient long-term memory in mice with a targeted mutation of the cAMPresponsive 
+element-binding protein. Cell 1994;79:59–68. [PubMed: 7923378]
+
+24. Cho YH, Giese KP, Tanila H, Silva AJ, Eichenbaum H. Abnormal hippocampal spatial representations in 
+αCaMKII T286A and CREB αΔ - mice. Science 1998;279:867–869. [PubMed: 9452387]
+
+25. Upchurch M, Wehner JM. Effects of N-methyl-D-aspartate antagonism on spatial learning in mice.
+Psychopharmacology 1990;100:214.
+
+26. Grant SGN, et al. Impaired long-term potentiation, spatial learning, and hippocampal development in fyn 
+mutant mice. Science 1992;258:1903–1910. [PubMed: 1361685]
+
+27. Limback-Stokin K, Korzus E, Nagaoka-Yasuda R, Mayford M. Nuclear calcium/calmodulin regulates memory 
+consolidation. J Neurosci 2004;24:10858–10867. [PubMed: 15574736]
+
+28. Tang YP, et al. Genetic enhancement of learning and memory in mice. Nature 1999;401:63–69.
+[PubMed: 10485705]
+
+29. Maurer R, Derivaz V. Rats in a transparent morris water maze use elemental and configural geometry of 
+landmarks as well as distance to the pool wall. Spatial Cogn Comput 2000;2:135–156.
+
+30. Kim JJ, Lee HJ, Han JS, Packard MG. Amygdala is critical for stress-induced modulation of hippocampal 
+long-term potentiation and learning. J Neurosci 2001;21:5222–5228. [PubMed: 11438597]
+
+31. Markowska AL, Long JM, Johnson CT, Olton DS. Variable-interval probe test as a tool for repeated 
+measurements of spatial memory in the water maze. Behav Neurosci 1993;107:627–632. [PubMed: 8397867]
+
+32. Sutherland RJ, Chew GL, Baker JC, Linggard RC. Some limitations on the use of distal cues in place 
+navigation by rats. Psychobiology 1987;15:48–57.
+
+33. Williams MT, et al. Developmental 3,4-methylenedioxymethamphetamine (MDMA) impairs sequential and spatial 
+but not cued learning independent of growth, litter effects, or injection stress. Brain Res 2003;968:89–101. 
+[PubMed: 12644267]
+
+34. Saucier D, Cain DP. Spatial learning without NMDA receptor-dependent long-term potentiation.
+Nature 1995;378:186–189. [PubMed: 7477321]
+
+35. Saucier D, Hargreaves EL, Boon F, Vanderwolf CH, Cain DP. Detailed behavioral analysis of water maze 
+acquisition under systemic NMDA or muscarinic antagonism: Nonspatial pretraining eliminates spatial learning 
+deficits. Behav Neurosci 1996;110:103–116. [PubMed: 8652059]
+
+36. Cain DP, Saucier D, Hall J, Hargreaves EL, Boon F. Detailed behavioral analysis of water maze acquisition 
+under APV or CNQX: Contribution of sensorimotor disturbances to drug-induced acquisition deficits. Behav 
+Neurosci 1996;110:86–102. [PubMed: 8652076]
+
+37. Cain DP, Saucier D. The neuroscience of spatial navigation: Focus on behavior yields advances. Rev 
+Neurosci 1996;7:215–231. [PubMed: 8916293]
+
+38. Hoh TE, Cain DP. Fractionating the nonspatial pretraining effect in the water maze task. Behav Neurosci 
+1997;111:1285–1291. [PubMed: 9438797]
+
+39. Williams MT, Vorhees CV, Boon F, Saber AJ, Cain DP. Methamphetamine exposure from postnatal days 11 to 20 
+causes impairments in both behavioral strategies and spatial learning in adult rats. Brain Res 
+2002;958:312–321. [PubMed: 12470867]
+
+40. Whishaw IQ. Posterior neocortical (visual cortex) lesions in the rat impair matching-to-place navigation 
+in a swimming pool: a reevaluation of cortical contributions to spatial behavior using a new assessment of 
+spatial versus non-spatial behavior. Behav Brain Res 2004;155:177–184. [PubMed: 15364476]
+
+41. Blokland A, Geraerts E, Been M. A detailed analysis of rats’ spatial memory in a probe trial of a Morris 
+task. Behav Brain Res 2004;154:71–75. [PubMed: 15302112]
+
+42. Morris RGM, Hagan JJ, Rawlins JNP. Allocentric spatial learning by hippocampectomized rats: A further test 
+of the ‘spatial mapping’ and ‘working memory’ theories of hippocampal function. Quart J Exp Psychol 
+1986;38B:365–395.
+
+43. Morris RGM, Davis S, Butcher SP. Hippocampal synaptic plasticity and NMDA receptors: A role in information 
+storage? Phil Trans R Soc Lond 1990;329:187–204. [PubMed: 1978364]
+
+44. Upchurch M, Wehner JM. Differences between inbred strains of mice in Morris water maze performance. Behav 
+Genet 1988;18:55–68. [PubMed: 3365197]
+
+45. Wahlsten D, Cooper SF, Crabbe JC. Different rankings of inbred mouse strains on the Morris maze and a 
+refined 4-arm water escape task. Behav Brain Res 2005;165:36–51. [PubMed: 16191444]
+
+46. Wenk, GL. Assessment of spatial memory using the radial arm and Morris water maze. Crawley, JN., et al., 
+editors. Wiley Interscience; New York: 2004.
+
+47. Williams MT, Moran MS, Vorhees CV. Behavioral and growth effects induced by low dose methamphetamine 
+administration during the neonatal period in rats. Int J Dev Neurosci 2004;22:273–
+283. [PubMed: 15380827]
+
+48. Mactutus CF, Booze RM. Accuracy of spatial navigation: The role of platform and tank size. Soc Neurosci 
+Abst 1994;20:1014.
+
+49. Lindner MD, Ribkoff VK. Relationship between performance in the Morris water task, visual acuity, and 
+thermoregulatory function in aged F-344 rats. Behav Brain Res 1991;45:45–55. [PubMed: 1764204]
+
+50. Hodges H. Maze procedures: The radial-arm and water maze compared. Cog Brain Res 1996;3:167–
+181.
+
+51. Iivonen H, Nurminen L, Harri M, Tanila H, Puolivali J. Hypothermia in mice tested in Morris water maze. 
+Behav Brain Res 2003;141:207–213. [PubMed: 12742257]
+
+52. Devan BD, Blank GS, Petri HL. Place navigation in the Morris water task: Effects of reducted platform 
+interval lighting and pseudorandom plaform positioning. Psychobiology 1992;20:120–126.
+
+53. Otnaess MK, Brun VH, Moser MB, Moser EI. Pretraining prevents spatial learning impairment after saturation 
+of hippocampal long-term potentiation. J Neurosci 1999;19 (RC49):1–5. [PubMed: 9870932]
+
+54. Gallagher M, Burwell R, Burchinal M. Severity of spatial learning impairment in aging: Development of a 
+learning index for performance in the Morris water maze. Behav Neurosci 1993;107:618–626. [PubMed: 8397866]
+
+55. Burwell RD, Saddoris MP, Bucci DJ, Wiig KA. Corticohippocampal contributions to spatial and contextual 
+learning. J Neurosci 2004;24:3826–3836. [PubMed: 15084664]
+
+56. Holscher C. Stress impairs performance in spatial watermaze learning tasks. Behav Brain Res 
+1999;100:225–235. [PubMed: 10212070]
+
+57. Clapcote SJ, Lazar NL, Bechard AR, Wood GA, Roder JC. NIH Swiss and Black Swiss mice have retinal 
+degeneration and performance deficits in cognitive tests. Comp Med 2005;55:310–316. [PubMed: 16158906]
+
+58. Devan BD, McDonald RJ, White NM. Effects of medial and lateral caudate-putamen lesions on placeand 
+cue-guided behaviors in the water maze: relation to thigmotaxis. Behav Brain Res 1999;100:5–
+14. [PubMed: 10212049]
+
+59. Rauch TM, Welch DI, Gallego L. Hyperthermia impairs retrieval of an overtrained spatial task in the Morris 
+water maze. Behav Neural Biol 1989;52:321–330. [PubMed: 2590145]
+
+60. Giese KP, Fedorov NB, Filipkowski RK, Silva AJ. Autophosphorylation at Thr 286 of the α calciumcalmodulin 
+kinase II in LTP and learning. Science 1998;279:870–873. [PubMed: 9452388]
+
+61. Guzowski JF, Setlow B, Wagner EK, McGaugh JL. Experience-dependent gene expression in the rat hippocampus 
+after spatial learning: A comparison of the immediate-early genes Arc, c-fos, and zif268. J Neurosci 
+2001;21:5089–5098. [PubMed: 11438584]
+
+62. Brown RW, et al. Adulthood nicotine treatment alleviates behavioural impairments in rats neonatally 
+treated with quinpirole: possible roles of acetylcholine function and neurotrophic factor expression. Eur J 
+Neurosci 2004;19:1634–1642. [PubMed: 15066159]
+
+63. Wolfer DP, Stagljar-Bozicevic M, Errington ML, Lipp HP. Spatial memory and learning in transgenic mice: 
+Fact or artifact? News Physiol Sci 1998;13:118–123. [PubMed: 11390774]
+
+64. Lipp HP, Wolfer DP. Genetically modified mice and cognition. Curr Opin Neurobiol 1998;8:272–
+280. [PubMed: 9635213]
+
+

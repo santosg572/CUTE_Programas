@@ -1,0 +1,452 @@
+ART02-Search strategy selection in the Morris water maze indicates allocentric map formation during learning that underpins spatial memory
+=====================================================================
+
+Using a ``Matlab classiﬁcation algorith``m, we demonstrate that a``highly salient distal cue array`` is required for signiﬁcantly increased likelihoods 
+of spatial search strategy 
+selection during Morris water maze spatial learning. We hypothesized that increased spatial search strategy selection during spatial learning would be the key measure 
+demonstrating the formation of an allocentric map to the escape location. Spatial memory, as indicated by quadrant preference for the area of the pool formally containing the 
+hidden platform, was assessed as the main measure that this allocentric map had formed during spatial learning. Our C57BL/6J wild-type (WT) mice exhibit quadrant preference 
+in the highly salient cue paradigm but not the low, corresponding with a 120% increase in the odds of a spatial search strategy selection during learning. In contrast, 
+quadrant preference remains absent in serotonin 1A receptor (5-HT1A R) knockout (KO) mice, who exhibit impaired search strategy selection during spatial learning. 
+Additionally, we also aimed to assess the impact of the quality of the distal cue array on the spatial learning curves of both latency to platform and path length using 
+mixed-effect regression models and found no signiﬁcant associations or interactions. In contrast, we demonstrated that the spatial learning curve for search strategy 
+selection was absent during training in the low saliency paradigm. 
+
+Utilizando un ``algoritmo de clasificación de Matlab``, demostramos que se requiere una ``matriz de señales distales`` altamente salientes para aumentar 
+significativamente las 
+probabilidades de selección de estrategia de búsqueda espacial durante el aprendizaje espacial del laberinto acuático de Morris. Planteamos la hipótesis de que una mayor 
+``selección de estrategia de búsqueda espacial`` durante el aprendizaje espacial sería la medida clave que demostraría la formación de un ``mapa 
+alocéntrico`` hacia la ubicación de 
+escape. La ``memoria espacial``, indicada por la preferencia de cuadrante por el área de la piscina que formalmente contiene la plataforma oculta, se 
+evaluó como la principal 
+medida de que este mapa alocéntrico se había formado durante el ``aprendizaje espacial``. Nuestros ``ratones C57BL/6J`` de ``tipo salvaje (WT)`` exhiben 
+preferencia de cuadrante en el 
+paradigma de señales altamente salientes, pero no en el bajo, lo que corresponde a un aumento del 120% en las probabilidades de una selección de estrategia de búsqueda 
+espacial durante el aprendizaje. Por el contrario, la preferencia de cuadrante permanece ausente en ``ratones knockout (KO)`` del ``receptor de 
+serotonina 1A (5-HT1A R)``, que 
+exhiben una selección de estrategia de búsqueda deteriorada durante el aprendizaje espacial. Además, evaluamos el impacto de la calidad de la matriz de señales distales en 
+las curvas de aprendizaje espacial, tanto de la ``latencia`` a la plataforma como de la longitud de la trayectoria, mediante modelos de regresión de 
+efectos mixtos, y no 
+encontramos asociaciones ni interacciones significativas. Por el contrario, demostramos que la ``curva de aprendizaje espacial`` para la selección de la 
+estrategia de búsqueda 
+estuvo ausente durante el entrenamiento en el paradigma de baja ``saliencia``.
+
+Therefore, we propose that allocentric search strategy selection during spatial learning is the learning 
+parameter in mice that robustly indicates the formation of a cognitive map for the escape goal location. These results also suggest that both latency to platform and path 
+length spatial learning curves do not discriminate between allocentric and egocentric spatial learning and do not reliably predict spatial memory formation. We also show that 
+spatial memory, as indicated by the absolute time in the quadrant formerly containing the hidden platform alone (without reference to the other areas of the pool), was not 
+sensitive to cue saliency or impaired in 5-HT1A R KO mice. Importantly, in the absence of a search strategy analysis, this suggests that to establish that the Morris water 
+maze has worked (i.e. control mice have formed an allocentric map to the escape goal location), a measure of quadrant preference needs to be reported to establish spatial 
+memory formation. This has implications for studies that claim hippocampal functioning is impaired using latency to platform or path length differences within the existing 
+Morris water maze literature. 
+
+Por lo tanto, proponemos que la selección de la estrategia de búsqueda ``alocéntrica`` durante el aprendizaje espacial es el parámetro de aprendizaje en 
+ratones que indica de 
+forma robusta la formación de un ``mapa cognitivo`` para la ubicación del objetivo de escape. Estos resultados también sugieren que las curvas de 
+aprendizaje espacial, tanto la 
+latencia a la plataforma como la longitud del camino, no discriminan entre el aprendizaje espacial alocéntrico y el egocéntrico, ni predicen de forma fiable la formación de 
+la memoria espacial. Asimismo, demostramos que la memoria espacial, indicada por el tiempo absoluto en el cuadrante que anteriormente contenía solo la plataforma oculta (sin 
+referencia a las demás áreas del grupo), no fue sensible a la prominencia de la señal o se vio afectada en ``ratones KO para 5-HT1A R``. Cabe destacar 
+que, en ausencia de un 
+análisis de la estrategia de búsqueda, esto sugiere que, para establecer que el laberinto acuático de Morris ha funcionado (es decir, que los ratones de control han formado 
+un mapa alocéntrico para la ubicación del objetivo de escape), es necesario informar una medida de la preferencia de cuadrante para establecer la formación de la memoria 
+espacial. Esto tiene implicaciones para los estudios que afirman que el funcionamiento del ``hipocampo`` se ve afectado mediante las diferencias en la 
+latencia a la plataforma o 
+la longitud del camino dentro de la literatura existente sobre el laberinto acuático de Morris.
+
+1. Introduction
+----------------
+
+Tolman ﬁrst proposed that a cognitive map is created during goal-driven maze behaviour (Tolman, 1948). His idea was the ﬁrst to suggest that during learning rodents spatial 
+coding systems can be viewpoint variant (egocentric person-centred view) or viewpoint invariant (allocentric world-centred view). Tolman hypothesized that during maze 
+learning rodents sample 
+their environments prior to making responses through vicarious trial and error behaviours that develop an overall representation of the maze based on partial experience. This 
+sampling is then incorporated into a cognitive map that enables the animal to dynamically learn the allocentric location of a reward and solve the maze. The Morris water maze 
+is one of the most widely cited behavioural tasks in neuroscience. It was elegantly designed to test the
+hypothesis that the hippocampus creates this viewpoint invariant cognitive map of space (O’Keefe and Nadel, 1978). Although rodents are natural swimmers, the stressful nature 
+of that experience supplies the motivation to ﬁnd an escape that is the goal of the water maze.
+
+ To prevent egocentric learning to solve the maze, local cues to guide escape 
+behaviour during navigation are eliminated by using a circular pool that is uniform throughout its circumference with a submerged platform as a hidden escape goal. 
+Surrounding the pool are placed a conﬁguration of salient distal cues that rodents are meant to vicariously sample during spatial learning to form an allocentric reference 
+map. Learning, in the words of Morris, is ‘‘acquiring the entire array of cues” (Morris, 1984). In his seminal water maze paper, Morris notes in principle that rats can 
+escape through egocentric random or unsystematic search paths but that in reality rats quickly learn to escape by swimming to the hidden platform location regardless of start 
+location (Morris, 1984). He thus proposed that rats escape by allocentrically learning the spatial position of the platform relative to the distal cue array. The quality of 
+this cognitive map is then tested in a retention probe where the spatial memory is assessed by preference of the rodent for the platform area when the platform is absent.
+
+However, despite its intelligent design, the Morris water maze does not completely eliminate the problem of local cues being present. Spatial learning in mice is most often 
+reported using latency to platform or path length to platform, highly correlated escape parameters that are easily drawn from tracking software (Vorhees & Williams, 2006). 
+Morris introduced latency to platform by noting that the curve steepness interpreted as learning is due to both the egocentric and allocentric spatial learning about the 
+hidden platform location (Morris, 1984). Furthermore, it was subsequently demonstrated that hippocampal lesioned rats learn the escape location with similar latencies to 
+controls (DiMattia & Kesner, 1988). Analysis of their swim paths and path directionality showed they were adopting strategies independent of the distal cues by using a wide 
+arc from the perimeter wall, a strategy now known in mice as chaining (Wolfer & Lipp, 2000). The ratio between the search area in the pool and the platform size is a critical 
+and often overlooked variable that can determine the degree of reliance on non-distal cue strategies like chaining (Vorhees & Williams, 2006). If this ratio is too small the 
+animal will learn the task without acquiring the distal array of cues while to the experimenter this difference is undetectable during spatial learning using latency to 
+platform. Presumably, if the distal array of cues is not salient enough one would expect a similar effect.
+
+Sin embargo, a pesar de su diseño inteligente, el laberinto acuático de Morris no elimina por completo el problema de las ``señales locales``. El 
+aprendizaje espacial en ratones 
+se reporta con mayor frecuencia utilizando la ``latencia`` a la plataforma o la longitud del camino a la plataforma, parámetros de escape altamente 
+correlacionados que se extraen 
+fácilmente del software de seguimiento ``(Vorhees y Williams, 2006)``. Morris introdujo la latencia a la plataforma al notar que la inclinación de la 
+curva interpretada como 
+aprendizaje se debe tanto al aprendizaje espacial egocéntrico como al ``alocéntrico`` sobre la ubicación oculta de la plataforma (Morris, 1984). Además, 
+posteriormente se 
+demostró que las ratas con lesiones en el hipocampo aprenden la ubicación de escape con latencias similares a los controles ``(DiMattia y Kesner, 
+1988)``. El análisis de sus 
+trayectorias de nado y la direccionalidad de la trayectoria mostró que estaban adoptando estrategias independientes de las ``señales distales`` al 
+utilizar un arco amplio desde 
+la pared perimetral, una estrategia ahora conocida en ratones como encadenamiento (Wolfer y Lipp, 2000). La relación entre el área de búsqueda en el grupo y el tamaño de la 
+plataforma es una variable crítica, a menudo pasada por alto, que puede determinar el grado de dependencia de estrategias de señales no distales, como el encadenamiento 
+(Vorhees y Williams, 2006). Si esta relación es demasiado pequeña, el animal aprenderá la tarea sin adquirir el conjunto distal de señales, mientras que para el 
+experimentador esta diferencia es indetectable durante el aprendizaje espacial mediante la latencia a la plataforma. Presumiblemente, si el conjunto distal de señales no es 
+lo suficientemente relevante, se esperaría un efecto similar.
+
+Furthermore, an early report in rats demonstrated that latency or path length to platform spatial learning curves do not predict spatial memory formation because key factors 
+that inﬂuence probe performance are not captured (Gallagher, Burwell, & Burchinal, 1993). However, the ﬁrst bearing of an animal does not correlate strongly with any of 
+these measures and is related to the path directionality measure used in Morris’s early work (Morris, 1984). Path directionality is the deviation of the ﬁrst bearing of an 
+animal from the correct angle heading towards the platform, which they demonstrate narrows as spatial learning progresses. Path directionality measures are inherent to the 
+strategy classiﬁcation hierarchy for mice introduced by Wolfer and Lipp using timetagged xy coordinates from spatial learning trials (Wolfer & Lipp, 2000). This 
+classiﬁcation captures the egocentric learning Morris describes (Morris, 1984) (progressing from thigmotaxis to random searching and scanning), notes the chaining response 
+described by DiMattia and Kesner (1988), and demarcates the beginning of allocentric learning when focused searching using the distal cue array becomes the deﬁning feature 
+of navigation. As the cognitive map is strengthened, this search strategy narrows in precision to direct swims to the escape location, where mice focally search in that
+location if their ﬁrst bearing is slightly askew. They propose that this transition predicts retention probe performance (Wolfer & Lipp, 2000). Using a Matlab algorithm, 
+this assessment can now be performed in a reasonable time frame (Garthe, Behr, & Kempermann, 2009).
+
+Además, un informe temprano en ratas demostró que la latencia o la longitud de la trayectoria hacia las curvas de aprendizaje espacial de la plataforma no predicen la 
+formación de la memoria espacial porque no se capturan los factores clave que influyen en el rendimiento de la sonda (Gallagher, Burwell y Burchinal, 1993). Sin embargo, el 
+primer rumbo de un animal no se correlaciona fuertemente con ninguna de estas medidas y está relacionado con la medida de direccionalidad de la trayectoria utilizada en el 
+trabajo temprano de Morris (Morris, 1984). La direccionalidad de la trayectoria es la desviación del primer rumbo de un animal del ángulo correcto en dirección a la 
+plataforma, que demuestran que se estrecha a medida que progresa el aprendizaje espacial. Las medidas de direccionalidad de la trayectoria son inherentes a la jerarquía de 
+clasificación de estrategias para ratones introducida por Wolfer y Lipp utilizando coordenadas xy etiquetadas en el tiempo de ensayos de aprendizaje espacial (Wolfer y Lipp, 
+2000). Esta clasificación captura el aprendizaje egocéntrico que describe Morris (Morris, 1984) (que progresa desde la tigmotaxis hasta la búsqueda y el escaneo aleatorios), 
+señala la respuesta de encadenamiento descrita por DiMattia y Kesner (1988) y demarca el inicio del aprendizaje alocéntrico cuando la búsqueda enfocada utilizando la matriz 
+de señales distales se convierte en la característica definitoria de la navegación. A medida que se fortalece el mapa cognitivo, esta estrategia de búsqueda se estrecha en 
+precisión para dirigir los nados hacia la ubicación de escape, donde los ratones buscan focalmente en esa ubicación si su primer rumbo está ligeramente desviado. Proponen que 
+esta transición predice el rendimiento de la sonda de retención (Wolfer y Lipp, 2000). Usando un algoritmo de Matlab, esta evaluación ahora se puede realizar en un marco de 
+tiempo razonable (Garthe, Behr y Kempermann, 2009).
+
+
+As described above, it has been clearly established that an allocentric map to the hidden platform requires a salient distal cue array and that this cognitive map underlies 
+the exhibition of spatial memory on the retention probe. The objective of this study was to utilize the Matlab classiﬁcation algorithm to assess the requirement of salient 
+cues for increased spatial search selection during Morris water maze spatial learning. We hypothesized that the likelihood of spatial search strategy selection is the key 
+learning measure that reﬂects the formation of an allocentric map to the escape location during spatial learning. To test that hypothesis, we trained animals with a high 
+saliency or low saliency distal cue array and assessed measures related to spatial learning and performance on the retention probe in both paradigms. We used quadrant 
+preference on the retention probe as the main outcome measure to establish that a cognitive map to the escape goal had formed during spatial learning. In a similar design to 
+Gallagher et al., we included animals with a spatial memory impairment, serotonin 1A receptor (5-HT1A R) knockout (KO) mice, as a spatial learning and memory impairment 
+control to strengthen our conclusions (Gallagher et al., 1993). We also assessed the effect of cue saliency on spatial learning curves for both latency to platform and path 
+length, as well as their relationship to spatial search strategy selection. Through this approach, we aimed to deﬁnitively determine if those spatial learning measures are 
+also appropriate indicators of allocentric learning and spatial memory formation in mice.
+
+Como se describió anteriormente, se ha establecido claramente que un mapa alocéntrico a la plataforma oculta requiere una matriz de señales distales salientes y que este mapa 
+cognitivo subyace a la exhibición de memoria espacial en la sonda de retención. El objetivo de este estudio fue utilizar el algoritmo de clasificación de Matlab para evaluar 
+el requisito de señales salientes para una mayor selección de búsqueda espacial durante el aprendizaje espacial del laberinto acuático de Morris. Planteamos la hipótesis de 
+que la probabilidad de selección de la estrategia de búsqueda espacial es la medida de aprendizaje clave que refleja la formación de un mapa alocéntrico a la ubicación de 
+escape durante el aprendizaje espacial. Para probar esa hipótesis, entrenamos animales con una matriz de señales distales de alta o baja saliencia y evaluamos medidas 
+relacionadas con el aprendizaje espacial y el rendimiento en la sonda de retención en ambos paradigmas. Usamos la preferencia de cuadrante en la sonda de retención como la 
+principal medida de resultado para establecer que se había formado un mapa cognitivo al objetivo de escape durante el aprendizaje espacial. En un diseño similar al de 
+Gallagher et al., incluimos animales con deterioro de la memoria espacial, ratones knockout (KO) del receptor de serotonina 1A (5-HT1A R), como control con deterioro del 
+aprendizaje y la memoria espacial para reforzar nuestras conclusiones (Gallagher et al., 1993). También evaluamos el efecto de la prominencia de la señal en las curvas de 
+aprendizaje espacial, tanto para la latencia a la plataforma como para la longitud de la trayectoria, así como su relación con la selección de la estrategia de búsqueda 
+espacial. Mediante este enfoque, buscamos determinar definitivamente si estas medidas de aprendizaje espacial también son indicadores apropiados del aprendizaje alocéntrico y 
+la formación de memoria espacial en ratones.
+
+2. Methods
+-----------
+
+2.1. Animals and housing 
+
+Serotonin 1A receptor (5-HT1A R) knockout (KO) mice and wild-type (WT) littermates on a C57BL/6J background were obtained by heterozygous breeding at 
+the Florey Institute of Neuroscience and Mental Health (van den Buuse, Ruimschotel, Martin, Risbrough, & Halberstadt, 2011). After weaning, female and male mice were 
+separately group-housed (3–5 per cage) by genotype in open-top standard-housed cages (34 cm Â 16 cm Â 16 cm) with ab libitum access to water and food on a 12 h light/ 12 h 
+dark cycle (lights on at 7 am). Male and female animals were used in this study and two separate cohorts of mice were trained on the Morris water maze (MWM) at around 12 
+weeks of age. The ﬁrst cohort obtained was trained on the MWM using the low cue saliency conﬁguration while the second cohort was trained using the high cue saliency 
+conﬁguration. Separate cohorts were used to eliminate the potential confounds of mice having already acquired a distal cue array and having had previous task training from 
+our conclusions. All experiments were performed blind to genotype in accordance with the guidelines of the Florey Institute’s Animal Ethics Committee and the National Health 
+and Medical Research Council (NHMRC).
+
+Se obtuvieron ratones knock out (KO) del receptor de serotonina 1A (5-HT1A R) y compañeros de camada de tipo salvaje (WT) en un fondo C57BL/6J mediante cría heterocigótica en 
+el Instituto Florey de Neurociencia y Salud Mental (van den Buuse, Ruimschotel, Martin, Risbrough y Halberstadt, 2011). Después del destete, los ratones hembra y macho se 
+alojaron en grupos separados (3-5 por jaula) por genotipo en jaulas estándar abiertas (34 cm Â 16 cm Â 16 cm) con acceso ab libitum a agua y comida en un ciclo de 12 h de 
+luz/12 h de oscuridad (luces encendidas a las 7 am). Se utilizaron animales machos y hembras en este estudio y dos cohortes separadas de ratones fueron entrenadas en el 
+laberinto acuático de Morris (MWM) alrededor de las 12 semanas de edad. La primera cohorte obtenida se entrenó en el MWM utilizando la configuración de baja saliencia de 
+señal, mientras que la segunda cohorte se entrenó con la configuración de alta saliencia de señal. Se utilizaron cohortes separadas para eliminar los posibles factores de 
+confusión, como que los ratones ya hubieran adquirido una matriz de señales distal y hubieran recibido entrenamiento previo en la tarea, según nuestras conclusiones. Todos 
+los experimentos se realizaron sin conocer el genotipo, de acuerdo con las directrices del Comité de Ética Animal del Instituto Florey y del Consejo Nacional de Salud e 
+Investigación Médica (NHMRC).
+
+
+2.2. Behavioural testing
+------------------------
+
+2.2.1. Spatial learning assessment 
+
+The Morris water maze protocol used was designed according to Vorhees & Williams, 2006 (Vorhees & Williams, 2006). A circular
+1.2 m diameter pool with a height of 0.5 m was used with an uniform interior and unobtrusive seams to diminish the presence of proximal cues during experimentation. The pool 
+was placed on the ﬂoor and ﬁlled with water to a height of approximately
+30 cm so that the 10 cm diameter circular platform was placed 0.5 cm below the water surface. Thus, the key measure of the task difﬁculty, the search area to target area 
+ratio, was 143:1. It was speciﬁcally chosen as it is the appropriate difﬁculty for the C57BL/6J mice used in our study (Vorhees & Williams, 2006). Additionally, smaller 
+search area to target area ratios than 143:1 would have increased the likelihood of the distance of the platform from the pool wall becoming a proximal cue. On the other 
+hand, larger ratios would have increased the task difﬁculty to a point where signiﬁcantly longer training (either through more trials per day or an extended period of days) 
+would be required for mice to acquire the escape goal. The water was made opaque with nontoxic white paint to hide the platform and kept at a temperature of 22 ± 2 °C to 
+provide escape motivation. The pool was divided into cardinal points and the hidden platform location remained constant throughout experimentation in the middle of the 
+south-western (SW) quadrant.
+
+During spatial learning, mice were trained for four trials per day for ﬁve consecutive days. To promote invariant cue representations forming during training, distinct start 
+locations were used for each trial: north-western (NW), northern (N), eastern (E), or southeastern (SE). These distal positions relative to the hidden platform were chosen to 
+minimise mice randomly achieving the escape goal at the beginning of navigation. The start location trial assignments were randomised across the ﬁve days of training. During 
+each trial, mice were allowed to search for the escape location for a maximum of 60 s. If they did not ﬁnd the hidden platform location during this period they were gently 
+guided to it. After ﬁnding the platform, mice were left on it for 30 s. If mice jumped from the escape location during this period, they were gently guided back to the goal 
+location. These measures were strictly adhered to as spatial mapping of the hidden platform location is known to take place during both navigation and exploratory rearing 
+once the escape has been found (Harvey et al., 2008). The experimenter was hidden behind a curtain during each trial; if mice were required to be gently navigated to the goal 
+location the experimenter was hidden during the 30 s opportunity for exploratory rearing. Mice were then removed and placed in holding containers underneath heating lamps 
+with 50 W infrared bulbs that were turned on during experimentation to warm the mice for the approximately 20 min before their next trial. Mice were trained sequentially in 
+blocks of 10–13 mice for each trial and the intertrial interval was the time taken for all the other mice to perform their trials, a suggested strategy to prevent 
+hypothermia-related confounds during training (Iivonen, Nurminen, Harri, Tanila, & Puoliväli, 2003).
+
+To indicate whether spatial learning occurred during the training described above, we used three outcome measures that had different natures (i.e. time to event, continuous, 
+or binary). The ﬁrst, latency to platform, described the time to an escape and could have been censored (e.g. when an animal did not ﬁnd the hidden platform location during 
+the 60 s trial and thus had to be guided to the escape location), so was thus a time to event outcome. The second, path length, was the distance traversed by a mouse during 
+each trial, so was a continuous outcome. The last, the search strategy, was a measure of how mice found/attempted to ﬁnd the hidden platform during each trial. The search 
+strategy data was dichotomized as non-spatial vs spatial (described in great detail below), so was thus a binary outcome measure.
+
+2.2.2. Design of low and high saliency distal cue arrays 
+
+A preliminary study in our lab revealed that training mice with the distal cue array described below as the low cue 
+saliency condition resulted in mice not exhibiting spatial memory. Thus we took an approach to increase the saliency in the room. We added larger posters, increased the 
+abundance of smaller posters and placed
+them higher up the walls, exposed one side of the room by removing a curtain, and moved 3D objects to more distal locations from the pool (Fig. 1, Supplementary Fig. 1). In a 
+second preliminary study, we conﬁrmed these changes resulted in mice exhibiting spatial memory. From these observations, we deﬁned the salience by the quantity, the quality 
+(i.e. size), the visibility, and the distance from the pool edge for 3D objects. The low saliency condition was deﬁned by two small posters and two 3D objects proximal to 
+the pool and the high saliency was deﬁned by an abundance of small posters, large posters, and 3D objects distal to the pool as described below.
+
+2.2.3. Low cue saliency paradigm 
+
+In addition to the existing structures within the room, mice were provided a distal cue array containing two 2D and two 3D objects (Fig. 1A, 
+Supplementary Fig. 1A). Printed on A4 paper (30 Â 42 cm) a large black X and a set of grated bars were placed in the middle of the west and south wall respectively. In the 
+north, a 1.3 m metal stand with a yellow bucket (15 cm diameter; 30 cm height) glued together 40 cm from the top was placed 16 cm from the pool. In the east, a metallic black 
+lamp (1.5 m) was placed 50 cm from the edge of the pool. Two days of ‘cued learning’ was used to control for the ability of mice in each genotype to learn to swim to a 
+visible goal. In this paradigm, a red funnel 10 cm tall was inserted in the middle of the platform and all other visual cues in the room were hidden beneath white sheets. 
+Mice were trained from four novel start positions to ﬁnd four randomised platform locations. All other elements of the training occurred as described above. No effect of 
+genotype was observed during cued learning (data not shown).
+
+2.2.4. High cue saliency paradigm 
+
+In this case, mice were provided with a distal cue array that had an increased number of high-contrast 2D cues printed on A4 paper. We also 
+raised the location of the 2D cues on the walls to allow increased visibility during navigation. Additionally, we removed the curtain that previously hid other potential 3D 
+cues including the heating lamps with their visibly lit infrared bulbs, the holding containers and the corridor leading to the room door. We moved the yellow bucket stand 
+described above to the south-east corner of the room and removed the black lamp from the room. We also included larger 2D objects, a large black poster (85 Â 62 cm) was 
+placed in the south-west corner and an English ﬂag (150 Â 85 cm) was placed in the north on the remaining curtain that was left in place to continue hiding the experimenter 
+and recording equipment (Fig. 1B, Supplementary Fig. 1B). No cued learning was performed prior to the experimentation.
+
+2.2.5. Spatial memory assessment 
+
+To assess long-term spatial memory a retention probe with the hidden platform removed from the pool was performed 24 h after the last day of 
+training in either paradigm. The trial lasted 1 min and was started when mice were placed in the pool at a novel distal start position (north-east) to test the quality of the 
+allocentric map formed during training. The mouse behaviour was analysed for only the ﬁrst 30 s as the absence of the hidden platform leads mice to extinguish the 
+representation of the goal location with prolonged exposure. Preference for the target quadrant was the main measure we used to establish if mice had acquired a viewpoint 
+invariant representation of the former goal location. We also analysed differences in the absolute time target quadrant without reference to chance or time in the other three 
+quadrants as this is a commonly used measure of spatial memory strength. A multitude of platform related measures, which are often used as additional outcome measures of 
+spatial memory formation, were also recorded or derived (Vorhees & Williams, 2006). Annulus crossings
+were recorded as bouts in the exact former location of the hidden platform, determined by the centre of the mouse entering that location during the probe trial. Proximity to 
+the platform was recorded by assessing the average distance of mice from the centre of the former goal location during the probe. To quantify accuracy for the former platform 
+location, the annulus crossing index (ACI) was calculated by subtracting the annulus crossings (deﬁned as above) of the equivalent platform position in each of the other 
+quadrants from the annulus crossings of the actual escape location (Janus, 2004). We also used the same logic to derive a novel ACI based on proximity but in this case used 
+the proximity to the platform from the same locations described above. For both the ACI (bouts) and the ACI (proximity), the accuracy for the former goal position is thus 
+expressed by positive ACI values.
+
+2.2.6. Morris water maze learning analysis 
+
+The learning parameters latency to platform and path length were derived from Topscan tracking software (Clever Sys, Restin, 
+Virginia). We also performed a search strategy analysis using time-tagged xy-coordinates derived from the same software and an algorithm in Matlab (Mathworks, Natick, 
+Massachusetts) where
+the script was coded identically to previously published work (Garthe et al., 2009). The seven search strategies were distinguished from each other by their essential 
+attributes (in order of their precision) as follows: direct swim - a maintained heading in the exact direction of the platform; focal search - a localized search near the 
+platform; directed search - a preference for the goaldirected corridor from the start location toward the escape location; chaining - searching in the annulus zone deﬁned by 
+the radial distance of the platform from the pool wall; scanning - preference for the centre zone of the pool area where the distal cue array is maximally visible; 
+thigmotaxis - preference for the wall zone of the pool and random search - searching indiscriminately throughout all pool areas (Fig. 2). In order to distinguish the 
+strategies from each other, we ﬁrst extracted the arena boundary values for the pool and the platform coordinates within it. These values from the tracking software were 
+then normalised and inputted into the Matlab algorithm. Through this process, the algorithm then generated a set of zones in the pool (wall, annulus and centre) and an 
+ellipsoid around the platform location required for the essential attributes of the strategies to be referenced against (Fig. 2A). On a trial by trial basis across all 
+training days, xy coordinates for each mouse were then inputted into the algorithm. The Matlab script ﬁrst determined a set of numerical parameters (the surface coverage, absolute heading error, 
+path efﬁciency index, goal-directed corridor and average distance to points of interest) and then objectively identiﬁed the various qualitative aspects of the trial’s swim 
+path. Each strategy was deﬁned in the algorithm by a set of criteria representing the abstract properties speciﬁc to that strategy (see (Garthe et al., 2009)). To avoid 
+misclassiﬁcation due to shared features among the seven strategy deﬁnitions, the Matlab script was written to ﬁrst sort the more precise swim paths (which are enclosed by 
+the swim paths of other strategies) as special cases before sorting the less deﬁned ones. Thus, the objective swim path attributes determined for that trial are then 
+serially matched against the criteria of the strategies from those most precisely deﬁned to those least precisely deﬁned in the order of precision listed above. Finally, 
+the ﬁrst strategy criteria that did not exclude the swim path attributes determined the strategy employed during that particular trial. Notably, since the algorithm output 
+was on a trial by trial basis, it was possible for an animal to adopt a range of strategies across training days. The various strategies can be classiﬁed according to the 
+type of learning taking place (Fig. 2B), with the least precise strategies being non-spatial or egocentric (chaining, scanning, thigmotaxis, random search) and the more 
+precise strategies being spatial or allocentric (direct swim, focal search and directed search) (Wolfer & Lipp, 2000). Thus, on the basis of this clear division in precision, 
+the strategy data were dichotomised as non-spatial (egocentric) or spatial (allocentric). Ultimately, this was used as input for statistical analysis in Stata (Survey Design 
+and Analysis Services Pty Ltd, ACT, Australia). The % spatial search strategy was used as an indicator of allocentric spatial learning.
+
+2.3. Statistics
+-----------------
+
+2.3.1. Spatial learning 
+
+Due to the repeated measures nature of the data where individual test outcomes are nested within each individual animal, we utilized mixed-effect 
+regression models to investigate the effect of cue saliency on all spatial learning outcome measures of interest. Additionally, search strategy (binary) and latency to 
+platform (time to event) were not continuous outcomes, so this statistical approach was required to analyse the effect of cue saliency in those cases. The advantages of this 
+modelling approach are two-fold: it accounts for potential missing data in a more robust way as well as presenting cue saliency effect estimates and their precision in 
+addition to the p-values. Individual animals were treated as random effects for all regression models. Signiﬁcance threshold was set at p < 0.05 for all analysis. For each 
+regression analysis, we ﬁrst assessed the overall effect of cue saliency on the dependent variable (search strategy, latency to platform, or path length) and used day 
+(learning), genotype (learning impairment), start location, and strategy selection (when not the dependent variable) as covariates for adjustment purposes. The effect of cue 
+saliency on the association between a given outcome measure and an independent variable (day, search strategy, start location) was examined by introducing an appropriate 
+interaction term into the regression model. If the interaction was statistically signiﬁcant, we then undertook further subgroup analyses in high vs. low cue saliency.
+
+The type of regression model used and type of effect size reported was determined by the nature of the outcome measure. For the search strategy analysis (binary outcome), a 
+random-effects logistic regression model was used. Effect sizes
+
+were estimated as odds ratios (OR) with corresponding 95% conﬁdence intervals (95% CIs) to quantify the precision of the estimated effects. In the case of latency to 
+platform (time to event outcome), survival analysis was appropriate for analysis of those repeated-measures data. In survival analyses data can be censored for many reasons, 
+including when the critical event (i.e. the mouse ﬁnding the escape goal) has not yet occurred at the end of the time of analysis (i.e. the allotted 60 s for each trial). 
+Censorship avoids introducing bias in the modelling by omitting 60 s trials where no escape occurred (i.e. by treating these cases as if they are missing data). For the data 
+to be censored in this fashion, latency to platform was inputted as a combination of two variables for each trial, the time to the escape goal, and whether or not the mouse 
+escaped. We employed a shared frailty Cox regression model- a well-established model that is used with survival data to speciﬁcally model within-mouse correlation of 
+repeated measures and may be thought of as a random-effects model for survival data (Cleves, 2008; Gutierrez, 2002). It was also used to explore the potential relationship 
+between latency to platform and search strategy. Effect sizes were estimated as hazard ratios (HR) of the escape occurring at any time over the 60 s trial period with 
+corresponding 95% CIs to quantify the precision of the estimated effects. The HR is thus a measure of the relative risk of reaching the platform at a given point in time. HRs 
+greater than 1 corresponded to an increased likelihood of a beneﬁcial outcome for the mouse (despite the counterintuitive effect size name). For the path length data 
+(continuous outcome), a clustered median regression model was used. It was also used to explore the potential relationship between path length and search strategy. Effect 
+sizes were reported as median differences (in cm) with corresponding 95% CIs to quantify the precision of the estimated effects. All mixed-effect regression analysis 
+performed has been provided in Supplementary materials (Supplementary Tables 1–3). For investigating the effect of cue saliency on spatial learning outcomes, a repeated 
+measures analysis of variance (RM-ANOVA) could only have been applied to the path length data because it was the sole continuous outcome. However, we would have been unable 
+to adjust for important factors, such as search strategy or start location, we wanted to include in our analyses.
+
+2.3.2. Spatial memory formation For the determination of long-term spatial memory formation, we assessed whether mice had quadrant preference for the target quadrant. 
+Quadrant preference has been historically deﬁned as the time spent in the target quadrant being signiﬁcantly different to time spent in each of the other quadrants through 
+RM-ANOVA analysis (Vorhees & Williams, 2006). However, a RM-ANOVA was not appropriate as knowledge of time spent in three of the quadrants automatically determines the time 
+in the ﬁnal quadrant, thus violating the independence of observations assumption required to perform it. Instead we assessed quadrant preference for each group using point 
+estimates of the time in target quadrant mean with the precision of that estimate (the 95% CI) to test the null hypothesis that the time spent in the target quadrant was not 
+different to chance (i.e. 25% of time during probe). A group was determined to possess quadrant preference only if the 95% CI of the time in target quadrant mean did not 
+overlap with chance. For all additional outcome measures of spatial memory we investigated, data were analysed by two-way ANOVA with genotype and cue saliency as 
+between-group factors. No sex differences were found for any parameter measured, therefore we did not adjust for gender in our regression analyses and used pooled data from 
+both sexes for assessing quadrant preference and for all ANOVA analyses.
+
+3. Results
+
+3.1. The effect of cue saliency on spatial learning
+
+3.1.1. Search strategy selection The ﬁrst main objective of this study was to assess the requirement of salient cues for increased spatial search selection during Morris 
+water maze spatial learning. We demonstrate a striking effect of the distal cue array saliency on spatial search strategy selection (Fig. 3A). Mice were 120% more likely to 
+adopt a spatial search strategy to ﬁnd the hidden platform if the saliency was high [cue: OR 2.21, 95% CI (1.20; 4.04), p = 0.01]. Our analysis of search strategies also 
+indicated that spatial learning was taking place in all mice. There was a clear learning effect, as the adjusted odds of adopting an allocentric strategy increased by 
+approximately 30% per day [day: OR 1.27, 95% CI (1.12; 1.45), p < 0.001]. This analysis also identiﬁed signiﬁcant differences between WT and serotonin 1A receptor (5-HT1A 
+R) knockout (KO) mice. Assuming similar cue, start location and day, the 5-HT1A R KO mice were over 50% less likely to choose an allocentric strategy [genotype: OR 0.46, 95% 
+CI (0.25; 0.86), p = 0.014]. There was a signiﬁcant interaction with the effect of cue saliency on the association between search strategy selection and day (p = 0.03). The 
+subsequent subgroup analysis within each cue paradigm revealed that the spatial learning curve was present only when mice were trained with a highly salient cue array. There 
+was a signiﬁcant increase in the odds to adopt an allocentric strategy over training in the high saliency paradigm [day: OR 1.33, 95% CI (1.12; 1.57), p = 0.001] but not if 
+the saliency was low [day: OR 1.21, 95% CI (0.97; 1.50), p = 0.086].
+
+The immediate viewpoints of the distal cue array were distinct for mice placed in the pool at each of the four start locations using both saliency paradigms (see Fig. 1). We 
+hypothesized that these differential vantage points of the distal cue array would inﬂuence the likelihood that a spatial search strategy would occur so we also investigated 
+start location as a covariate in the analyses. Assuming similar cue, genotype, and day no statistically signiﬁcant changes were observed in the adjusted odds of a spatial 
+search strategy due to start location. However, a signiﬁcant interaction with the effect of cue saliency was identiﬁed between search strategy selection and start location 
+(p < 0.001). The subsequent subgroup analysis within each cue paradigm revealed that the spatial search selection likelihood was not equivalent across the four distinct start 
+locations we employed during spatial learning trials (Fig. 3B). When restricting analysis to the high saliency paradigm, the adjusted likelihood of a spatial search strategy 
+occurring was signiﬁcantly different when comparing the individual start locations. The eastern [OR 3.16; 95% CI (1.58; 6.34), p = 0.001] and south-eastern [OR 2.30, 95% CI 
+(1.13; 4.68), p = 0.022] but not the north-western start location (OR 1.81, 95% CI (0.88; 3.74), p = 0.11) had signiﬁcantly increased likelihoods for mice to select a 
+spatial search strategy compared to the northern start position. In contrast, when restricting analysis to the low saliency paradigm, the same hierarchy existed in terms of 
+adjusted likelihood, but in this case it was the complete reverse. In this case, assuming similar cue, day, and genotype, the eastern [OR 0.26, 95%CI (0.11; 0.64), p = 0.004] 
+and south-eastern [OR 0.26, 95% CI (0.11; 0.64), p = 0.003] but not the north-western location [OR 0.66, 95% CI (0.32; 1.38), p = 0.27] had signiﬁcantly decreased 
+likelihoods for mice to select a spatial search strategy compared to the northern start position.
+
+3.1.2. Latency to platform A secondary objective of our spatial learning analysis was to determine the requirement of salient cues for a latency to platform learning curve to 
+exist during spatial learning. We also aimed to
+
+establish the adjusted association between latency to platform and spatial search strategy selection. The time taken for mice to reach the hidden platform location across 
+training was assessed for each saliency condition (Fig. 3C). Our shared frailty Cox regression analysis (see Methods) of latency to platform identiﬁed that there was no 
+signiﬁcant change in the adjusted risk of mice reaching the platform due to cue saliency [cue: HR 0.84, 95% CI (0.68; 1.05), p = 0.12]. It also revealed, assuming similar 
+cue, day and genotype, that at any point of time mice were 115% more likely to ﬁnd the hidden platform location if they selected a spatial search strategy to ﬁnd it 
+[strategy: HR 2.15, 95% CI (1.74; 2.66), p < 0.001]. We also showed an overall learning effect as mice were 15% more likely to ﬁnd the platform at any given point in time 
+with each training day [day: HR 1.15, 95% CI (1.07; 1.23), p < 0.001]. A learning impairment in 5-HT1A R KO mice was also found, as they are approximately 30% less likely to 
+ﬁnd the platform [genotype: HR 0.71, 95% CI (0.58; 0.89), p = 0.002]. There was a signiﬁcant interaction with the effect of cue saliency on the association between latency 
+to platform and search strategy selection (p < 0.001) but not latency to platform and day (p = 0.70). This was reﬂected by differences in the inﬂuence of a spatial search 
+strategy selection on the adjusted likelihood of mice reaching the platform under the two saliency paradigms, from being approximately 1.5 times more likely if testing with a 
+high saliency [strategy: HR 1.49, 95% CI (1.15; 1.93), p = 0.003] compared to approximately 5.5 times more likely with low saliency [strategy: HR 5.52, 95% CI (3.72; 8.17), p 
+< 0.001]. No statistically signiﬁcant differences or interactions with cue saliency were observed in the investigation into whether
+
+the different start locations changed the likelihood for mice to ﬁnd the hidden platform.
+
+3.1.3. Path length to platform To complete the secondary objective of our spatial learning analysis we then assessed the requirement of salient cues for a path length to 
+platform learning curve to exist and established the adjusted association between path length and spatial search strategy selection. The spatial learning curves for the 
+length of the path taken for mice to reach the hidden platform were derived in each cue saliency paradigm (Fig. 3D). No signiﬁcant effects of cue paradigm on path length 
+[median difference in path length by cue: À59.76, 95% CI (À133.99 cm; 14.46), p = 0.11] were identiﬁed using our median clustered regression analysis (see Methods). However, 
+assuming similar cue, day and genotype, a spatial search strategy selection signiﬁcantly reduced the path length [strategy: À135.20, 95% CI (À227.08 cm; À43.33), p = 0.004]. 
+There was also a clear learning effect as adjusted path lengths were shortened across days [day: À32.26, 95% CI (À58.25 cm; À6.28), p = 0.015]. Additionally, a learning 
+impairment in 5-HT1A R KO animals was demonstrated as the same analysis revealed that they took longer adjusted path lengths [genotype: 109.08 cm, 95% CI (10.42;
+
+207.74), p = 0.03]. There was a signiﬁcant interaction with the effect of cue saliency on the association between path length and search strategy selection (p = 0.001) but 
+not path length and day (p = 0.34). This was reﬂected by differences in the inﬂuence of a spatial search strategy selection on the adjusted path length, from signiﬁcantly 
+associated with decreased path lengths if testing with
+
+a low saliency paradigm [strategy: À285.11, 95%CI (À385.53 cm; À184.69), p < 0.001] compared to no signiﬁcant association given a high saliency cue paradigm [strategy: 
+À25.48 cm, 95% CI (À170.81; 119.85), p = 0.73]. No signiﬁcant differences or interactions with cue saliency were observed during our analyses into whether the different 
+start locations inﬂuenced the path length mice employed to ﬁnd the hidden platform.
+
+3.2. The effect of cue saliency on spatial memory
+
+3.2.1. Quadrant preference The second main objective of this study was to assess the requirement of a salient distal cue array for spatial memory formation (i.e. the ability 
+to demonstrate that a cognitive map to the escape goal location had formed during spatial learning on a retention probe). We used preference for the target quadrant (see 
+methods) as the main outcome measure that spatial memory had formed. Our analysis of quadrant preference showed that only WT animals trained with the high saliency paradigm 
+demonstrated spatial memory on the retention probe (Fig. 4). In the low saliency cue paradigm, both WT [8.94 s, 95% CI (6.42; 11.47)] and 5-HT1A R KO animals (8.82 s, 95% CI 
+(6.28; 11.37)) did not demonstrate quadrant preference, as their 95% CIs overlap with the chance performance (25% - 7.5 s). This comparison within the high saliency paradigm 
+identiﬁed intact quadrant preference in WT animals [12.42 s, 95% CI (9.23; 15.61)] with a 95% CI that overlapped with 50% of time in target quadrant. 5-HT1A R KO mice, 
+included as a positive control for spatial memory impairment, exhibited no quadrant preference [9.00 s, 95% CI (7.43–10.56)] and thus had impaired spatial memory despite the 
+increase in cue saliency.
+
+3.2.2. Additional retention probe outcome measures A secondary objective of our spatial memory analysis was to determine the requirement of salient cues for spatial memory 
+formation using additional spatial memory retention probe outcome measures routinely employed in Morris water maze studies. 5HT1A R KO mice were again used as a positive 
+control for spatial memory impairment. Thus, we also assessed the effect of cue saliency, genotype and potential interactions between both factors on a broad sample of these 
+outcome measures during the retention
+
+probe (Fig. 5). The absolute time in target quadrant (Fig. 5A) is used as the key measure of spatial memory strength, but we found no signiﬁcant effects of cue saliency (F 
+1,43 = 0.88, p = 0.35) or genotype (F 1,43 = 2.17, p = 0.15) and no cue Â genotype interaction (F 1,43 = 1.87, p = 0.18). In contrast, the latency for the mouse to visit the 
+exact location where the platform resided during training (Fig. 5B), was sensitive to cue saliency (F 1,43 = 10.76, p = 0.002) but not genotype (F 1,43 = 1.37, p = 0.25). 
+Additionally, no signiﬁcant interaction was identiﬁed between those factors (F 1,43 = 0.21, p = 0.65) for latency to platform on the retention probe. Similarly, the number 
+of times a mouse crosses the former platform location (Fig. 5C) was also sensitive to cue saliency (F 1,43 = 4.49, p = 0.04) but no signiﬁcant effect of genotype (F 1,43 = 
+1.46, p = 0.23) or a signiﬁcant cue Â genotype interaction (F 1,43 = 0.040, p = 0.84) were observed. However, no signiﬁcant effects of cue saliency (F 1,43 = 3.30, p = 
+0.076) and genotype (F 1,43 = 3.65, p = 0.063) or signiﬁcant interaction between those factors (F 1,43 = 0.16, p = 0.7) were observed using an annulus crossing index (ACI) 
+derived from crossings in the four equivalent platform locations as an outcome measure (Fig. 5D), Analysing the average proximity of the mouse from the former platform 
+location during training (Fig. 5E), we also found a signiﬁcant effect of cue saliency (F 1,43 = 5.29, p = 0.026) but no signiﬁcant effect of genotype (F 1,43 = 2.45, p = 
+0.13) or a signiﬁcant cue Â genotype interaction (F 1,43 = 0.74, p = 0.4) were identiﬁed. Additionally, the version of the ACI derived using the average proximity from each 
+equivalent platform location (Fig. 5F) showed again a signiﬁcant effect of cue saliency (F 1,43 = 10.92, p = 0.002). In a similar fashion to the above results, no 
+statistically signiﬁcant effect of genotype (F 1,43 = 1.69, p = 0.2) or a signiﬁcant interaction between cue and genotype
+
+(F 1,43 = 1.16, p = 0.29) were observed.
+
+4. Discussion
+
+The main objectives of this study were to determine if search strategy selection during spatial learning and spatial memory demonstration on the retention probe were 
+dependent on the quality of the distal cue array. We established this dependency in both cases. We also wanted to test our hypothesis that search strategy selection is the 
+key spatial learning measure that predicts the formation of an allocentric map to the escape location (and thus predicts intact spatial memory). Several lines of evidence in 
+our study support accepting this hypothesis. Firstly, we found that spatial memory was exhibited only by WT mice trained in the high but not the low saliency paradigm. 
+Secondly, the odds of a spatial search strategy increased by 120% in the high compared to the low saliency condition and a spatial learning curve during training was present 
+on this measure only in the high saliency paradigm. Finally, spatial learning curves for both latency to platform and path length had no signiﬁcant effect of, or interaction 
+with, cue saliency despite the differences in spatial memory in each paradigm. Overall, these lines of reasoning all strongly support accepting our original hypothesis and 
+are explored in greater detail below.
+
+4.1. The effect of cue saliency on search strategy selection and spatial memory
+
+Morris deﬁned spatial learning as ‘‘acquiring the entire array of cues” (Morris, 1984) so in this study we hypothesized that search strategy selection is the spatial 
+learning outcome measure that demonstrates this acquisition is taking place. Three key pieces of evidence from our investigation into the effect of cue saliency on search 
+strategy support accepting this hypothesis. Firstly, the adjusted odds of a spatial search strategy occurring increased by 120% if a salient distal cue array was provided. 
+This demonstrated
+
+that spatial search strategy selection was dependent upon the distal cue array. Secondly, a search strategy spatial learning curve was present in the high saliency paradigm 
+but absent in the low. This result established that mice were transitioning from egocentric navigation to utilizing allocentric routes to the escape location only when 
+trained with a salient distal cue array. It is worth noting that the % spatial search strategy was less than 50% during training for WT mice in the highly salient condition, 
+indicating that on a trial by trial basis mice were still adopting multiple different strategies on any given day. It is possible that mice could adopt a spatial strategy 
+and, after unsuccessfully ﬁnding the escape goal, revert back to a non-spatial strategy within the same trial. In this case, the algorithm would have most likely ranked the 
+trial as non-spatial, which is a limitation to its sensitivity we must acknowledge. However, from our subjective rankings in those cir-
+
+cumstances, mice tended to transition between the allocentric strategies or egocentric strategies within the same trial. Notably, this behaviour is accounted for by the 
+dichotomization we employed. Finally, the likelihood of a spatial search strategy selection from the eastern start positions was increased using the high saliency paradigm 
+but decreased using the low. This further substantiates the evidence described above that allocentric learning requires salient distal cues. It also suggests that mice were 
+not uniformly acquiring the distal array of cues as they were attempting to form an allocentric reference map to the escape goal in either paradigm, but were instead heavily 
+reliant on certain cues. Variable start locations have been proposed to force mice to acquire the entire array of distal cues (Eichenbaum, Stewart, & Morris, 1990). The idea 
+was that mice assimilate the varying initial visual perspectives posed from the unique start locations for
+
+
