@@ -41,6 +41,7 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI=0, i0=0){
    
    for (i in 1:n){
    	pi = pp[i+i0-1,]
+        print(pi)
    	xi = xx[i,]
         uu[i, ] = Calu1u2u3(xi,pi)
    }
