@@ -17,7 +17,8 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI=0, i0=0){
    w2 = dwx2[1]
    w3 = dwx2[1]
    
-   xw = funI[1,]	
+   xw = x1
+   xw[3] =funI[1,3]	
    u = Calu1u2u3(xw, p1)
    	
    for (i in 2:n){
@@ -27,7 +28,8 @@ SolucionXPU_3 <- function(del=0, pp=0, wx1=0, wx2=0, wx3=0, funI=0, i0=0){
    	x23 = x1[3] + del * r[[3]] + w3
    	x1 = c(x21, x22, x23)
 	xx[i,] = x1
-        xw = funI[i,]
+        xw = x1
+        xw[3] = funI[i,3]
 	p1 = pp[i+i0-1,]
 	w1 = dwx1[i]
 	w2 = dwx2[i]

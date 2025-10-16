@@ -30,6 +30,8 @@ funI =  matrix(rep(c(.7, .7, .5), c(n,n, n)), ncol=3)
 #pp =  1*matrix(rep(c(1,1), c(n,n)), ncol=2)
 param = matrix(c(.15, .15, .15, 12, .1,.1,.1,26, .01,.01,.1,12, .04,.01,.15,24, .07,.03,.05,18, 0, 0, 0, 25), ncol=6)
 
+niter = 20
+
 m = 2
 dwx1 = param[1,m]
 dwx2 = param[2,m]
@@ -57,12 +59,13 @@ for (jj in 1:1){
   xx = c()
   uu = c()  
   tt = c()
-  for (m in 1:15){    
+  for (m in 1:niter){    
     R <- SolucionXPU_3(del, pp, wx1=dwx1, wx2=dwx2, wx3=dwx3, funI, 1)
     xx = rbind(xx, R$xx)
     uu = rbind(uu, R$uu)
     funI = R$xx
     tt = c(tt, t)
+    print(dim(funI))
     t = tao+t
   }
   print(dim(xx))
