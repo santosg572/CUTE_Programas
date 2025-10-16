@@ -15,7 +15,7 @@ Integral <- function(del=0, fi=0){
 }
 
 
-tao = .01
+tao = .1
 del = .001
 
 np = round(1/del +1)
@@ -26,7 +26,7 @@ del = t[2] - t[1]
 
 fi = rep(1, np)
 
-niter = 500
+niter = 50
 tt = c()
 xx = c()
 
@@ -38,8 +38,9 @@ for (i in 1:niter){
   t = tao+t
 }
 
-plot(tt, xx, type='l')
 y = exp(2*tt)
-points(tt, y, type='l', col='red')
+plot(tt, y, type='l')
+
+points(tt, xx, type='l', col='red')
 
 
