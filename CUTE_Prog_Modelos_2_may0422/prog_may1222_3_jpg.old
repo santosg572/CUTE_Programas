@@ -8,11 +8,10 @@ source('SolucionXPU_3.R')
 source('SolucionPPU_3.R')
 source('funciones_modelos.R')
    
-del = .001
-x2 = 60
-n = x2/del + 1
+fac= 12
 
-t = seq(0, x2, length.out = n)
+n = round(fac *5001)
+t = seq(0,fac*5, length.out = n)
 del = t[2] - t[1]
 
 cc = rep(0, n)
@@ -38,7 +37,7 @@ kk =   param[4,m]
 
 
 fig = 'fig_'
-prefijo = paste('fac_',12,'_p_1_0_dwx1_',dwx1,'_dwx2_',dwx2,'_dwp_',dwp, sep='')
+prefijo = paste('fac_',fac,'_p_1_0_dwx1_',dwx1,'_dwx2_',dwx2,'_dwp_',dwp, sep='')
 pat = getwd()
 
 CreaFolder(prefijo)
