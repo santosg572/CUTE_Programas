@@ -14,7 +14,7 @@ d2 = '''
 </html>
 '''
 
-file = sys.argv[1]
+file = 'cute'
 filin = open(file+'.txt', 'r')
 datos = filin.readlines()
 filin.close()
