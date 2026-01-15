@@ -1,5 +1,22 @@
 rm(list=ls())
 
+# https://hackmd.io/y51KdUxgQuGN4u3Tfv-s3Q
+
+SolucionTeorica <- function(n=0){
+  tao = 2
+  t = seq(0, tao, length.out=n)
+  del1 = t[2] - t[1]
+  ff = 1-t/5
+  tt = t
+  t = t+2
+  ff = c(ff, (t^2-14*t+54)/50)
+  tt = c(tt, t)
+  t = t + 2
+  ff = c(ff, (874 - 258*t + 27*t^2 - t^3)/750)
+  tt = c(tt, t)
+  ret = list(tt, ff, del1)
+}
+
 Integral <- function(x1=0, x=0, del1=0){
   n = length(x)
   xx = rep(0,n)
@@ -18,33 +35,20 @@ Integral <- function(x1=0, x=0, del1=0){
 
 n = 500
 
-tao = 2
-t = seq(0, tao, length.out=n)
-tp = t
+ss = SolucionTeorica(n)
 
-ff = 1-t/5
-tt = t
-t = t+2
-
-ff = c(ff, (t^2-14*t+54)/50)
-tt = c(tt, t)
-t = t + 2
-ff = c(ff, (874 - 258*t + 27*t^2-t^3)/750)
-tt = c(tt, t)
-
-
-
-plot(tt, ff, type='l', lwd=2)
+plot(ss[[1]], ss[[2]], type='l', lwd=2)
 
 # solucion de x'=-(x-2)/5,  x(t) = 1 en t \in [-2,0]
 
 # Solucion numerica
 
+del1 = ss[[3]]
+
+t = seq(
 x = rep(1, n)
 
 cat(' modificado: ene1426')
-
-del1 = tp[2] - tp[1]
 
 rr = c()
 tt = c()
