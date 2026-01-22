@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <!-- Load MathJax from a CDN -->
+  <script src="https://polyfill.io"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+  p { font-size: 1.5em; } 
+</style>
+
+</head>
+<body>
+
+<h1>Solución de ecuacion diferencial ordinaria</h1>
+
+<p>
+Resolver la ecuacion diferencial: \( \dot{x} = x^{-3} \) con \( x(0) = 1 \). 
+</p>
+
+<p>
+Solución: 
+
+$$
+x(t) = \sqrt[4]{4t + 1}
+$$
+
+Por métodos numéricos se resolvio la ecuacion diferencial ordinaria con retardo dada por:
+
+$$
+\dot{x}(t) = \frac{1}{x(t) (t-\tau_1) (t-\tau_2)}, \hspace{3mm} \text{  con }  \hspace{3mm} \tau_1 < \tau_2  \hspace{3mm} \text{  y }  \hspace{3mm} x(t) = 1  \hspace{3mm} 
+\text{ en }  \hspace{3mm} t \in [-\tau_2,0]
+$$ 
+
+</body>
+</html>
+
