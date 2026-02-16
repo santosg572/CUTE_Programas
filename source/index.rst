@@ -11,10 +11,7 @@ Welcome to Numerical_Analysis_2E_Walter's documentation!
    :caption: Contents:
 
    reporte
+   ecuacionesconretardo/2_species-retardo-19_ulio_25
+   ecuacionesconretardo/2especies-retardo-13julio25.rst
+   ecuacionesconretardo/OCAM08_Delay.rst
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

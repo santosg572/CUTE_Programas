@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Optimal control problems with delays in state and control variables subject to mixed control–state constraints &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Ecuaciones de Lotka-Volterra para dos especies con retardo" href="2especies-retardo-13julio25.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="optimal-control-problems-with-delays-in-state-and-control-variables-subject-to-mixed-controlstate-constraints">
+<h1>Optimal control problems with delays in state and control variables subject to mixed control–state constraints<a class="headerlink" href="#optimal-control-problems-with-delays-in-state-and-control-variables-subject-to-mixed-controlstate-constraints" title="Link to this heading">¶</a></h1>
+<p>2008</p>
+<p>Optimal control problems with delays in state and control variables are studied. Constraints are imposed as mixed control–state inequality
+constraints. Necessary optimality conditions in the form of Pontryagin’s minimum principle are established. The proof proceeds by
+augmenting the delayed control problem to a nondelayed problem with mixed terminal boundary conditions to which Pontryagin’s minimum
+principle is applicable. Discretization methods are discussed by which the delayed optimal control problem is transformed into a
+large-scale nonlinear programming problem. It is shown that the Lagrange multipliers associated with the programming problem provide a
+consistent discretization of the advanced adjoint equation for the delayed control problem. An analytical example and numerical examples
+from chemical engineering and economics illustrate the results.</p>
+<section id="introduction">
+<h2>1. INTRODUCTION<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Differential control systems with delays in state or control variables play an important role in the modelling of real-life phenomena in
+various ﬁelds of applications. Many papers have been devoted to delayed (other terminology: time lag, retarded, hereditary) optimal
+control problems and the derivation of necessary optimality conditions. Let us brieﬂy review some papers concerning different classes of
+control problems. An introduction to time delay control problems can be found in Oˇguzt¨oreli [ 1 ] . Kharatishvili [ 2 ] was ﬁrst to
+provide a maximum principle for optimal control
+problems with a constant state delay. In [ 3 ] , he gave similar results for control problems with pure control delays. Halany [ 4 ] proves
+a maximum principle for optimal control problems with multiple constant delays in state and control variables that, however, are chosen to
+be equal for state and control. Similar results were obtained by Ray and Soliman [ 5 ] . Guinn [ 6 ] sketches a simple method for obtaining
+necessary conditions for control problems with a constant delay in the state variable. He suggests to augment the delayed control problem
+that yields a higher-dimensional undelayed control problem to which the standard maximum principle is applicable. Banks [ 7 ] derives a
+maximum principle for control systems with a time-dependent delay in the state variable. Delays in the control are admitted for systems
+linear in the control variable. Colonius and Hinrichsen [ 8 ] provide a uniﬁed approach to control problems with delays in the state
+variable by applying the theory of necessary conditions for optimization problems in function spaces. All articles mentioned so far do not
+consider general control or state inequality constraints.</p>
+<p>Angell and Kirsch [ 9 ] treat functional differential equations with function-space state inequality constraints. However, they do not
+discuss the regularity of the multiplier associated with the state constraint and do not provide a numerical example with a pure state
+space constraint. To our knowledge, optimal control problems with constant delays in state and control variables and mixed control–state
+inequality constraints have not yet been considered in the literature. The ﬁrst goal in this paper is to derive a Pontryagin-type minimum
+(maximum) principle for this class of delayed control problems. Concerning the development of numerical methods and the numerical treatment
+of practical examples, our impression is that this topic has not yet been adequately addressed in the literature. Bader [ 10 ] uses
+collocation methods to solve the boundary value problem for the retarded state variable and advanced adjoint variable. He successfully
+solves several academic examples, but his method does not give accurate results for the more difﬁcult CSTR reactor problem described in
+Soliman and Ray [ 5, 11 ] . A similar CSTR reactor problem is considered in Oh and Luus [ 12 ] and Dadebo and Luus [ 13 ] , who use the
+differential dynamic programming method with a moderate number of stages. Therefore, the second goal of this paper is the presentation of
+discretization and nonlinear programming methods that provide the optimal state, control and adjoint functions and allow for an accurate
+check of the necessary conditions.</p>
+<p>The organization of this paper is as follows. Section 2 presents the statement of the delayed control problem with mixed state–control
+constraints. In Section 3, we recall the minimum principle for nondelayed control problems with control–state constraints. Here, a crucial
+feature is that the initial and the terminal boundary conditions must be considered in a general mixed form. Section 4 is devoted to the
+derivation of ﬁrst-order necessary optimality conditions for the delayed optimal control problem given in Section 2. Essentially, the
+augmentation approach of Guinn [ 6 ] is generalized, which allows to use the minimum principle in Section 3. For technical reasons, we need
+the assumption that the ratio of the time delays in state and control is a rational number. The analysis in this section is based on the
+theses of G¨ollmann [ 14 ] and Kern [ 15 ] . In Section 5, the Euler discretization for the delayed control problem is discussed, which
+leads to a high-dimensional nonlinear programming problem. As in the nondelayed case, it can be shown that the Lagrange multipliers
+corresponding to the optimization problem constitute an Euler discretization for the advanced adjoint equations. In Section 6, we discuss
+an analytical example that allows to test the accuracy of the numerical solution for various step sizes. Sections 7 and 8 are devoted to
+the numerical solution and the veriﬁcation of the minimum principle for two practical examples. The ﬁrst example is taken from [ 5, 11 ]
+and describes the optimal control of a chemical tank reactor (CSTR reactor), whereas the second example arises in the optimal harvesting of
+a resource (optimal ﬁshing).</p>
+</section>
+<section id="optimal-control-problems-with-delays-in-state-and-control">
+<h2>2. OPTIMAL CONTROL PROBLEMS WITH DELAYS IN STATE AND CONTROL<a class="headerlink" href="#optimal-control-problems-with-delays-in-state-and-control" title="Link to this heading">¶</a></h2>
+</section>
+<section id="first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">
+<h2>3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS<a class="headerlink" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints" title="Link to this heading">¶</a></h2>
+</section>
+<section id="necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints">
+<h2>4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS<a class="headerlink" href="#necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints" title="Link to this heading">¶</a></h2>
+</section>
+<section id="discretization-optimization-and-consistency-of-adjoint-equations">
+<h2>5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS<a class="headerlink" href="#discretization-optimization-and-consistency-of-adjoint-equations" title="Link to this heading">¶</a></h2>
+</section>
+<section id="an-analytical-example">
+<h2>6. AN ANALYTICAL EXAMPLE<a class="headerlink" href="#an-analytical-example" title="Link to this heading">¶</a></h2>
+</section>
+<section id="a-nonlinear-chemical-tank-reactor-model">
+<h2>7. A NONLINEAR CHEMICAL TANK REACTOR MODEL<a class="headerlink" href="#a-nonlinear-chemical-tank-reactor-model" title="Link to this heading">¶</a></h2>
+</section>
+<section id="optimal-control-of-a-renewable-resource">
+<h2>8. OPTIMAL CONTROL OF A RENEWABLE RESOURCE<a class="headerlink" href="#optimal-control-of-a-renewable-resource" title="Link to this heading">¶</a></h2>
+</section>
+<section id="software-versions-and-cpu-type-used">
+<h2>9. SOFTWARE VERSIONS AND CPU TYPE USED<a class="headerlink" href="#software-versions-and-cpu-type-used" title="Link to this heading">¶</a></h2>
+</section>
+<section id="conclusion">
+<h2>10. CONCLUSION<a class="headerlink" href="#conclusion" title="Link to this heading">¶</a></h2>
+<p>REFERENCES</p>
+<ol class="arabic simple">
+<li><p>O˘guzt¨oreli MN. Time-Lag Control Systems. Academic Press: New York, 1966.</p></li>
+<li><p>Kharatishvili GL. Maximum principle in the theory of optimal time-delay processes. Doklady Akademii Nauk USSR 1961; 136:39–42.</p></li>
+<li><p>Kharatishvili GL. A Maximum Principle in External Problems with Delays. Mathematical Theory on Control.</p></li>
+</ol>
+<p>Academic Press: New York, 1967.</p>
+<ol class="arabic simple" start="4">
+<li><p>Halanay A. Optimal controls for systems with time lag. SIAM Journal on Control 1968; 6:215–234.</p></li>
+</ol>
+<p>5. Soliman MA, Ray WH. On the optimal control of systems having pure time delays and singular arcs. International Journal of Control 1972;
+16(5):963–976.</p>
+<p>6. Guinn T. Reduction of delayed optimal control problems to nondelayed problems. Journal of Optimization Theory and Applications 1976;
+18:371–377.</p>
+<ol class="arabic simple" start="7">
+<li><p>Banks HT. Necessary conditions for control problems with variable time lags. SIAM Journal on Control 1968; 8(1):9–47.</p></li>
+</ol>
+<p>8. Colonius F, Hinrichsen D. Optimal control of functional differential systems. SIAM Journal on Control and Optimization 1978;
+16(6):861–879.</p>
+<p>9. Angell TS, Kirsch A. On the necessary conditions for optimal control of retarded systems. Applied Mathematics and Optimization 1990;
+22:117–145.</p>
+<p>10. Bader G. Numerische Behandlung von Randwertproblemen f¨ur Funktionaldifferentialgleichungen. Preprint 227, Universit¨at Heidelberg,
+Institut f¨ur Angewandte Mathematik, 1983.</p>
+<ol class="arabic simple" start="11">
+<li><p>Soliman MA, Ray WH. Optimal control of multivariable systems with pure time delays. Automatica 1971; 7:681–689.</p></li>
+<li><p>Oh SH, Luus R. Optimal feedback control of time-delay systems. AIChE Journal 1976; 22(1):140–147.</p></li>
+</ol>
+<p>13. Dadebo S, Luus R. Optimal control of time-delay systems by dynamic programming. Optimal Control Applications and Methods 1992;
+13:29–41.</p>
+<p>14. G¨ollmann L. Numerische Behandlung optimaler Steuerprozesse mit konstanten Verz¨ogerungen unter gemischten
+Steuer-Zustandsbeschr¨ankungen. Dissertation, Universit¨at M¨unster, Institut f¨ur Numerische Mathematik, 1996.</p>
+<p>15. Kern D. Notwendige Optimalit¨atsbedingungen und numerische L¨osungsmethoden f¨ur optimale Steuerprozesse mit Retardierungen. Diploma
+Thesis, Institut f¨ur Numerische Mathematik, Universit¨at M¨unster, 2005.</p>
+<p>16. Milyutin AA, Osmolovskii NP. Calculus of Variations and Optimal Control. Translations of Mathematical Monographs, vol. 180. American
+Mathematical Society: Providence, RI, 1998.</p>
+<ol class="arabic simple" start="17">
+<li><p>Hestenes MR. Calculus of Variations and Optimal Control Theory. Wiley: New York, 1966.</p></li>
+<li><p>Neustadt LW. Optimization—A Theory of Necessary Conditions. Princeton University Press: Princeton, NJ, 1976.</p></li>
+</ol>
+<p>19. Fourer R, Gay DM, Kernighan BW. AMPL: A Modeling Language for Mathematical Programming. The Scientiﬁc Press: South San Francisco, CA,
+1993.</p>
+<p>20. Vanderbei RJ. LOQO: an interior point code for quadratic programming, Report, Statistics and Operations Research, Princeton University,
+1998.</p>
+<p>21. W¨achter A. An interior point algorithm for large-scale nonlinear optimization with applications in process engineering. Dissertation,
+Carnegie Mellon University, Pittsburgh, 2002.</p>
+<p>22. W¨achter A, Biegler LT. On the implementation of an interior–point ﬁlter line-search algorithm for large-scale nonlinear programming.
+Mathematical Programming 2006; 106:25–57.</p>
+<p>23. B¨uskens Ch. Optimierungsmethoden und Sensitivit¨atsanalyse f¨ur optimale Steuerprozesse mit Steuer–und Zustandsbeschr¨ankungen.
+Dissertation, Institut f¨ur Numerische Mathematik, Universit¨at M¨unster, 1998.</p>
+<ol class="arabic simple" start="24">
+<li><p>Hager W. Runge–Kutta methods in optimal control and the transformed adjoint system. Numerische Mathematik 2000; 87:247–282.</p></li>
+</ol>
+<p>25. Ray WH, Soliman MA. The optimal control of processes containing pure time delays—I, necessary conditions for an optimum. Chemical
+Engineering Science 1970; 25:1911–1925.</p>
+<ol class="arabic simple" start="26">
+<li><p>May RM. Time-delay versus stability in population models with two and three tropic levels. Ecology 1973; 54:315–325.</p></li>
+<li><p>May RM. Stability and Complexity in Model Ecosystems (2nd edn). Princeton University Press: Princeton, NJ, 1975.</p></li>
+</ol>
+<p>28. Feddermann F. ¨Okonomische Nutzung regenerativer Ressourcensysteme. Dissertation, Universit¨at M¨unster, Institut f¨ur Numerische
+Mathematik, Universit¨at M¨unster, 2004. Published in: Verlag Dr. Kovaˇc: Hamburg, 2005.</p>
+<p>29. Clarke FH, Wolenski PR. The sensitivity of optimal control problems to time delay. SIAM Journal on Control and Optimization 1991;
+29(5):1176–1215.</p>
+<p>30. Vanderbei RJ, Shanno DF. An interior–point algorithm for nonconvex nonlinear programming. Computational Optimization and Applications
+1999; 13:231–252.</p>
+<p>31. Chan WL, Yung SP. Sufﬁcient conditions for variational problems with delayed argument. Journal of Optimization Theory and Applications
+1993; 76:131–144.</p>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../reporte.html">Reporte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_species-retardo-19_ulio_25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2especies-retardo-13julio25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Optimal control problems with delays in state and control variables subject to mixed control–state constraints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">1. INTRODUCTION</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimal-control-problems-with-delays-in-state-and-control">2. OPTIMAL CONTROL PROBLEMS WITH DELAYS IN STATE AND CONTROL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints">4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#discretization-optimization-and-consistency-of-adjoint-equations">5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#an-analytical-example">6. AN ANALYTICAL EXAMPLE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#a-nonlinear-chemical-tank-reactor-model">7. A NONLINEAR CHEMICAL TANK REACTOR MODEL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optimal-control-of-a-renewable-resource">8. OPTIMAL CONTROL OF A RENEWABLE RESOURCE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#software-versions-and-cpu-type-used">9. SOFTWARE VERSIONS AND CPU TYPE USED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">10. CONCLUSION</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="2especies-retardo-13julio25.html" title="previous chapter">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/ecuacionesconretardo/OCAM08_Delay.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

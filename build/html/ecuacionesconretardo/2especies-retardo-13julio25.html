@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Ecuaciones de Lotka-Volterra para dos especies con retardo &#8212; Numerical_Analysis_2E_Walter 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css?v=12dfc556" />
+    <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Optimal control problems with delays in state and control variables subject to mixed control–state constraints" href="OCAM08_Delay.html" />
+    <link rel="prev" title="Ecuaciones de Lotka-Volterra para dos especies con retardo" href="2_species-retardo-19_ulio_25.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ecuaciones-de-lotka-volterra-para-dos-especies-con-retardo">
+<h1>Ecuaciones de Lotka-Volterra para dos especies con retardo<a class="headerlink" href="#ecuaciones-de-lotka-volterra-para-dos-especies-con-retardo" title="Link to this heading">¶</a></h1>
+<p>Versión 1</p>
+<p>July 13, 2025</p>
+<p>x˙ 1 (t) = x 1 (t − 20) − x 1 (t − 20)x 2 (t − 20) − 0.4x 1 (t − 20)u 1 (t − 20)</p>
+<p>x˙ 2 (t) = −x 2 (t − 20) + x 1 (t − 20)x 2 (t − 20) − 0.4x 2 (t − 20)u 2 (t − 20), (1)</p>
+<p>con las condiciones:</p>
+<p>x 1 (t) = x 2 (t) = 1, −20 ≤ t ≤ 0</p>
+<ol class="arabic simple" start="2">
+<li></li>
+</ol>
+<p>u 1 (t) = u 2 (t) = 0, −20 ≤ t ≤ 0</p>
+<ol class="arabic simple" start="3">
+<li></li>
+</ol>
+<p>En cuanto al sistema adjunto, para t ∈ [0, 40], se tiene</p>
+<p>p˙ 1 (t) = −x 1 (t) − χ (t) [0,40] (t + 20) + p 1 (t + 20)x 2 (t − 20) + p 2 (t + 20)x 2 (t − 20) − 0.4p 1 (t + 20)u 1 (t − 20) p1  (
+)</p>
+<p>p˙ 2 (t) = −x 2 (t) − χ (t) [0,40] (t + 20) + p 2 (t + 20)x 1 (t − 20) − p 1 (t + 20)x 1 (t − 20) − 0.4p 2 (t + 20)u 2 (t − 20) p2
+( )</p>
+<ol class="arabic simple" start="4">
+<li></li>
+</ol>
+<p>u 1 (t) = p 1 (t + 20)x 1 (t − 20)</p>
+<ol class="arabic simple" start="5">
+<li></li>
+</ol>
+<p>u 2 (t) = p 2 (t + 20)x 2 (t − 20)</p>
+<p>Para t ∈ [40, 60], u 1 (t) = u 2 (t) = 0, entonces el sistema adjunto satisface : (6)</p>
+<p>p˙ 1 (t) = −x 1 (t)</p>
+<p>p˙ 2 (t) = −x 2 (t),</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Numerical_Analysis_2E_Walter</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../reporte.html">Reporte</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_species-retardo-19_ulio_25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OCAM08_Delay.html">Optimal control problems with delays in state and control variables subject to mixed control–state constraints</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="2_species-retardo-19_ulio_25.html" title="previous chapter">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
+      <li>Next: <a href="OCAM08_Delay.html" title="next chapter">Optimal control problems with delays in state and control variables subject to mixed control–state constraints</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, leopoldo.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.4.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="../_sources/ecuacionesconretardo/2especies-retardo-13julio25.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
