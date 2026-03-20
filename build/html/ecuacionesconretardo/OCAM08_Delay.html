@@ -41,8 +41,16 @@ principle is applicable. Discretization methods are discussed by which the delay
 large-scale nonlinear programming problem. It is shown that the Lagrange multipliers associated with the programming problem provide a
 consistent discretization of the advanced adjoint equation for the delayed control problem. An analytical example and numerical examples
 from chemical engineering and economics illustrate the results.</p>
-<section id="introduction">
-<h2>1. INTRODUCTION<a class="headerlink" href="#introduction" title="Link to this heading">¶</a></h2>
+<p>Se estudian problemas de control óptimo con retardos en las variables de estado y control. Se imponen
+restricciones como desigualdades mixtas de control y estado. Se establecen condiciones necesarias de optimalidad
+en la forma del principio del mínimo de Pontryagin. La demostración procede ampliando el problema de control con
+retardo a un problema sin retardo con condiciones de contorno terminales mixtas, al cual se aplica el principio
+del mínimo de Pontryagin. Se analizan métodos de discretización mediante los cuales el problema de control óptimo
+con retardo se transforma en un problema de programación no lineal a gran escala. Se demuestra que los
+multiplicadores de Lagrange asociados al problema de programación proporcionan una discretización consistente de
+la ecuación adjunta avanzada para el problema de control con retardo. Un ejemplo analítico y ejemplos numéricos
+de ingeniería química y economía ilustran los resultados.</p>
+<p><strong>1. INTRODUCTION</strong></p>
 <p>Differential control systems with delays in state or control variables play an important role in the modelling of real-life phenomena in
 various ﬁelds of applications. Many papers have been devoted to delayed (other terminology: time lag, retarded, hereditary) optimal
 control problems and the derivation of necessary optimality conditions. Let us brieﬂy review some papers concerning different classes of
@@ -57,6 +65,25 @@ maximum principle for control systems with a time-dependent delay in the state v
 linear in the control variable. Colonius and Hinrichsen [ 8 ] provide a uniﬁed approach to control problems with delays in the state
 variable by applying the theory of necessary conditions for optimization problems in function spaces. All articles mentioned so far do not
 consider general control or state inequality constraints.</p>
+<p>Los sistemas de control diferencial con retardos en las variables de estado o de control desempeñan un papel
+importante en el modelado de fenómenos de la vida real en diversos campos de aplicación. Muchos artículos se han
+dedicado a problemas de control óptimo con retardo (otra terminología: retardo de tiempo, retardado, hereditario)
+y a la derivación de condiciones necesarias de optimalidad. Revisemos brevemente algunos artículos sobre
+diferentes clases de problemas de control. Una introducción a los problemas de control con retardo de tiempo se
+puede encontrar en Oˇguzt¨oreli [ 1 ]. Kharatishvili [ 2 ] fue el primero en proporcionar un principio de máximo
+para problemas de control óptimo con un retardo de estado constante. En [ 3 ] , dio resultados similares para
+problemas de control con retardos de control puros. Halany [ 4 ] demuestra un principio de máximo para problemas
+de control óptimo con múltiples retardos constantes en las variables de estado y de control que, sin embargo, se
+eligen para que sean iguales para el estado y el control. Resultados similares fueron obtenidos por Ray y Soliman
+[ 5 ]. Guinn [6] describe un método sencillo para obtener las condiciones necesarias para problemas de control
+con retardo constante en la variable de estado. Sugiere ampliar el problema de control con retardo, lo que da
+lugar a un problema de control sin retardo de mayor dimensión al que se aplica el principio del máximo estándar.
+Banks [7] deriva un principio del máximo para sistemas de control con retardo dependiente del tiempo en la
+variable de estado. Se admiten retardos en el control para sistemas lineales en la variable de control. Colonius
+y Hinrichsen [8] proporcionan un enfoque unificado para problemas de control con retardos en la variable de
+estado mediante la aplicación de la teoría de las condiciones necesarias para problemas de optimización en
+espacios de funciones. Todos los artículos mencionados hasta ahora no consideran restricciones generales de
+control o desigualdad de estado.</p>
 <p>Angell and Kirsch [ 9 ] treat functional differential equations with function-space state inequality constraints. However, they do not
 discuss the regularity of the multiplier associated with the state constraint and do not provide a numerical example with a pure state
 space constraint. To our knowledge, optimal control problems with constant delays in state and control variables and mixed control–state
@@ -69,6 +96,21 @@ Soliman and Ray [ 5, 11 ] . A similar CSTR reactor problem is considered in Oh a
 differential dynamic programming method with a moderate number of stages. Therefore, the second goal of this paper is the presentation of
 discretization and nonlinear programming methods that provide the optimal state, control and adjoint functions and allow for an accurate
 check of the necessary conditions.</p>
+<p>Angell y Kirsch [9] tratan ecuaciones diferenciales funcionales con restricciones de desigualdad de estado en el
+espacio de funciones. Sin embargo, no discuten la regularidad del multiplicador asociado con la restricción de
+estado y no proporcionan un ejemplo numérico con una restricción de espacio de estado pura. Hasta donde sabemos,
+los problemas de control óptimo con retardos constantes en las variables de estado y control y restricciones
+mixtas de desigualdad de control-estado aún no se han considerado en la literatura. El primer objetivo de este
+artículo es derivar un principio de mínimo (máximo) de tipo Pontryagin para esta clase de problemas de control
+con retardo. Con respecto al desarrollo de métodos numéricos y el tratamiento numérico de ejemplos prácticos,
+nuestra impresión es que este tema aún no se ha abordado adecuadamente en la literatura. Bader [10] utiliza
+métodos de colocación para resolver el problema de valor de frontera para la variable de estado retardada y la
+variable adjunta avanzada. Resuelve con éxito varios ejemplos académicos, pero su método no da resultados
+precisos para el problema más difícil del reactor CSTR descrito en Soliman y Ray [5, 11]. Un problema similar de
+reactor CSTR se considera en Oh y Luus [12] y Dadebo y Luus [13], quienes utilizan el método de programación
+dinámica diferencial con un número moderado de etapas. Por lo tanto, el segundo objetivo de este trabajo es
+presentar métodos de discretización y programación no lineal que proporcionen las funciones óptimas de estado,
+control y adjuntas, y permitan una verificación precisa de las condiciones necesarias.</p>
 <p>The organization of this paper is as follows. Section 2 presents the statement of the delayed control problem with mixed state–control
 constraints. In Section 3, we recall the minimum principle for nondelayed control problems with control–state constraints. Here, a crucial
 feature is that the initial and the terminal boundary conditions must be considered in a general mixed form. Section 4 is devoted to the
@@ -82,10 +124,51 @@ an analytical example that allows to test the accuracy of the numerical solution
 the numerical solution and the veriﬁcation of the minimum principle for two practical examples. The ﬁrst example is taken from [ 5, 11 ]
 and describes the optimal control of a chemical tank reactor (CSTR reactor), whereas the second example arises in the optimal harvesting of
 a resource (optimal ﬁshing).</p>
-</section>
-<section id="optimal-control-problems-with-delays-in-state-and-control">
-<h2>2. OPTIMAL CONTROL PROBLEMS WITH DELAYS IN STATE AND CONTROL<a class="headerlink" href="#optimal-control-problems-with-delays-in-state-and-control" title="Link to this heading">¶</a></h2>
-</section>
+<p>La organización de este artículo es la siguiente. La Sección 2 presenta el enunciado del problema de control
+retardado con restricciones mixtas de estado y control. En la Sección 3, recordamos el principio de mínimo para
+problemas de control sin retardo con restricciones de control y estado. Aquí, una característica crucial es que
+las condiciones de contorno iniciales y finales deben considerarse en una forma mixta general. La Sección 4 se
+dedica a la derivación de las condiciones necesarias de optimalidad de primer orden para el problema de control
+óptimo retardado dado en la Sección 2. Esencialmente, se generaliza el enfoque de aumento de Guinn [6], lo que
+permite utilizar el principio de mínimo en la Sección 3. Por razones técnicas, necesitamos la suposición de que
+la razón de los retardos de tiempo en el estado y el control es un número racional. El análisis en esta sección
+se basa en las tesis de Göllmann [14] y Kern [15]. En la Sección 5, se discute la discretización de Euler para el
+problema de control retardado, lo que conduce a un problema de programación no lineal de alta dimensión. Como en
+el caso sin retardo, se puede demostrar que los multiplicadores de Lagrange correspondientes al problema de
+optimización constituyen una discretización de Euler para las ecuaciones adjuntas avanzadas. En la Sección 6,
+analizamos un ejemplo analítico que permite comprobar la precisión de la solución numérica para diferentes
+tamaños de paso. Las Secciones 7 y 8 se dedican a la solución numérica y a la verificación del principio de
+mínimo para dos ejemplos prácticos. El primer ejemplo se toma de [5, 11] y describe el control óptimo de un
+reactor de tanque químico (reactor CSTR), mientras que el segundo ejemplo surge en la explotación óptima de un
+recurso (pesca óptima).</p>
+<p><strong>2. OPTIMAL CONTROL PROBLEMS WITH DELAYS IN STATE AND CONTROL</strong></p>
+<p>We consider retarded optimal control problems with constant delays r  0 in the state variable x(t)∈R n and s  0
+in the control variable u(t)∈R m . The following retarded control problem with mixed control–state inequality
+constraints will be referred to as problem (ROCP):</p>
+<p>Consideramos problemas de control óptimo retardado con retardos constantes r 0 en la variable de estado x(t)∈R n
+y s 0 en la variable de control u(t)∈R m . El siguiente problema de control retardado con restricciones de
+desigualdad mixtas de control-estado se denominará problema (ROCP):</p>
+<p>subject to the retarded differential equation, boundary conditions and mixed control–state inequality constraints</p>
+<p>sujeto a la ecuación diferencial retardada, condiciones de contorno y restricciones de desigualdad de
+estado-control mixtas</p>
+<p>For convenience, all functions</p>
+<p>Para mayor comodidad, todas las funciones</p>
+<p>are assumed to be twice continuously differentiable w.r.t. all arguments. A pair of functions (u,x)∈ L ∞ ( [
+a,b ] ,R m )×W 1,∞ ( [ a,b ] ,R n ) is called an admissible pair for problem (ROCP), if the state x and control
+u satisfy restrictions (2)–(6). An admissible pair (ˆu, ˆx) is called a locally optimal pair or weak minimum for
+(ROCP), if</p>
+<p>Se supone que son dos veces continuamente diferenciables con respecto a todos los argumentos. Un par de funciones
+(u,x)∈ L ∞ ( [ a,b ] ,R m )×W 1,∞ ( [ a,b ] ,R n ) se denomina par admisible para el problema (ROCP), si el
+estado x y el control u satisfacen las restricciones (2)–(6). Un par admisible (ˆu, ˆx) se denomina par
+localmente óptimo o mínimo débil para (ROCP), si</p>
+<p>holds for all (u,x) admissible in a neighborhood of (ˆu, ˆx) with ∥ u(t)− ˆu(t) ∥ , ∥ x(t)− ˆx(t) ∥ &lt; for
+all t ∈ [ a,b ] and &gt;0 sufﬁciently small. Instead of considering a weak minimum, we could use the more general
+notion of a Pontryagin minimum, thus admitting neighborhoods of (ˆu, ˆx) in the L 1 -norm; cf. Milyutin and
+Osmolovskii [ 16 ] .</p>
+<p>se cumple para todo (u,x) admisible en un entorno de (ˆu, ˆx) con ∥ u(t)− ˆu(t) ∥ , ∥ x(t)− ˆx(t) ∥ &lt; para
+todo t ∈ [ a,b ] y &gt;0 suficientemente pequeño. En lugar de considerar un mínimo débil, podríamos usar la noción
+más general de un mínimo de Pontryagin, admitiendo así entornos de (ˆu, ˆx) en la norma L 1; cf. Milyutin y
+Osmolovskii [ 16 ] .</p>
 <section id="first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">
 <h2>3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS<a class="headerlink" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints" title="Link to this heading">¶</a></h2>
 </section>
@@ -201,8 +284,6 @@ Mathematik, Universit¨at M¨unster, 2004. Published in: Verlag Dr. Kovaˇc: Ham
 <li class="toctree-l1"><a class="reference internal" href="2_species-retardo-19_ulio_25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2especies-retardo-13julio25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Optimal control problems with delays in state and control variables subject to mixed control–state constraints</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#introduction">1. INTRODUCTION</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#optimal-control-problems-with-delays-in-state-and-control">2. OPTIMAL CONTROL PROBLEMS WITH DELAYS IN STATE AND CONTROL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints">4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#discretization-optimization-and-consistency-of-adjoint-equations">5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS</a></li>
