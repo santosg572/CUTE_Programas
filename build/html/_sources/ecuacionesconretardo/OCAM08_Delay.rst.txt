@@ -254,7 +254,8 @@ Now we study the retarded control problem (ROCP) with constant delays r,s  0 and
 transformation technique that requires the technical assumption that the ratio of the delays is a rational 
 number.
 
-Ahora estudiamos el problema de control retardado (ROCP) con retardos constantes r,s = 0 y (r,s) = (0,0). 
+Ahora estudiamos el problema de control retardado (ROCP) con retardos constantes :math:`r,s \geq 0` y 
+:math:`(r,s) \neq (0,0)`. 
 Utilizaremos una técnica de transformación que requiere la suposición técnica de que la relación de los retardos 
 es un número racional.
 
@@ -274,7 +275,8 @@ v ∈R m denoting the delayed state and control variables are needed:
 
 El hamiltoniano H y el hamiltoniano aumentado H para el problema de control con retardo (ROCP) se definen de 
 forma análoga a los problemas sin retardo. Sin embargo, a diferencia de los hamiltonianos sin retardo, se 
-necesitan dos argumentos adicionales y ∈R n y v ∈R m que denotan las variables de estado y de control con 
+necesitan dos argumentos adicionales :math:`y \in R^n` y :math:`v \in R^m` que denotan las variables de 
+estado y de control con 
 retardo:
 
 where ∈R n ,  ∈R p .
@@ -494,8 +496,170 @@ inusuales. Se necesita más trabajo para desarrollar completamente la teoría.
 
 **5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS**
 
-6. AN ANALYTICAL EXAMPLE
-------------------------
+Without restrictions, we may assume that the cost functional for the retarded control problem (ROCP) is given 
+in Mayer form:
+
+Sin restricciones, podemos suponer que la función de coste para el problema de control retardado (ROCP) se da 
+en forma de Mayer:
+
+
+The reduction of the more general cost functional (1) to Mayer form proceeds as for undelayed control systems 
+by the introduction of the additional state variable x 0 through the retarded equation:
+
+La reducción del funcional de coste más general (1) a la forma de Mayer procede como para los sistemas de 
+control sin retardo mediante la introducción de la variable de estado adicional x 0 a través de la ecuación 
+retardada:
+
+Then the cost functional (1) is rewritten in Mayer form J(u, ˜x)=g(x(b)) + x 0 (b) with the new state 
+variable ˜x =(x 0 ,x ∗ )∈R n + 1 .
+
+Entonces, el funcional de costo (1) se reescribe en forma de Mayer J(u, ˜x)=g(x(b)) + x 0 (b) con la nueva 
+variable de estado ˜x =(x 0 ,x ∗ )∈R n + 1 .
+
+As for undelayed differential equations, there exist standard integration schemes of Euler or Runge–Kutta 
+type for the retarded differential equation ˙x(t)= f (t,x(t),x(t −r),u(t),u(t −s)). Using a uniform step 
+size h>0, it is crucial to match the delays r and s to the step size h by the following assumption:
+
+En cuanto a las ecuaciones diferenciales sin retardo, existen esquemas de integración estándar de tipo Euler 
+o Runge-Kutta para la ecuación diferencial retardada ˙x(t)= f (t,x(t),x(t −r),u(t),u(t −s)). Utilizando un 
+tamaño de paso uniforme h>0, es crucial que los retardos r y s coincidan con el tamaño de paso h mediante la 
+siguiente suposición:
+
+
+Note that, if h satisﬁes (43), any fraction h/ with ∈N also does. Therefore, restriction (43) is satisﬁed 
+for all ﬁner grids. The rationality assumption (17) regarding the delays r and s imply the existence of 
+positive and coprime integers p and q satisfying
+
+
+Nótese que, si h satisface (43), cualquier fracción h/ con ∈N también lo hace. Por lo tanto, la restricción 
+(43) se satisface para todas las cuadrículas más finas. La suposición de racionalidad (17) con respecto a los 
+retrasos r y s implica la existencia de enteros positivos y coprimos p y q que satisfacen
+
+Deﬁning h max :=s/q gives the maximum interval length for an elementary transformation interval that 
+satisﬁes
+
+Definir h max :=s/q da la longitud máxima del intervalo para un intervalo de transformación elemental que 
+satisface
+
+We have to assume that b−a represents an integer multiple of h max :
+
+Debemos suponer que b−a representa un múltiplo entero de h max:
+
+This gives a condition for the minimum grid point number for an equidistant discretization mesh
+
+Esto proporciona una condición para el número mínimo de puntos de la cuadrícula para una malla de 
+discretización equidistante.
+
+which can be multiplied by an arbitrary integer in order to reﬁne the grid:
+
+que se puede multiplicar por un número entero arbitrario para refinar la cuadrícula:
+
+Deﬁning
+
+gives an arbitrary small and appropriate step size h for the mesh that matches condition (43).
+
+proporciona un tamaño de paso h arbitrariamente pequeño y apropiado para la malla que coincide con la 
+condición (43).
+
+For simplicity, we discuss Euler’s integration method with step size h =(b−a)/N for N ∈N+  and grid points 
+t i =a + ih, i =0,1,..., N. Using the approximations x(t i ) ≈ x i ∈R n and u(t i ) ≈ u i ∈R m , we 
+obtain the following nonlinear programming problem (NLP):
+
+Para simplificar, analizamos el método de integración de Euler con un tamaño de paso h = (b − a) / N para N 
+∈ N+ y puntos de la cuadrícula t i = a + ih, i = 0, 1, ..., N. Usando las aproximaciones x(t i ) ≈ x i ∈ R 
+n y u(t i ) ≈ u i ∈ R m , obtenemos el siguiente problema de programación no lineal (PNL):
+
+subject to
+
+Herein, the initial value proﬁles  and  provide the values:
+
+Aquí se muestran los perfiles de valor inicial y se proporcionan los valores:
+
+The optimization variable in (NLP) is represented by the vector:
+
+The optimization variable in (NLP) is represented by the vector:
+
+
+
+The Lagrangian function for (NLP) is given by
+
+La función lagrangiana para (NLP) viene dada por
+
+with Lagrange multipliers =( 0 , 1 ,..., N−1 )∈R n·N , i ∈R n (i =0,..., N −1), for Equations (45),  =(  
+0 ,  1 ,...,  N−1 )∈R p·N ,  i ∈R p (i =0,..., N −1), for the inequality constraints
+(47), and  N ∈R q for the boundary condition (46). Note that the variables x −i (i =0,...,k) and u −i (i 
+=1,...,l) appearing in the Lagrangian have ﬁxed values in view of the initial conditions
+(48) and (49). The Karush–Kuhn–Tucker (KKT) necessary optimality conditions for (NLP) then ¯ ¯ ¯ imply the 
+existence of Lagrange multipliers ( , , N ) satisfying the following equations:
+
+con multiplicadores de Lagrange =( 0 , 1 ,…, N−1 )∈R n·N , i ∈R n (i =0,…, N −1), para las ecuaciones 
+(45), =( 0 , 1 ,…, N−1 )∈R p·N , i ∈R p (i =0,…, N −1), para las restricciones de desigualdad (47), y N 
+∈R q para la condición de contorno (46). Nótese que las variables x −i (i =0,…,k) y u −i (i =1,…,l) que 
+aparecen en el lagrangiano tienen valores fijos en vista de las condiciones iniciales (48) y (49). Las 
+condiciones necesarias de optimalidad de Karush-Kuhn-Tucker (KKT) para (NLP) implican entonces la existencia 
+de multiplicadores de Lagrange ( , , N ) que satisfacen las siguientes ecuaciones:
+
+For indices i =1,..., N −k−1, the ﬁrst set of equations yields the relations
+
+for indices i = N −k,..., N −1 we obtain
+
+and, ﬁnally, for the index i = N we obtain the boundary condition:
+
+Rearranging the preceding equations, we ﬁnd
+
+Furthermore, the KKT conditions imply the nonnegativity of the multipliers i and the complementarity 
+conditions:
+
+Además, las condiciones KKT implican la no negatividad de los multiplicadores i y las condiciones de 
+complementariedad:
+
+Introducing the scaled multipliers  i /h, Equations (54) can be identiﬁed as the Euler discretization of the 
+advanced adjoint equation (19) with boundary condition (20). Hence, the Lagrange multipliers provide the 
+following approximations:
+
+Al introducir los multiplicadores escalados i /h, las ecuaciones (54) pueden identificarse como la 
+discretización de Euler de la ecuación adjunta avanzada (19) con la condición de contorno (20). Por lo tanto, 
+los multiplicadores de Lagrange proporcionan las siguientes aproximaciones:
+
+
+Then the ﬁrst-order conditions *L/*u i =0,i =0,..., N −1, represent the discretized local minimum condition 
+(22) for the augmented Hamiltonian.
+
+Entonces, las condiciones de primer orden *L/*u i =0,i =0,…, N −1, representan la condición de mínimo local 
+discretizada (22) para el hamiltoniano aumentado.
+
+To solve the optimization problem (NLP) in (44)–(47) numerically, we employ the programming language AMPL 
+developed by Fourer et al. [ 19 ] in conjunction with the optimization solvers LOQO by Vanderbei [ 20 ] or 
+IPOPT by W¨achter et al. [ 21, 22 ] . Both solvers also provide the Lagrange multipliers and thus yield the 
+discretized adjoint variables for the control problem (ROCP). Alternatively, the optimization problem (NLP) 
+can be solved using the code NUDOCCCS developed by B¨uskens [ 23 ] . However, a comparison analysis is not an 
+issue of this paper and should be subject of a more detailed study. The considered numerical method 
+illustrates that a rather straightforward approach can easily be implemented by different optimizers within 
+the AMPL code. Instead of Euler’s discretization scheme, we may also use Runge–Kutta integration schemes of 
+higher order such as the Heun approach (cf. Kern [ 15 ] ). For undelayed optimal control problems, Hager [ 24 
+] has given a detailed consistency analysis for higher-order Runge–Kutta schemes. A similar study should be 
+undertaken for retarded control problems, which, however, is beyond the scope of this paper.
+
+Para resolver numéricamente el problema de optimización (NLP) en (44)–(47), empleamos el lenguaje de 
+programación AMPL desarrollado por Fourer et al. [ 19 ] junto con los solucionadores de optimización LOQO de 
+Vanderbei [ 20 ] o IPOPT de W¨achter et al. [ 21, 22 ]. Ambos solucionadores también proporcionan los 
+multiplicadores de Lagrange y, por lo tanto, generan las variables adjuntas discretizadas para el problema de 
+control (ROCP). Alternativamente, el problema de optimización (NLP) puede resolverse utilizando el código 
+NUDOCCCS desarrollado por B¨uskens [ 23 ]. Sin embargo, un análisis comparativo no es el objetivo de este 
+artículo y debería ser objeto de un estudio más detallado. El método numérico considerado ilustra que un 
+enfoque bastante directo puede implementarse fácilmente con diferentes optimizadores dentro del código AMPL. 
+En lugar del esquema de discretización de Euler, también podemos utilizar esquemas de integración de 
+Runge-Kutta de orden superior, como el método de Heun (véase Kern [15]). Para problemas de control óptimo sin 
+retardo, Hager [24] ha presentado un análisis detallado de la consistencia de los esquemas de Runge-Kutta de 
+orden superior. Debería realizarse un estudio similar para problemas de control con retardo, lo cual, sin 
+embargo, escapa al alcance de este artículo.
+
+For notational ease in the following examples, we suppress the ‘hat’ to denote optimal solutions.
+
+Para simplificar la notación en los siguientes ejemplos, omitimos el símbolo de "sombrero" para denotar 
+soluciones óptimas.
+
+**6. AN ANALYTICAL EXAMPLE**
 
 7. A NONLINEAR CHEMICAL TANK REACTOR MODEL
 ------------------------------------------
