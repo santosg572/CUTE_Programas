@@ -168,20 +168,42 @@ the absence of delays, the initial value proﬁles given by conditions (3) and (
 continuity of the state variables in the augmented problem necessitates to introduce a general boundary condition 
 of mixed type,
 
+Formalmente, cualquier problema de control sin retardo está contenido en el problema retardado (ROCP) al elegir r 
+=s =0. Debido a la ausencia de retardos, se omiten los perfiles de valor inicial dados por las condiciones (3) y 
+(4). Sin embargo, la continuidad de las variables de estado en el problema aumentado requiere introducir una 
+condición de contorno general de tipo mixto,
+
 which replaces the terminal boundary condition (5). This condition is indispensable in the proof of the necessary 
 conditions presented in Section 4. The Hamiltonian or Pontryagin function for the nondelayed control problem 
 without any constraints (6) is given by
 
+que reemplaza la condición de contorno terminal (5). Esta condición es indispensable en la demostración de las 
+condiciones necesarias presentadas en la Sección 4. La función hamiltoniana o de Pontryagin para el problema de 
+control sin retardo y sin restricciones (6) viene dada por
+
 The augmented Hamiltonian is deﬁned by adjoining the mixed control–state constraint (6) by a multiplier  ∈R p 
 to the Hamiltonian (8):
+
+El hamiltoniano aumentado se define adjuntando la restricción mixta de control-estado (6) mediante un 
+multiplicador ∈R p al hamiltoniano (8):
+
 
 Here and in the sequel, ∗ denotes the transposition. The extension of the classical Pontryagin’s minimum 
 principle to the mixed control–state constraints (6) requires a regularity condition or constraint qualiﬁcation. 
 For a locally optimal pair (ˆu, ˆx) and t ∈ [ a,b ] , let J 0 (t):= { j ∈ { 1,..., p }| C j (t, ˆx(t), ˆu(t))=0 
 } denote the set of active indices for the inequality constraint (6). Then, we assume the rank condition:
 
+Aquí y en lo sucesivo, ∗ denota la transposición. La extensión del principio mínimo clásico de Pontryagin a las 
+restricciones mixtas de control-estado (6) requiere una condición de regularidad o cualificación de la 
+restricción. Para un par localmente óptimo (ˆu, ˆx) y t ∈ [ a,b ] , sea J 0 (t):= { j ∈ { 1,…, p }| C j (t, 
+ˆx(t), ˆu(t))=0 } el conjunto de índices activos para la restricción de desigualdad (6). Entonces, asumimos la 
+condición de rango:
+
 The following necessary optimality conditions are to be found in Hestenes [ 17, Chapter 7, Theorem 3.1 ] and 
 Neustadt [ 18, Chapter VI.3, p. 296 ] .
+
+Las siguientes condiciones necesarias de optimalidad se pueden encontrar en Hestenes [ 17, Capítulo 7, Teorema 
+3.1 ] y Neustadt [ 18, Capítulo VI.3, pág. 296 ].
 
 Theorem 3.1 (Pontryagin’s Minimum Principle) Let (ˆu, ˆx) be a locally optimal pair for the control problem 
 (ROCP) without delays, i.e. r =s =0, and the mixed boundary condition (7). Assume that the regularity condition 
@@ -189,28 +211,183 @@ Theorem 3.1 (Pontryagin’s Minimum Principle) Let (ˆu, ˆx) be a locally optim
 function  ˆ ∈ L ∞ ( [ a,b ] ,R p ) and a multiplier  ˆ ∈R q , such that the following conditions hold for a.e. 
 t ∈ [ a,b ] :
 
+Teorema 3.1 (Principio del mínimo de Pontryagin) Sea (ˆu, ˆx) un par localmente óptimo para el problema de 
+control (ROCP) sin retardos, es decir, r =s =0, y la condición de contorno mixta (7). Supongamos que se satisface 
+la condición de regularidad (10). Entonces existen una función adjunta (coestado) ˆ ∈W 1,∞ ( [ a,b ] ,R n ), 
+una función multiplicadora ˆ ∈ L ∞ ( [ a,b ] ,R p ) y un multiplicador ˆ ∈R q , tales que se cumplen las 
+siguientes condiciones para casi todo t ∈ [ a,b ] :
+
+
 (i) adjoint differential equation:
+
+ecuación diferencial adjunta:
 
 (ii) transversality conditions:
 
+condiciones de transversalidad:
+
 (iii) minimum condition for Hamiltonian:
+
+condición mínima para el hamiltoniano:
 
 (iv) local minimum condition for augmented Hamiltonian:
 
+condición de mínimo local para el hamiltoniano aumentado:
+
 (v) nonnegativity of multiplier and complementarity condition:
+
+no negatividad del multiplicador y condición de complementariedad:
 
 In (12) and (13), w x a and w x b denote partial derivatives of w=w(x a ,x b ) with respect to its ﬁrst and 
 second arguments. In the following section, Theorem 3.1 will be used to derive necessary conditions for the 
 retarded control problem (ROCP).
 
+En (12) y (13), w x a y w x b denotan derivadas parciales de w=w(x a ,x b ) con respecto a su primer y segundo 
+argumento. En la siguiente sección, se utilizará el Teorema 3.1 para derivar las condiciones necesarias para el 
+problema de control retardado (ROCP).
 
 
 
-4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS
-------------------------------------------------------------------------------------------------------------
+**4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS**
 
-5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS
---------------------------------------------------------------------
+Now we study the retarded control problem (ROCP) with constant delays r,s  0 and (r,s) =(0,0). ̸ We shall use a 
+transformation technique that requires the technical assumption that the ratio of the delays is a rational 
+number.
+
+ssumption 4.1 (rationality assumption) Assume that r,s  0,(r,s) ̸ =(0,0) and
+
+In particular, this assumption holds for any couple of rational numbers (r,s), where at least one number is 
+nonzero.
+
+The Hamiltonian H and the augmented Hamiltonian H for the delayed control problem (ROCP) are deﬁned in analogy 
+to nondelayed problems. However, in contrast to the nondelayed Hamiltonians, two additional arguments y ∈R n and 
+v ∈R m denoting the delayed state and control variables are needed:
+
+where ∈R n ,  ∈R p .
+
+We shall obtain necessary optimality conditions for the retarded control problem (ROCP) by ﬁrst transforming 
+(augmenting) problem (ROCP) to a higher-dimensional nondelayed control problem. To further study the augmented 
+problem, we need Pontryagin’s minimum principle for nondelayed control problems with mixed control–state 
+constraints, which will be reviewed in the following section.
+
+The following ﬁrst-order necessary conditions can be found in G¨ollmann [ 14 ] ; a precise proof under 
+Assumption 4.1 has been given by Kern [ 15 ] .
+
+Theorem 4.2 (minimum principle for the retarded optimal control problem (ROCP)) Let (ˆu, ˆx) be locally optimal 
+for (ROCP) with delays satisfying Assumption 4.1. Then there exist a costate (adjoint) function ˆ ∈W 1,∞ ( [ 
+a,b ] ,R n ), a multiplier function  ˆ ∈ L ∞ ( [ a,b ] ,R p ) and a multiplier  ˆ ∈R q , such that the 
+following conditions hold for a.e. t ∈ [ a,b ] :
+
+(i) adjoint differential equation:
+
+where (t) and (t) denote the evaluation of the partial derivatives H x and H y along ˆ ˆx(t), ˆx(t −r), ˆu(t), 
+ˆu(t −s), (t),  (t); (ii) transversality condition:
+
+(iii) minimum condition for Hamiltonian:
+
+for all u ∈R m satisfying C(t, ˆx(t),u)  0;
+
+ (iv) local minimum condition for augmented Hamiltonian:
+
+(v) nonnegativity of multiplier and complementarity condition:
+
+Proof The proof uses a transformation technique suggested by Guinn [ 6 ] to derive ﬁrst-order necessary 
+conditions for unconstrained optimal control problems with pure state delays. In view of the rationality 
+assumption (17), there exist integers k,l ∈N with
+
+Without loss of generality, we may assume the ﬁrst case. Then the delays r,s are integer multiples of the 
+interval length h :=s/l:
+
+The time interval [ a,a + h ] will be used below as the basis time interval for the augmented control problem. 
+Without loss of generality, we may further assume that the interval length b−a represents an integer multiple of 
+h, i.e. we have b−a = Nh with N ∈N + .
+
+Now we introduce the state variable  ∗ =(  ∗ ,...,  ∗ N−1 )∈R Nn ,  i ∈R n , and control variable 0  ∗ =( 
+∗ ,..., ∗ N−1 )∈R Nm , i ∈R m , which are deﬁned by
+
+The continuity of the state x(t) in [ a,b ] implies the following boundary conditions for the augmented state 
+(t):
+
+which can be expressed as
+
+In terms of the new state and control variables  and , the retarded control problem (ROCP) is equivalent to the 
+following undelayed optimal control problem on the time interval [ a,a + h ] :
+
+The ﬁxed starting proﬁles (3) and (4) are included in this notation by considering the variables • −k ,...,  
+−1 and −l ,..., −l deﬁned by
+
+However, note that  −k ,...,  −1 and −l ,..., −1 do not represent optimization variables. Introducing adjoint 
+variables and multipliers for the augmented problem by (26)–(29) by
+
+the Hamiltonian functions (8) and (9) for the nondelayed augmented control problem are given by
+
+Every locally optimal pair (ˆu(·), ˆx(·)) for (ROCP) deﬁnes a pair ( (·), (·)) that minimizes the augmented 
+problem (26)–(29). Pontryagin’s minimum principle for nondelayed problems (Theorem 3.1) assures the existence of 
+a costate (adjoint) function ˆ ∈W 1,∞ ( [ a,a + h ] ,R N·n ), a multiplier function M ˆ ∈ L ∞ ( [ a,a + h ] 
+,R N·p ) and a vector ∈R (N−1)n + q ,  ˆ =(ˆ  ∗ ,...,  ˆ ∗ ,  ˆ ∗ )∗  0 N−2 N−1 where  ˆ 0 ,...  ˆ N−2 
+∈R n and  ˆ N−1 ∈R q , such that the following conditions hold for almost every
+
+t ∈ [ a,a + h ] :
+
+1. adjoint differential equation:
+
+2. transversality condition:
+
+3. minimum condition for Hamiltonian:
+
+4. local minimum condition for augmented Hamiltonian:
+
+5. nonnegativity of multiplier and complementarity condition:
+
+Evaluating the adjoint equation for the component
+
+ˆ  j
+
+(0  j  N −1) yields
+
+Now we are able to deﬁne the adjoint function ˆ ∈W 1,∞ ( [ a,b ] ,R n ) and multiplier function  ˆ ∈ L ∞ ( [ 
+a,b ] ,R p ) for the retarded control problem (ROCP) in the following way. For t ∈ [ a,b ] , there exists 0  j  
+N −1 with a + jh  t  a + ( j + 1)h. We substitute
+
+and obtain from the previous adjoint equation:
+
+Thus, we have found the adjoint equation (19). The transversality condition (34) for  N−1
+
+gives the desired transversality condition (20) for (ROCP) in view of b=a + Nh:
+
+To verify the minimum condition for the Hamiltonian H, we consider t ∈ [ a,b ] and the corresponding index j ∈ 
+{ 0,..., N −1 } with a + jh  t  a + ( j + 1)h. Substituting t ′ :=t − jh ∈ [ a,a + h ] , the minimum condition 
+(36) gives
+
+for all admissible ∈R Nm satisfying (29). The local minimum condition (37) yields K  (t ′ )=0. Now we deﬁne an 
+admissible control policy (·)=( ∗ ,..., ∗ ) ∗ ∈R Nm by
+
+where the control vector u ∈R m is admissible for (ROCP), i.e. C(t, ˆx(t),u)  0. Evaluating inequality (40) for 
+this vector  and removing equal expressions on both sides, we obtain for the remaining terms associated with j 
+and j + l:
+
+Redeﬁning the adjoint and multiplier function in (39) with t ′ =t − jh, we obtain the desired minimum condition 
+(21) for the Hamiltonian H, respectively, the local minimum condition (22) for the augmented Hamiltonian. 
+Condition (38) immediately implies the multiplier and complementarity condition (23) in view of (39). 
+
+Remark Soliman, Ray [ 5 ] have discussed bang-bang and singular controls that appear in control problems, where 
+the control u ∈R m is partitioned into controls u 1 ∈R m 1 and u 2 ∈R m 2 with control u 1 appearing linearly 
+in the system. The control–state constraint (6) then reduces to bounds for u 1 :
+
+The minimum condition (21) shows that the control u 1 (t) is determined by the sign of the components of the 
+switching vector function
+
+whereas the control u 2 satisﬁes the local minimum condition (22)
+
+The CSTR control problem in Section 6 provides an example with such a partitioning of the control vector. Soliman 
+and Ray [ 5 ] study junction phenomena for bang-bang and singular arcs. They not only give conditions under which 
+junction results for control systems without delay carry over to delayed systems, but also give examples for 
+delayed systems that exhibit unusual features. Some examples illustrating these unusual features have been worked 
+out by Kern [ 15 ] . Further work is needed to fully develop the theory.
+
+
+
+**5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS**
 
 6. AN ANALYTICAL EXAMPLE
 ------------------------

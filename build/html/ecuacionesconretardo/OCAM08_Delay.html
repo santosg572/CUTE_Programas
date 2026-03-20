@@ -169,12 +169,75 @@ Osmolovskii [ 16 ] .</p>
 todo t ∈ [ a,b ] y &gt;0 suficientemente pequeño. En lugar de considerar un mínimo débil, podríamos usar la noción
 más general de un mínimo de Pontryagin, admitiendo así entornos de (ˆu, ˆx) en la norma L 1; cf. Milyutin y
 Osmolovskii [ 16 ] .</p>
-<section id="first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">
-<h2>3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS<a class="headerlink" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints" title="Link to this heading">¶</a></h2>
-</section>
-<section id="necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints">
-<h2>4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS<a class="headerlink" href="#necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints" title="Link to this heading">¶</a></h2>
-</section>
+<p><strong>3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS</strong></p>
+<p>Formally, any undelayed control problem is contained in the retarded problem (ROCP) by choosing r =s =0. Owing to
+the absence of delays, the initial value proﬁles given by conditions (3) and (4) are omitted. However, the
+continuity of the state variables in the augmented problem necessitates to introduce a general boundary condition
+of mixed type,</p>
+<p>Formalmente, cualquier problema de control sin retardo está contenido en el problema retardado (ROCP) al elegir r
+=s =0. Debido a la ausencia de retardos, se omiten los perfiles de valor inicial dados por las condiciones (3) y
+(4). Sin embargo, la continuidad de las variables de estado en el problema aumentado requiere introducir una
+condición de contorno general de tipo mixto,</p>
+<p>which replaces the terminal boundary condition (5). This condition is indispensable in the proof of the necessary
+conditions presented in Section 4. The Hamiltonian or Pontryagin function for the nondelayed control problem
+without any constraints (6) is given by</p>
+<p>que reemplaza la condición de contorno terminal (5). Esta condición es indispensable en la demostración de las
+condiciones necesarias presentadas en la Sección 4. La función hamiltoniana o de Pontryagin para el problema de
+control sin retardo y sin restricciones (6) viene dada por</p>
+<p>The augmented Hamiltonian is deﬁned by adjoining the mixed control–state constraint (6) by a multiplier  ∈R p
+to the Hamiltonian (8):</p>
+<p>El hamiltoniano aumentado se define adjuntando la restricción mixta de control-estado (6) mediante un
+multiplicador ∈R p al hamiltoniano (8):</p>
+<p>Here and in the sequel, ∗ denotes the transposition. The extension of the classical Pontryagin’s minimum
+principle to the mixed control–state constraints (6) requires a regularity condition or constraint qualiﬁcation.
+For a locally optimal pair (ˆu, ˆx) and t ∈ [ a,b ] , let J 0 (t):= { j ∈ { 1,…, p }| C j (t, ˆx(t), ˆu(t))=0
+} denote the set of active indices for the inequality constraint (6). Then, we assume the rank condition:</p>
+<p>Aquí y en lo sucesivo, ∗ denota la transposición. La extensión del principio mínimo clásico de Pontryagin a las
+restricciones mixtas de control-estado (6) requiere una condición de regularidad o cualificación de la
+restricción. Para un par localmente óptimo (ˆu, ˆx) y t ∈ [ a,b ] , sea J 0 (t):= { j ∈ { 1,…, p }| C j (t,
+ˆx(t), ˆu(t))=0 } el conjunto de índices activos para la restricción de desigualdad (6). Entonces, asumimos la
+condición de rango:</p>
+<p>The following necessary optimality conditions are to be found in Hestenes [ 17, Chapter 7, Theorem 3.1 ] and
+Neustadt [ 18, Chapter VI.3, p. 296 ] .</p>
+<p>Las siguientes condiciones necesarias de optimalidad se pueden encontrar en Hestenes [ 17, Capítulo 7, Teorema
+3.1 ] y Neustadt [ 18, Capítulo VI.3, pág. 296 ].</p>
+<p>Theorem 3.1 (Pontryagin’s Minimum Principle) Let (ˆu, ˆx) be a locally optimal pair for the control problem
+(ROCP) without delays, i.e. r =s =0, and the mixed boundary condition (7). Assume that the regularity condition
+(10) is satisﬁed. Then there exist a costate (adjoint) function ˆ ∈W 1,∞ ( [ a,b ] ,R n ), a multiplier
+function  ˆ ∈ L ∞ ( [ a,b ] ,R p ) and a multiplier  ˆ ∈R q , such that the following conditions hold for a.e.
+t ∈ [ a,b ] :</p>
+<p>Teorema 3.1 (Principio del mínimo de Pontryagin) Sea (ˆu, ˆx) un par localmente óptimo para el problema de
+control (ROCP) sin retardos, es decir, r =s =0, y la condición de contorno mixta (7). Supongamos que se satisface
+la condición de regularidad (10). Entonces existen una función adjunta (coestado) ˆ ∈W 1,∞ ( [ a,b ] ,R n ),
+una función multiplicadora ˆ ∈ L ∞ ( [ a,b ] ,R p ) y un multiplicador ˆ ∈R q , tales que se cumplen las
+siguientes condiciones para casi todo t ∈ [ a,b ] :</p>
+<ol class="lowerroman simple">
+<li><p>adjoint differential equation:</p></li>
+</ol>
+<p>ecuación diferencial adjunta:</p>
+<ol class="lowerroman simple" start="2">
+<li><p>transversality conditions:</p></li>
+</ol>
+<p>condiciones de transversalidad:</p>
+<ol class="lowerroman simple" start="3">
+<li><p>minimum condition for Hamiltonian:</p></li>
+</ol>
+<p>condición mínima para el hamiltoniano:</p>
+<ol class="lowerroman simple" start="4">
+<li><p>local minimum condition for augmented Hamiltonian:</p></li>
+</ol>
+<p>condición de mínimo local para el hamiltoniano aumentado:</p>
+<ol class="loweralpha simple" start="22">
+<li><p>nonnegativity of multiplier and complementarity condition:</p></li>
+</ol>
+<p>no negatividad del multiplicador y condición de complementariedad:</p>
+<p>In (12) and (13), w x a and w x b denote partial derivatives of w=w(x a ,x b ) with respect to its ﬁrst and
+second arguments. In the following section, Theorem 3.1 will be used to derive necessary conditions for the
+retarded control problem (ROCP).</p>
+<p>En (12) y (13), w x a y w x b denotan derivadas parciales de w=w(x a ,x b ) con respecto a su primer y segundo
+argumento. En la siguiente sección, se utilizará el Teorema 3.1 para derivar las condiciones necesarias para el
+problema de control retardado (ROCP).</p>
+<p><strong>4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS</strong></p>
 <section id="discretization-optimization-and-consistency-of-adjoint-equations">
 <h2>5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS<a class="headerlink" href="#discretization-optimization-and-consistency-of-adjoint-equations" title="Link to this heading">¶</a></h2>
 </section>
@@ -284,8 +347,6 @@ Mathematik, Universit¨at M¨unster, 2004. Published in: Verlag Dr. Kovaˇc: Ham
 <li class="toctree-l1"><a class="reference internal" href="2_species-retardo-19_ulio_25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2especies-retardo-13julio25.html">Ecuaciones de Lotka-Volterra para dos especies con retardo</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Optimal control problems with delays in state and control variables subject to mixed control–state constraints</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#first-order-necessary-optimality-conditions-for-undelayed-optimal-control-problems-with-mixed-constraints">3. FIRST-ORDER NECESSARY OPTIMALITY CONDITIONS FOR UNDELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONSTRAINTS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#necessary-optimality-conditions-for-delayed-optimal-control-problems-with-mixed-controlstate-constraints">4. NECESSARY OPTIMALITY CONDITIONS FOR DELAYED OPTIMAL CONTROL PROBLEMS WITH MIXED CONTROL–STATE CONSTRAINTS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#discretization-optimization-and-consistency-of-adjoint-equations">5. DISCRETIZATION, OPTIMIZATION AND CONSISTENCY OF ADJOINT EQUATIONS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#an-analytical-example">6. AN ANALYTICAL EXAMPLE</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#a-nonlinear-chemical-tank-reactor-model">7. A NONLINEAR CHEMICAL TANK REACTOR MODEL</a></li>
