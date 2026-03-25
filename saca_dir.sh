@@ -2,15 +2,13 @@
 
 dd=$(date +"Year: %y, Month: %m, Day: %d")
 dd=$(date +"M%mD%dY%y")
-echo $dd
+echo "Fecha de hoy: "$dd
 
-dd="cute"
-
-echo `pwd` > $dd".txt"
-ls -1 `pwd` >> $dd".txt"
-
-python creaHTML.py
-
-
-
+if [ $# -ne 2 ]; then
+  echo "introduce path y nombre de archivo"
+else
+    echo "bien"
+    echo $1 > $2".txt"
+    ls -1 $1 >> $2".txt"
+fi
 

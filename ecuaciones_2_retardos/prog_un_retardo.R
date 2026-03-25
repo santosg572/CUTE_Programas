@@ -51,6 +51,70 @@ procesa_drerecha <- function(tao=0, niter=0){
   ret = list(tt, yy)
 }
 
+procesa_drerecha2 <- function(valini=0, tao=0, tf=0){   
+  np = 11
+  
+  to = seq(0, tao, length.out = np)
+  yi = rep(1, np)
+    
+  del = to[2]-to[1]
+  t = seq(0, tf, del)
+  niter = length(t)  
+  
+  print(del)
+  print(niter)   
+  y1 = yi[np]
+  yy = c(y1)
+  for (i in 2:np){
+       y2 = y1 + del*yi[i]
+       y1 = y2
+       yy = c(yy, y1)
+  }
+
+  y1 = yy[np]
+  print(y1)
+
+  for (i in (np+1):niter){
+       y2 = y1 + del*yy[i-np]
+       y1 = y2
+       yy = c(yy, y1)
+  }
+  ret = list(t, yy)
+}
+
+procesa_izquierda2 <- function(valini=0, tao=0, tf=0){
+  np = 11
+
+  to = seq(0, tao, length.out = np)
+  yF = exp(tF)
+  yi = rep(yF, np)
+
+  del = to[2]-to[1]
+  t = seq(0, tf, del)
+  niter = length(t)
+
+  yy = rep(0, niter)
+
+  y2 = yi[1]
+  yy[niter] = y2
+ 
+  k = niter-1
+  for (i in 2:np){
+       y1 = y2 - del*yi[i]
+       y2 = y1
+       yy[k] = y2
+       k = k-1
+  }
+
+  for (i in k:1){
+       y1 = y2 - del*yy[i-np]
+       y1 = y2
+       yy = c(yy, y1)
+  }
+  ret = list(t, yy)
+}
+
+
 procesa_izquierda <- function(tao=0, niter=0, tF){
   t2 = 0
   t1 = -tao
@@ -77,10 +141,14 @@ procesa_izquierda <- function(tao=0, niter=0, tF){
 
 pp = procesa_izquierda(tao=.2, niter=70, 20)
 
+#pp = procesa_drerecha(tao=.2, niter=70)
+
 plot(pp[[1]], pp[[2]], type='l')
 
 mt = exp(pp[[1]])
 
 points (pp[[1]], mt, type='l', col='red')
 
+#w = procesa_drerecha2(1, .05, 14)
 
+#points(w[[1]], w[[2]], type='l', col='blue')

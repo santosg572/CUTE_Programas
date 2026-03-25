@@ -1,4 +1,4 @@
-/Users/santosg/CUTE_Programas
+./
 ART
 Articulos
 CUT
@@ -26,6 +26,7 @@ antonieta_CUTE_Programas_ART_nov1221
 build
 copila.sh
 creaHTML.py
+cute.html
 cute.txt
 ecuaciones_2_retardos
 fecha.sh
