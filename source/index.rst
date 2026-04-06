@@ -1,8 +1,3 @@
-.. Numerical_Analysis_2E_Walter documentation master file, created by
-   sphinx-quickstart on Sat Oct  4 03:33:53 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Welcome to Numerical_Analysis_2E_Walter's documentation!
 ========================================================
 
@@ -10,8 +5,6 @@ Welcome to Numerical_Analysis_2E_Walter's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   reporte
-   ecuacionesconretardo/2_species-retardo-19_ulio_25
-   ecuacionesconretardo/2especies-retardo-13julio25.rst
-   ecuacionesconretardo/OCAM08_Delay.rst
+   dir_feb0626
+
 
