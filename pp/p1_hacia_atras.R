@@ -17,7 +17,7 @@ print(nn)
 y2 = y[nn-n+1]
 print(y2)
 for (i in (nn-n):1){
-   y1 = y2 - del1 * (-1*((i+1)*del1)^2 - 2 + y[i+n])
+   y1 = y2 - del1 * (-1*(i*del1)^2 - 2 + y[i+n])
    y2 = y1
    y[i] = y1
 }
