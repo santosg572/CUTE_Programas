@@ -1,0 +1,60 @@
+Solucion de Ecuación Diferencial Ordinaria 2 orden
+===================================================
+
+1) Dada la ecuación:
+
+.. math::
+
+   x'' + b x' + cx + d = 0
+
+encontrar su solución.
+
+2) Soluciones particulales de :math:`x'' + b x' + cx = 0`
+
+Consideremos la ecuación :math:`x^2+bx+c=0`
+
+La soluciones de esta ecuacion son:
+
+.. math::
+
+   r_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+
+Luego la solucion de la ecuación (2) es
+
+.. math::
+
+   y(t) = A e^{r_1t} + B e^{r_2t}
+
+Luego la solución general de la ecuación 1 es:
+
+.. math::
+
+   y(t) = A e^{r_1t} + B e^{r_2t} - \frac{d}{c}
+
+Establescamos las condiciones iniciales y(0) = 1 y y'(0) = 0
+
+Lugo obtenemos:
+
+.. math::
+
+   y(0) = A + B - \frac{d}{c} = 1
+
+   y'(0) = Ar_1 + Br_2 = 0
+
+entonces
+
+.. math::
+
+   -Ar_1 - Br_1 = -r_1(1 + \frac{d}{c})
+
+   Ar_1 + Br_2 = 0
+
+luego:
+
+.. math::
+
+   B = \frac{-r_1(1 + \frac{d}{c})}{r_2-r_1}
+
+   A = -\frac{r_2}{r_1} B
+
+
