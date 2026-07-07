@@ -1,15 +1,29 @@
+# b^2 - 4c
+
 c = 1
-b = 3
 d = 1
+b = 4*c-5
 
-t = seq(0, 5, .1)
+t2 = 10
+t = seq(0, t2, .01)
 
-dd = b^2-4*c
+dd = as.complex(b^2-4*c)
 
-x1 = (-b + sqrt(dd))/2
-x2 = (-b - sqrt(dd))/2
+r1 = (-b + sqrt(dd))/2
+r2 = (-b - sqrt(dd))/2
 
-y = exp(x1*t) + exp(x2+t) - d/c
+print(r1)
+print(r2)
+
+num = -r1*(1+d/c)
+den = r2-r1
+
+B = num/den
+A = -r2*B/r1
+
+y = A*exp(r1*t) + B*exp(r2*t) - d/c
+
+print(y[1])
 
 plot(t, y, type='l')
 
@@ -17,16 +31,18 @@ n = length(t)
 
 yy = matrix(rep(0, 2*n), ncol=2)
 
-y1 = c(-b,1)
+y1 = c(0,1)
 A = matrix(c(-b, 1, -c, 0), ncol=2)
 del1 = t[2] - t[1]
-
+yy[1,] = y1
 for (i in 2:n){
-  y2 = y1 + del1*(A %*% y1) - c(d,0)
+  y2 = y1 + del1*(A %*% y1 - c(d,0))
   yy[i,] = y2
   y1 = y2
 }
 
-points(t, yy[,2], type='l', col='red')
+yc = yy[,2]
+print(yc[1])
+points(t, yc+.01, type='l', col='red')
 
 
