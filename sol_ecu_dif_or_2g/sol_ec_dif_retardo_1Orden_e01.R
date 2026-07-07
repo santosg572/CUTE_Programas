@@ -1,8 +1,8 @@
-t2=10
+t2=5
 del1 = .01
 t = seq(0, t2, del1)
 
-y = 2*sin(t)
+y = exp(t)
 
 print(y[1])
 plot(t, y, type='l')
@@ -60,5 +60,5 @@ print(yy)
 print(length(tt))
 print(length(yy))
 
-#points(tt, yy, type='l', col='red')
+points(tt, yy, type='l', col='red')
 
