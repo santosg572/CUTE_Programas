@@ -1,43 +1,21 @@
-# y' = cos(t), y(0) =1
-#
-
-# solucion analitica
- 
-t2=20
+t2=5
 del1 = .01
 t = seq(0, t2, del1)
 
-y = sin(t)+1
+y = exp(t)
 
+print(y[1])
 plot(t, y, type='l')
 
-# ============================
-# solucion numerica
+#============================
 
-del1 = .01
-t = seq(0, t2, del1)
-n = length(t)
-y = rep(0, n)
-
-y1 = 1
-y[1] = y1
-
-for (i in 2:n){
-  y2 = y1 + del1 * cos(t[i-1])
-  y1 = y2
-  y[i] = y1
-}
-
-points(t, y+.1, type='l', col='blue')
-
-#=============== solucion con retardo
-
-tao = 1
-del1 = .01
+tao = .01
+del1 = .001
 n = tao/del1+1
 
+
 t = seq(0,tao,length.out = n)
-y = rep(0, n)
+y = rep(1, n)
 
 nrep = t2/tao
 cat('nrep:', nrep, '\n')
@@ -55,13 +33,11 @@ nt = length(tt)
 
 yy = rep(0,nt)
 
-y1 = 1
+y1 = y[1]
 yy[1] = y1
 
-cat('n = ', n, '\n')
-
 for (i in 2:n){
-  y2 = y1 + del1*cos(t[i-1])
+  y2 = y1 + del1*y[i]
   yy[i] = y2
   y1 = y2
 }
@@ -73,7 +49,7 @@ print('y1')
 print(y1)
 
 for (i in (n+1):nt){
-  y2 = y1 + del1*cos(tt[i-n])
+  y2 = y1 + del1*yy[i-n]
   yy[i] = y2
   y1 = y2
 }

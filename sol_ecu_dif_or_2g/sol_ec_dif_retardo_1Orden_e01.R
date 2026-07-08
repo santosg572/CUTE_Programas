@@ -1,11 +1,32 @@
+# ecuacion  x'=x, con x(0)=1
+#
+
 t2=5
 del1 = .01
+
+# solucion analitica
+
 t = seq(0, t2, del1)
-
 y = exp(t)
-
-print(y[1])
 plot(t, y, type='l')
+
+# ================================
+# solucion numerica
+
+t = seq(0, t2, del1)
+n = length(t)
+y = rep(0, n)
+
+y1 = 1
+y[1] = y1
+for (i in 2:n){
+  y2 = y1 + del1*y1
+  y1 = y2
+  y[i] = y1
+}
+
+points(t,y, type='l', col='blue')
+
 
 #============================
 

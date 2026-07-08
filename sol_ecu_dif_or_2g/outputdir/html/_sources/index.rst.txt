@@ -1,19 +1,10 @@
-.. solucion documentation master file, created by
-   sphinx-quickstart on Mon Jul  6 05:07:38 2026.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-solucion documentation
+Ecuaciones Diferenciales
 ======================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   c01
+   sol_ecu_dif_ord_1orden
+   sol_ecu_dif_ord_2orden
 
