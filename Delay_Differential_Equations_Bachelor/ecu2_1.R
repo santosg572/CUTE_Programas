@@ -28,10 +28,10 @@ for (n in 1:nrep){
   x2 = c(x2, x)
 }
 
-print(length(t2))
-print(length(x2))
-print(t2)
-print(x2)
+#print(length(t2))
+#print(length(x2))
+#print(t2)
+#print(x2)
 plot(t2,x2, type='l')
 
 
@@ -41,11 +41,10 @@ tao = 2
 del1 = .01
 n = tao/del1+1
 
-
 t = seq(0,tao,length.out = n)
 y = rep(1, n)
 
-nrep = t2/tao
+nrep = 8
 #cat('nrep:', nrep, '\n')
 
 tt = t
@@ -54,8 +53,8 @@ for (i in 2:nrep){
   tt = c(tt, (i-1)*tao+t[2:n])
 }
 
-#print('tt')
-#print(tt)
+print('tt')
+print(tt)
 
 nt = length(tt)
 
