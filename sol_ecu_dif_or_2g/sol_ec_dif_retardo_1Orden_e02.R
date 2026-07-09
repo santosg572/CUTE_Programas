@@ -14,7 +14,7 @@ plot(t, y, type='l')
 # ============================
 # solucion numerica
 
-del1 = .01
+del1 = .001
 t = seq(0, t2, del1)
 n = length(t)
 y = rep(0, n)
@@ -32,7 +32,7 @@ points(t, y+.1, type='l', col='blue')
 
 #=============== solucion con retardo
 
-tao = 1
+tao = .1
 del1 = .01
 n = tao/del1+1
 

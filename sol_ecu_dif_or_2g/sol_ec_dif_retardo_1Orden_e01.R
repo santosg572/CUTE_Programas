@@ -30,8 +30,8 @@ points(t,y, type='l', col='blue')
 
 #============================
 
-tao = .01
-del1 = .001
+tao = .1
+del1 = .01
 n = tao/del1+1
 
 
