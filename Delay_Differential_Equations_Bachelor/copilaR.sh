@@ -1,6 +1,6 @@
 #!/bin/bash
 
-rm Rplots.pdf
+rm $1".png"
 Rscript $1".R"
-open Rplots.pdf
+open $1".png"
 

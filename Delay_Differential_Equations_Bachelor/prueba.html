@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>Mathedemo</title>
+<style>
+    p {
+      font-size: 25px;
+    }
+  </style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\(','\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+
+<body>
+
+<h2> Problema a resolver: </h2>
+
+<p> Solución de la ecuación diferencial con retardo:
+
+<p>
+$$
+x' = x(t-\tau) \text{ para } \tau < t \leq 0
+$$
+</p>
+<img src="ecu2_1.png" alt="A descriptive summary of the image" width="500" height="300"><p>Este es un texto normal y <mark>este texto está resaltado</mark>.</p><p>Aquí usamos <strong>mucha importancia</strong> y aquí <em>énfasis suave</em>.</p><p># solucion de la ecuacion x'(t) = -x(t-T) para t >= 0<wbr># con x(t)=1 para t en [-T,0]<wbr><wbr><wbr>t2=5<wbr><wbr>#======================= solucion analitica con retardo<wbr><wbr>tao = 2<wbr>del1 = .1<wbr>n = tao/del1+1<wbr><wbr>t = seq(0,1,length.out = 100)<wbr><wbr>nrep = 8<wbr><wbr>t2 = c()<wbr>x2 = c()<wbr><wbr>for (n in 1:nrep){<wbr>  #n = 2<wbr>  tt = tao*t+(n-1)*tao<wbr>  x = 1<wbr>  for (k in 1:n){<wbr>    x = x + (-1)^k * (tt-(k-1)*tao)^k / factorial(k)<wbr>  }<wbr>  t2 = c(t2, tt)<wbr>  x2 = c(x2, x)<wbr>}<wbr><wbr>file = 'ecu2_1'<wbr>png(paste(file,".png",sep=''))<wbr><wbr>#print(length(t2))<wbr>#print(length(x2))<wbr>#print(t2)<wbr>#print(x2)<wbr>plot(t2,x2, type='l')<wbr><wbr><wbr>#======================= solucion numerica con  retardo<wbr><wbr>tao = 2<wbr>del1 = .01<wbr>n = tao/del1+1<wbr><wbr>t = seq(0,tao,length.out = n)<wbr>y = rep(1, n)<wbr><wbr>nrep = 8<wbr>#cat('nrep:', nrep, '\n')<wbr><wbr>tt = t<wbr><wbr>for (i in 2:nrep){<wbr>  tt = c(tt, (i-1)*tao+t[2:n])<wbr>}<wbr><wbr>print('tt')<wbr>print(tt)<wbr><wbr>nt = length(tt)<wbr><wbr>yy = rep(0,nt)<wbr><wbr>y1 = y[1]<wbr>yy[1] = y1<wbr><wbr>for (i in 2:n){<wbr>  y2 = y1 - del1*y[i]<wbr>  yy[i] = y2<wbr>  y1 = y2<wbr>}<wbr><wbr>#print('yy')<wbr>#print(yy)<wbr><wbr>#print('y1')<wbr>#print(y1)<wbr><wbr>for (i in (n+1):nt){<wbr>  y2 = y1 - del1*yy[i-n]<wbr>  yy[i] = y2<wbr>  y1 = y2<wbr>}<wbr><wbr>#print(tt)<wbr>#print(yy)<wbr><wbr>#print(length(tt))<wbr>#print(length(yy))<wbr><wbr>points(tt, yy, type='l', col='red')<wbr><wbr>dev.off()<wbr><wbr></p>
+</body>
+</html>

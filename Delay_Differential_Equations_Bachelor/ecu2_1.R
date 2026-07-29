@@ -28,6 +28,9 @@ for (n in 1:nrep){
   x2 = c(x2, x)
 }
 
+file = 'ecu2_1'
+png(paste(file,".png",sep=''))
+
 #print(length(t2))
 #print(length(x2))
 #print(t2)
@@ -88,4 +91,6 @@ for (i in (n+1):nt){
 #print(length(yy))
 
 points(tt, yy, type='l', col='red')
+
+dev.off()
 
