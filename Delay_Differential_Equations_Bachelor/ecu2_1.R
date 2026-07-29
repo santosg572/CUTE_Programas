@@ -3,10 +3,11 @@
 
 
 t2=5
-
+dely = .2
 #======================= solucion analitica con retardo
 
 tao = 2
+
 del1 = .1
 n = tao/del1+1
 
@@ -40,7 +41,7 @@ plot(t2,x2, type='l')
 
 #======================= solucion numerica con  retardo
 
-tao = 2
+#tao = 2
 del1 = .01
 n = tao/del1+1
 
@@ -90,7 +91,7 @@ for (i in (n+1):nt){
 #print(length(tt))
 #print(length(yy))
 
-points(tt, yy, type='l', col='red')
+points(tt, yy+dely, type='l', col='red')
 
 dev.off()
 
