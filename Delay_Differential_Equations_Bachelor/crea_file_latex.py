@@ -45,18 +45,20 @@ fil.write(c1)
 fil.write(texto)
 fil.write('<img src="ecu2_1.png" alt="A descriptive summary of the image" width="500" height="300">')
 
+fil.write('<p>Super<br>cali<br>fragilístico<br>espialidoso.</p>')
+
 fil.write('<p>Este es un texto normal y <mark>este texto está resaltado</mark>.</p>')
 fil.write('<p>Aquí usamos <strong>mucha importancia</strong> y aquí <em>énfasis suave</em>.</p>')
 
-fil.write('<p>')
+fil.write('<code style="font-size: 25px;">')
 
 for ss in dd:
   ss=ss.replace('\n', '')
-  ss1 = ss+'<wbr>'
+  ss1 = ss+'<br>'
   print(ss1)
   fil.write(ss1)
 
-fil.write('</p>')
+fil.write('</code>')
 
 fil.write(c2)
 fil.close()
